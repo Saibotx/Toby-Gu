@@ -73,8 +73,8 @@ const _Title=styled('h1')`
 function Hero(props){
   return (
     <_HeroContainer src={cover}>
-      <div style={{position:'fixed', left:'50%', transform:'translateX(-50%)', zIndex:1, width:'100vw', height:'57vw', minHeight:'92vh', minWidth:'161vh', backgroundColor:'red', opacity:0.5}}>
-        <div style={{left:'32%', top:'46%', position:'absolute',}}>
+      <div style={{position:'fixed', left:'50%', transform:'translateX(-50%)', zIndex:1, width:'100vw', height:'57vw', minHeight:'92vh', minWidth:'161vh'}}>
+        <div style={{left:'32%', top:'46%', position:'absolute', color:'white'}}>
         {/* aspect ratio of 7:4 */}
           AssHole with small face
         </div>
@@ -122,12 +122,43 @@ function Profile(props){
   )
 }
 
+const _Right = styled('div')`
+  height: 0;
+  width: 50%;
+  margin: 0 0 10px -50px;
+  border-bottom: 100px solid red;
+  border-left: 50px solid transparent;
+`;
+
+const _Left = styled('div')`
+  height: 0;
+  width: 50%;
+  margin: 0 -50px 10px 0;
+  border-top: 100px solid orange;
+  border-right: 50px solid transparent;
+`;
+
+const _SplitContainer = styled('div')`
+  display:flex;
+  flex-direction: row;
+`;
+
+function SplitSection(props){
+  return (
+    <_SplitContainer>
+      <_Left/>
+      <_Right/>
+    </_SplitContainer>
+  );
+}
+
 
 export default function Home(props) {
   return(
     <div>
       <Hero/>
       <Profile/>
+      <SplitSection/>
     </div>
   );
 }
