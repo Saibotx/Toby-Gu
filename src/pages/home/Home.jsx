@@ -73,6 +73,12 @@ const _Title=styled('h1')`
 function Hero(props){
   return (
     <_HeroContainer src={cover}>
+      <div style={{position:'fixed', left:'50%', transform:'translateX(-50%)', zIndex:1, width:'100vw', height:'57vw', minHeight:'92vh', minWidth:'161vh', backgroundColor:'red', opacity:0.5}}>
+        <div style={{left:'32%', top:'46%', position:'absolute',}}>
+        {/* aspect ratio of 7:4 */}
+          AssHole with small face
+        </div>
+      </div>
       <_HeroText>
         <_Title><_PurpText>Toby</_PurpText> <_OjText>Gu</_OjText></_Title>
         <h4>Senior Software Engineer | Designer | Front End Lead Developer</h4>
@@ -93,6 +99,8 @@ const _ProfileContainer = styled('div')`
     margin-left: 20%;
     margin-right: 20%;
     color:#494949;
+    z-index: 2;
+    position:relative;
 `;
 
 const _PortHole = styled('img')`
@@ -103,12 +111,14 @@ const _PortHole = styled('img')`
 
 function Profile(props){
   return (
+    <div style={{width:'100%', backgroundColor:'white', zIndex:2, position:'relative'}}>
     <_ProfileContainer>
       <_PortHole src={`${profile}`}/>
       <h2>Hey! I'm Toby</h2>
       <h3> A Toronto based software engineer specializing in front-end development and design. <br/> I've founded two startups and have been coding since before facebook was cool.</h3>
       <_Button color='#494949'>Learn More</_Button>
     </_ProfileContainer>
+  </div>
   )
 }
 
