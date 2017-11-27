@@ -3,6 +3,16 @@ import React from 'react';
 import styled, { css } from 'react-emotion';
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
+// var {SparkScroll, SparkProxy, sparkScrollFactory} =
+//   require('react-spark-scroll/spark-scroll-rekapi')({
+//     invalidateAutomatically: true
+// });
+
+import ReactSparkScroll from 'react-spark-scroll-rekapi';
+var {SparkScroll, SparkProxy, sparkScrollFactory} = ReactSparkScroll({invalidateAutomatically:true});
+
+// SparkScroll['MyClass'] = sparkScrollFactory(MyClass);
+
 //Import assets
 import cover from '../../assets/cover.jpg';
 import profile from '../../assets/profile.jpg';
@@ -81,7 +91,12 @@ function Hero(props){
       </div>
       <_HeroText>
         <_Title><_PurpText>Toby</_PurpText> <_OjText>Gu</_OjText></_Title>
-        <h4>Senior Software Engineer | Designer | Front End Lead Developer</h4>
+        <SparkScroll.h4
+          timeline={{
+            topTop: {opacity: 0},
+            centerCenter: {opacity: 1}
+          }}
+          >Senior Software Engineer | Designer | Front End Lead Developer</SparkScroll.h4>
         <h4>Photographer, Entrepreneur & World Traveller</h4>
         <_ButtonRow>
           <_Button>Learn More</_Button>
