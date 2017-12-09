@@ -27,6 +27,8 @@ export default class SplitSectionContainer extends React.Component {
         hoverSide={this.state.hover}
         onMouseLeave={this.onMouseLeave}
         onMouseEnter={this.onMouseEnter}
+        onPickSide={this.props.onPickSide}
+        side={this.props.side}
       />
     );
   }

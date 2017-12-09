@@ -30,14 +30,40 @@ const largeWidth = '800px'
 const _RightBg = styled('div')`
   height:0;
   z-index: 0;
-  width: ${props=>calcHovSideVal('30%','70%','50%',props.hoverSide)};
+  width: ${props=>{
+    if (props.side) {
+      return props.side == 'left' ? '3%' : '97%'
+    }
+    return calcHovSideVal('30%','70%','50%',props.hoverSide)
+    }
+  };
   @media (max-width: ${mediumWidth}){
-    border-bottom: 60vh solid #d5d9ff;
-    border-left: 6.75vh solid transparent;
+    border-bottom: ${props=>{
+      if (props.side){
+        return '100vh solid #d5d9ff';
+      }
+      return '60vh solid #d5d9ff';
+    }};
+    border-left: ${props=>{
+      if(props.side){
+        return '11vh solid transparent';
+      }
+      return '6.75vh solid transparent';
+    }};
   }
   @media (min-width: ${largeWidth}){
-    border-bottom: 80vh solid #d5d9ff;
-    border-left: 9vh solid transparent;
+    border-bottom: ${props=>{
+      if (props.side){
+        return '100vh solid #d5d9ff';
+      }
+      return '80vh solid #d5d9ff';
+    }};
+    border-left: ${props=>{
+      if(props.side){
+        return '11vh solid transparent';
+      }
+      return '9vh solid transparent';
+    }};
   }
   transition:all 0.5s;
 `;
@@ -45,14 +71,40 @@ const _RightBg = styled('div')`
 const _LeftBg = styled('div')`
   height:0;
   z-index: 0;
-  width: ${props=>calcHovSideVal('70%','30%','50%',props.hoverSide)};
+  width: ${props=>{
+    if (props.side) {
+      return props.side == 'left' ? '97%' : '3%'
+    }
+    return calcHovSideVal('70%','30%','50%',props.hoverSide)
+    }
+  };
   @media (max-width: ${mediumWidth}){
-    border-top: 60vh solid #e2e2e2;
-    border-right: 6.75vh solid transparent;
+    border-top: ${props=>{
+      if (props.side){
+        return '100vh solid #e2e2e2';
+      }
+      return '60vh solid #e2e2e2';
+    }};
+    border-right: ${props=>{
+      if(props.side){
+        return '11vh solid transparent';
+      }
+      return '6.75vh solid transparent';
+    }};
   }
   @media (min-width: ${largeWidth}){
-    border-top: 80vh solid #e2e2e2;
-    border-right: 9vh solid transparent;
+    border-top: ${props=>{
+      if (props.side){
+        return '100vh solid #e2e2e2';
+      }
+      return '80vh solid #e2e2e2';
+    }};
+    border-right: ${props=>{
+      if(props.side){
+        return '11vh solid transparent';
+      }
+      return '9vh solid transparent';
+    }};
   }
   transition:all 0.5s;
 `;
@@ -125,7 +177,7 @@ const _HiddenDescription = styled('div')`
 `
 
 export default function SplitSection(props){
-
+  console.log("splitsection props", props);
   return (
     <_SplitContainer
       onMouseLeave={props.onMouseLeave}>
@@ -147,11 +199,15 @@ export default function SplitSection(props){
             </p>
             <br/>
           </_HiddenDescription>
-          <_Button small whiteBg color='dark'>See Work</_Button>
+          <_Button
+            onClick={()=>{props.onPickSide('left')}}
+            small whiteBg color='dark'>
+            See Work
+          </_Button>
         </_Profession>
       </_MouseOverCont>
       <_SplitImage hoverSide={props.hoverSide} left src={`${splitleft}`}/>
-      <_LeftBg hoverSide={props.hoverSide}/>
+      <_LeftBg side={props.side} hoverSide={props.hoverSide}/>
       <_MouseOverCont
         style={{left:'50%'}}
         onMouseEnter={()=>props.onMouseEnter('right')}>
@@ -170,11 +226,15 @@ export default function SplitSection(props){
             </p>
             <br/>
           </_HiddenDescription>
-          <_Button small whiteBg color='dark'>View Gallery</_Button>
+          <_Button
+            onClick={()=>{props.onPickSide('right')}}
+            small whiteBg color='dark'>
+            View Gallery
+          </_Button>
         </_Profession>
       </_MouseOverCont>
       <_SplitImage hoverSide={props.hoverSide} src={`${splitright}`}/>
-      <_RightBg hoverSide={props.hoverSide}/>
+      <_RightBg side={props.side} hoverSide={props.hoverSide}/>
       <_SplitImage hoverSide={props.hoverSide} style={{opacity:props.hoverSide=='left'? 1: 0}} src={`${left}`}/>
       <_SplitImage hoverSide={props.hoverSide} style={{opacity:props.hoverSide=='right'? 1: 0}} src={`${right}`}/>
     </_SplitContainer>

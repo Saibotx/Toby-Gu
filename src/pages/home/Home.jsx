@@ -31,12 +31,27 @@ const RightModal = styled('div')`
   right:${props=>props.right || '0%'}
 `;
 
+const _disspearingDiv = styled('div')`
+  max-height: ${props=>props.height};
+  overflow: hidden;
+  transition: all 1s;
+  ${'' /* transition-timing-function: ease-in; */}
+`
+
 export default function Home(props) {
   return(
     <div>
-      <Hero/>
-      <Profile/>
-      <SplitSectionContainer/>
+      {
+        <_disspearingDiv height={props.side ? '0vh' : '150vh'}>
+          <Hero/>
+          <Profile/>
+        </_disspearingDiv>
+      }
+
+      <SplitSectionContainer
+        onPickSide={props.onPickSide}
+        side={props.side}
+      />
       {/* <LeftModal/>
       <RightModal/> */}
     </div>

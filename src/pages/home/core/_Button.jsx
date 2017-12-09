@@ -9,7 +9,7 @@ const _Button = styled('button')`
   margin-top:10px
   color: ${props => props.color == 'dark' ? 'rgb(73,73,73)' : 'white'};
   border-color: ${props => props.color == 'dark' ? 'rgb(73,73,73)' : 'white'};
-  font-size: ${props=>props.small ? '1em' : '1.2em'};;
+  font-size: ${props=>props.small ? '1em' : '1.2em'};
   font-weight: 200;
   padding: ${props=>props.small ? '5px 10px 5px 10px' : '10px 30px 10px 30px'};
   border-width: 2px;
