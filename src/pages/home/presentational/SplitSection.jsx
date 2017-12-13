@@ -132,6 +132,7 @@ function SplitSection(props){
         <Switch>
           {/* <Route  */}
           <Route exact path="/engineer" component={PageShell(ExampleComponent)} />
+          <Route exact path="/photographer" component={PageShell(ExampleComponent)} />
           {/* <Route exact path="/photographer" component={PageShell(ExampleComponent)} /> */}
         </Switch>
       </div>
