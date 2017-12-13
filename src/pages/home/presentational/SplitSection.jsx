@@ -32,7 +32,7 @@ const _SplitContainer = styled('div')`
   display:flex;
   flex-direction: row;
   position:relative;
-  background: #e2e2e2;
+  background: ${props=>props.side != 'right' ? '#e2e2e2' :  '#d5d9ff'};
 `;
 
 const _RightBg = styled('div')`
@@ -90,8 +90,10 @@ const _LeftBg = styled('div')`
     border-top: ${props=>{
       if (props.side){
         return '100vh solid #e2e2e2';
+        // return '100vh solid blue';
       }
       return '60vh solid #e2e2e2';
+      // return '60vh solid blue';
     }};
     border-right: ${props=>{
       if(props.side){
@@ -104,8 +106,10 @@ const _LeftBg = styled('div')`
     border-top: ${props=>{
       if (props.side){
         return '100vh solid #e2e2e2';
+        // return '100vh solid blue';
       }
       return '80vh solid #e2e2e2';
+      // return '80vh solid blue';
     }};
     border-right: ${props=>{
       if(props.side){
@@ -120,7 +124,9 @@ const _LeftBg = styled('div')`
 function SplitSection(props){
   return (
     <_SplitContainer
-      onMouseLeave={props.onMouseLeave}>
+      onMouseLeave={props.onMouseLeave}
+      side={props.side}
+      >
       <SplitSectionContent {...props}/>
       <div style={{position:'absolute', zIndex:5}}>
         <Switch>
