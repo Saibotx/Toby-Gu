@@ -33,12 +33,10 @@ const _ButtonRow = styled('div')`
   margin:auto;
 `;
 
-
-
-const _PurpText = styled('text')`
+const _PurpText = styled('div')`
   color:#c1c7fa;
 `;
-const _OjText = styled('text')`
+const _OjText = styled('div')`
   color:#f7cb99;
 `;
 

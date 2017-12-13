@@ -2,11 +2,16 @@ import React from 'react';
 import Interactive from 'react-interactive';
 import { Switch, Route } from 'react-router-dom';
 // import Home from './Home';
+
+// import PageShell from './PageShell.js';
+
 import Home from '../pages/home/index.jsx';
 import ExampleComponent from './ExampleComponent';
 import PageNotFound from './PageNotFound';
 import Breadcrumbs from './Breadcrumbs';
 import s from '../styles/app.style';
+
+
 
 export default function App() {
   return (
@@ -23,12 +28,14 @@ export default function App() {
       <nav style={s.breadcrumbs}>
         <Breadcrumbs />
       </nav> */}
+      <Home/>
 
-      <Switch>
+      {/* <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/example" component={ExampleComponent} />
+        <Route path="/engineer" component={PageShell(ExampleComponent)} />
+        <Route path="/photographer" component={PageShell(ExampleComponent)} />
         <Route component={PageNotFound} />
-      </Switch>
+      </Switch> */}
 {/*
       <div style={s.creditLine}>
         <Interactive

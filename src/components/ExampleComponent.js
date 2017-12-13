@@ -15,32 +15,47 @@ const ExamplePageText = () => (
 
 export default function ExampleComponent() {
   return (
-    <Switch>
-      <Route
-        exact path="/example/two-deep"
-        render={({ location }) => (
-          <div>
-            <ExamplePageText />
-            <ExampleTwoDeepComponent location={location} />
-          </div>
-        )}
-      />
-      <Route
-        exact path="/example"
-        render={() => (
-          <div>
-            <ExamplePageText />
-            <div style={s.pageLinkContainer}>
-              <Interactive
-                as={Link}
-                {...s.link}
-                to="/example/two-deep?field1=foo&field2=bar#boom!"
-              >Example two deep with query and hash</Interactive>
-            </div>
-          </div>
-        )}
-      />
-      <Route component={PageNotFound} />
-    </Switch>
+    <div style={{background:'blue'}}>ASS!!
+      <br/>
+      assets<br/>
+      assets<br/>
+      assets<br/>
+      assets<br/>
+      assets<br/>
+      assets<br/>
+      assets<br/>
+      assets<br/>
+      assets<br/>
+      assets<br/>
+      assets<br/>
+      assets
+    </div>
+    // <Switch>
+    //   <Route
+    //     exact path="/example/two-deep"
+    //     render={({ location }) => (
+    //       <div>
+    //         <ExamplePageText />
+    //         <ExampleTwoDeepComponent location={location} />
+    //       </div>
+    //     )}
+    //   />
+    //   <Route
+    //     exact path="/example"
+    //     render={() => (
+    //       <div>
+    //         <ExamplePageText />
+    //         <div style={s.pageLinkContainer}>
+    //           <Interactive
+    //             as={Link}
+    //             {...s.link}
+    //             to="/example/two-deep?field1=foo&field2=bar#boom!"
+    //           >Example two deep with query and hash</Interactive>
+    //         </div>
+    //       </div>
+    //     )}
+    //   />
+    //   <Route component={PageNotFound} />
+    // </Switch>
   );
 }

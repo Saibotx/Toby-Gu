@@ -1,22 +1,32 @@
 import React from 'react';
 import SplitSection from '../presentational/SplitSection.jsx';
+import {withRouter} from 'react-router-dom';
 
-
-export default class SplitSectionContainer extends React.Component {
+class SplitSectionContainer extends React.Component {
   constructor() {
     super();
     this.onMouseLeave = this.onMouseLeave.bind(this);
     this.onMouseEnter = this.onMouseEnter.bind(this);
+    this._isInSubPath = this._isInSubPath.bind(this);
     this.state = { hover:null }
   }
 
+  _isInSubPath(){
+
+    let pathname = this.props.location.pathname
+    if ( pathname != '/'){
+      return true
+    }
+    return false;
+  }
+
   onMouseLeave(){
-    if (this.state.hover != null)
+    if (this.state.hover != null && !this._isInSubPath())
       this.setState({hover:null});
   }
 
   onMouseEnter(side){
-    if (side){
+    if (side && !this._isInSubPath()){
       this.setState({hover:side});
     }
   }
@@ -33,3 +43,9 @@ export default class SplitSectionContainer extends React.Component {
     );
   }
 }
+// SplitSectionContainer.contextTypes = {
+//     router: React.PropTypes.object,
+//     location: React.PropTypes.object
+// }
+
+export default withRouter(SplitSectionContainer);

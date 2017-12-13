@@ -1,13 +1,25 @@
 import React from 'react';
 import Home from './Home.jsx';
-//ass
+import {withRouter} from 'react-router-dom';
 
-export default class HomePage extends React.Component {
-  constructor(){
-    super();
+class HomePage extends React.Component {
+  constructor(props){
+    super(props);
     this.pickSide = this.pickSide.bind(this);
+    let pathname = props.location.pathname
+    var side = null;
+    switch (pathname){
+      case '/engineer':
+        side = 'left';
+        break;
+      case '/photographer':
+        side = 'right';
+        break;
+      default:
+        side = null;
+    }
     this.state={
-      side:null
+      side
     }
   }
   pickSide(side){
@@ -26,3 +38,6 @@ export default class HomePage extends React.Component {
 
   }
 }
+
+
+export default withRouter(HomePage);
