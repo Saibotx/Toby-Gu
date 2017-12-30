@@ -5,10 +5,7 @@ import {withRouter} from 'react-router-dom';
 import { Switch, Route} from 'react-router-dom';
 
 //import components
-import _Button from '../core/_Button.jsx';
 import SplitSectionContent from './SplitSectionContent.jsx';
-import PageShell from '../functional/PageShell';
-import ExampleComponent from '../../../components/ExampleComponent';
 
 
 
@@ -90,10 +87,8 @@ const _LeftBg = styled('div')`
     border-top: ${props=>{
       if (props.side){
         return '100vh solid #e2e2e2';
-        // return '100vh solid blue';
       }
       return '60vh solid #e2e2e2';
-      // return '60vh solid blue';
     }};
     border-right: ${props=>{
       if(props.side){
@@ -106,10 +101,8 @@ const _LeftBg = styled('div')`
     border-top: ${props=>{
       if (props.side){
         return '100vh solid #e2e2e2';
-        // return '100vh solid blue';
       }
       return '80vh solid #e2e2e2';
-      // return '80vh solid blue';
     }};
     border-right: ${props=>{
       if(props.side){
@@ -128,14 +121,6 @@ function SplitSection(props){
       side={props.side}
       >
       <SplitSectionContent {...props}/>
-      <div style={{position:'absolute', zIndex:5}}>
-        <Switch>
-          {/* <Route  */}
-          <Route exact path="/engineer" component={PageShell(ExampleComponent)} />
-          <Route exact path="/photographer" component={PageShell(ExampleComponent)} />
-          {/* <Route exact path="/photographer" component={PageShell(ExampleComponent)} /> */}
-        </Switch>
-      </div>
       <_LeftBg side={props.side} hoverSide={props.hoverSide}/>
       <_RightBg side={props.side} hoverSide={props.hoverSide}/>
     </_SplitContainer>

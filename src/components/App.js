@@ -1,54 +1,62 @@
+//Import Packages
 import React from 'react';
 import Interactive from 'react-interactive';
 import { Switch, Route } from 'react-router-dom';
-// import Home from './Home';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-// import PageShell from './PageShell.js';
-
-import Home from '../pages/home/index.jsx';
-import ExampleComponent from './ExampleComponent';
+//Import Pages
+import Home from '../pages/home/Home.jsx';
+import WorkPortfolio from './WorkPortfolio.js';
 import PageNotFound from './PageNotFound';
-import Breadcrumbs from './Breadcrumbs';
-import s from '../styles/app.style';
 
+//Import Components
+import FadeIn from './FadeIn.js';
+import SplitSectionContainer from './SplitSectionContainer.jsx';
 
+//Import CSS
+import '../styles/transitions.css';
+
+//Define helper functions
+const Transition = (props) => {
+  return (
+    <ReactCSSTransitionGroup
+      transitionEnterTimeout={1000}
+      transitionLeaveTimeout={1000}
+      transitionName={'grow'}
+      >
+        {props.children}
+    </ReactCSSTransitionGroup>
+  )
+}
 
 export default function App() {
+  var pathname = window.location.pathname;
+  var side;
+  switch (pathname) {
+    case '/engineer':
+      side = 'left';
+      break;
+    case '/photographer':
+      side = 'right';
+      break;
+    default:
+      side = null;
+  }
+  var renderHome = pathname == '/' ? Home : null;
   return (
-    // <div style={s.root}>
-    <div>
-      {/* <h1 style={s.title}>Single Page Apps for GitHub Pages</h1>
-      <Interactive
-        as="a"
-        href="https://github.com/rafrex/spa-github-pages"
-        style={s.repoLink}
-        {...s.link}
-      >https://github.com/rafrex/spa-github-pages</Interactive>
-
-      <nav style={s.breadcrumbs}>
-        <Breadcrumbs />
-      </nav> */}
-      <Home/>
-
-      {/* <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/engineer" component={PageShell(ExampleComponent)} />
-        <Route path="/photographer" component={PageShell(ExampleComponent)} />
-        <Route component={PageNotFound} />
-      </Switch> */}
-{/*
-      <div style={s.creditLine}>
-        <Interactive
-          as="a"
-          href="http://www.rafaelpedicini.com"
-          interactiveChild
-          focus={{}}
-          touchActive={{}}
-          touchActiveTapOnly
-        >
-          Code and concept by <span {...s.childLink}>Rafael Pedicini</span>
-        </Interactive>
-      </div> */}
+    <div style={{positon:'relative'}}>
+      {/* hacky way of dismounting home section with animation. acutal animation happens
+        within the Home component.  */}
+      <Transition >
+        { pathname == '/' && <Home hidden={pathname != '/'}/> }
+      </Transition>
+      {/* sub pages */}
+      <Switch>
+        <Route path="/engineer" component={FadeIn(WorkPortfolio)} />
+        <Route path="/photographer" component={FadeIn(WorkPortfolio)} />
+      </Switch>
+      {/* background render depending on side */}
+      <SplitSectionContainer side={side}/>
     </div>
   );
 }

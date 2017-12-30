@@ -2,7 +2,7 @@
 //Import components
 import Hero from './presentational/Hero.jsx';
 import Profile from './presentational/Profile.jsx';
-import SplitSectionContainer from './functional/SplitSectionContainer.jsx';
+// import SplitSectionContainer from './functional/SplitSectionContainer.jsx';
 // import LeftModal from './presentational/'
 
 //Import Packages
@@ -35,25 +35,15 @@ const _disspearingDiv = styled('div')`
   max-height: ${props=>props.height};
   overflow: hidden;
   transition: all 1s;
-  ${'' /* transition-timing-function: ease-in; */}
 `
 
 export default function Home(props) {
   return(
     <div>
-      {
-        <_disspearingDiv height={props.side ? '0vh' : '150vh'}>
-          <Hero/>
-          <Profile/>
-        </_disspearingDiv>
-      }
-
-      <SplitSectionContainer
-        onPickSide={props.onPickSide}
-        side={props.side}
-      />
-      {/* <LeftModal/>
-      <RightModal/> */}
+      <_disspearingDiv height={props.hidden ? '0vh' : '150vh'}>
+        <Hero/>
+        <Profile/>
+      </_disspearingDiv>
     </div>
   );
 }

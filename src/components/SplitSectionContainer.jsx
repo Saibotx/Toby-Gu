@@ -1,5 +1,5 @@
 import React from 'react';
-import SplitSection from '../presentational/SplitSection.jsx';
+import SplitSection from './SplitSection.jsx';
 import {withRouter} from 'react-router-dom';
 
 class SplitSectionContainer extends React.Component {
@@ -12,7 +12,6 @@ class SplitSectionContainer extends React.Component {
   }
 
   _isInSubPath(){
-
     let pathname = this.props.location.pathname
     if ( pathname != '/'){
       return true
@@ -37,15 +36,10 @@ class SplitSectionContainer extends React.Component {
         hoverSide={this.state.hover}
         onMouseLeave={this.onMouseLeave}
         onMouseEnter={this.onMouseEnter}
-        onPickSide={this.props.onPickSide}
         side={this.props.side}
       />
     );
   }
 }
-// SplitSectionContainer.contextTypes = {
-//     router: React.PropTypes.object,
-//     location: React.PropTypes.object
-// }
 
 export default withRouter(SplitSectionContainer);

@@ -6,7 +6,7 @@ import ReactSparkScroll from 'react-spark-scroll-rekapi';
 var {SparkScroll, SparkProxy, sparkScrollFactory} = ReactSparkScroll({invalidateAutomatically:true});
 
 //Import components
-import _Button from '../core/_Button.jsx';
+import _Button from '../../../components/core/_Button.jsx';
 
 //Import assets
 import cover from '../../../assets/cover.jpg';
