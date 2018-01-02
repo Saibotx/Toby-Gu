@@ -22,8 +22,8 @@ const Transition = props => {
 
   return (
     <ReactCSSTransitionGroup
-      transitionEnterTimeout={5200}
-      transitionLeaveTimeout={5200}
+      transitionEnterTimeout={800}
+      transitionLeaveTimeout={800}
       transitionName={"undefined"}
     >
       {props.children}

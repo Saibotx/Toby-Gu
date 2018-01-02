@@ -9,7 +9,7 @@ export default class WorkPortfolio extends React.Component {
   render() {
     return (
       <div name='asss' style={{zIndex:5,height:'100vh', position:'fixed', width:'100vw'}}>
-        <h1 style={{position:'absolute'}}> {'< Developer >'} </h1>
+        <h1 style={{position:'fixed'}}> {'< Developer >'} </h1>
 
       <Parallax pages={3} ref={ref => (this.parallax = ref)}>
         {/* <Parallax.Layer

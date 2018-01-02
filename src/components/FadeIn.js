@@ -7,9 +7,9 @@ function FadeIn(Page, method) {
   return props =>
     <ReactCSSTransitionGroup
       transitionAppear={true}
-      transitionAppearTimeout={1600}
-      transitionEnterTimeout={1600}
-      transitionLeaveTimeout={1600}
+      transitionAppearTimeout={2600}
+      transitionEnterTimeout={2600}
+      transitionLeaveTimeout={2600}
       transitionName={method}
     >
         <Page {...props} />

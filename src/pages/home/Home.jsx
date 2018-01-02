@@ -34,7 +34,7 @@ const RightModal = styled('div')`
 const _disspearingDiv = styled('div')`
   max-height: ${props=>props.height};
   overflow: hidden;
-  transition: all 0.9s ease-in;
+  transition: all 0.6s ease-in;
 `
 
 export default function Home(props) {
