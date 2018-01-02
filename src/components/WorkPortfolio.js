@@ -8,8 +8,9 @@ export default class WorkPortfolio extends React.Component {
 
   render() {
     return (
-      // <div style={{position:'relative'}}>
-      //   <h1> {'< Developer >'} </h1>
+      <div name='asss' style={{zIndex:5,height:'100vh', position:'fixed', width:'100vw'}}>
+        <h1 style={{position:'absolute'}}> {'< Developer >'} </h1>
+
       <Parallax pages={3} ref={ref => (this.parallax = ref)}>
         {/* <Parallax.Layer
           // Page offset, or where the layer will be at when scrolled to
@@ -23,10 +24,10 @@ export default class WorkPortfolio extends React.Component {
         </Parallax.Layer>
          */}
         <Parallax.Layer offset={1} speed={1} style={{ backgroundColor: '#243B4A' }} />
-          <Parallax.Layer offset={2} speed={1} style={{ backgroundColor: '#805E73' }} />
-          <Parallax.Layer offset={3} speed={1} style={{ backgroundColor: '#87BCDE' }} />
+        <Parallax.Layer offset={2} speed={1} style={{ backgroundColor: '#805E73' }} />
+        <Parallax.Layer offset={3} speed={1} style={{ backgroundColor: '#87BCDE' }} />
       </Parallax>
-      // </div>
+      </div>
     );
   }
 }

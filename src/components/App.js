@@ -45,7 +45,7 @@ export default function App() {
       side = null;
   }
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{position:'relative'}}>
       {/* hacky way of dismounting home section with animation. acutal animation happens
         within the Home component.  */}
       <Transition>
