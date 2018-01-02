@@ -34,13 +34,15 @@ const RightModal = styled('div')`
 const _disspearingDiv = styled('div')`
   max-height: ${props=>props.height};
   overflow: hidden;
-  transition: all 0.7s;
+  transition: all 0.9s ease-in;
 `
 
 export default function Home(props) {
+  var pathname = window.location.pathname;
+  var hidden = pathname != '/';
   return(
     <div>
-      <_disspearingDiv height={props.hidden ? '0vh' : '150vh'}>
+      <_disspearingDiv height={hidden ? '0vh' : '150vh'}>
         <Hero/>
         <Profile/>
       </_disspearingDiv>

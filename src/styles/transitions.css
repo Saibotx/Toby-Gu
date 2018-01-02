@@ -31,7 +31,7 @@
 }
 .grow-appear.grow-appear-active {
   max-height: 150vh;
-  transition: all 0.6s linear;
+  transition: all 1.2s ease-in;
   overflow: hidden;
 }
 .grow-enter {
@@ -40,7 +40,7 @@
 }
 .grow-enter.grow-enter-active {
     max-height: 150vh;
-    transition: all 0.6s;
+    transition: all 1.2s ease-in;
     overflow: hidden;
 }
 .grow-leave {
@@ -51,7 +51,8 @@
 .grow-leave.grow-leave-active {
     max-height: 0vh;
     width: 100%;
-    transition: all 0.6s;
+    transition: all 0.6s ease-in;
+    /* transition-delay: all 0.5s; */
     overflow: hidden;
     color:blue;
 }

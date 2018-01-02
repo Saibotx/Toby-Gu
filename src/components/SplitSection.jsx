@@ -27,6 +27,9 @@ const largeWidth = '800px'
 
 const _SplitContainer = styled('div')`
   display:flex;
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow:hidden;
   flex-direction: row;
   position:relative;
   background: ${props=>props.side != 'right' ? '#e2e2e2' :  '#d5d9ff'};
