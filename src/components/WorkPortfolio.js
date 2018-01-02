@@ -1,5 +1,41 @@
 import React from "react";
 import Parallax from "react-springy-parallax";
+import styled, { css } from 'react-emotion';
+
+const _Container = styled('div')`
+  z-index: 5;
+  height:100vh;
+  position:fixed;
+  width:100vw;
+`;
+const _FloatingCont = styled('div')`
+  width:100vw;
+  z-index: 10;
+  text-align: center;
+  position:fixed;
+`;
+
+const _PButton = styled('button')`
+  position:fixed;
+  left:100%;
+  top:50%;
+  transform:translate(-130%);
+  border-width: 3px;
+  padding:10px;
+  border-color: black;
+  color:black;
+  background-color: transparent;
+  font-size: 1.4em;
+  font-weight: 700;
+  &:hover{
+    background-color: grey
+    color:white;
+    border-color: transparent;
+  }
+  &:active{
+    background-color: black;
+  }
+`
 
 export default class WorkPortfolio extends React.Component {
   constructor(props) {
@@ -8,26 +44,19 @@ export default class WorkPortfolio extends React.Component {
 
   render() {
     return (
-      <div name='asss' style={{zIndex:5,height:'100vh', position:'fixed', width:'100vw'}}>
-        <h1 style={{position:'fixed'}}> {'< Developer >'} </h1>
+      <_Container>
+        <_FloatingCont>
+          <h1> {'< Developer >'} </h1>
+          <_PButton> P </_PButton>
+        </_FloatingCont>
+
 
       <Parallax pages={3} ref={ref => (this.parallax = ref)}>
-        {/* <Parallax.Layer
-          // Page offset, or where the layer will be at when scrolled to
-          // 0 means start, 1 second page, 1.5 second and half, and so on ...
-          offset={0}
-          // Parallax factor, allows for positive and negative values
-          // Shifts the layer up or down in accordance to its offset
-          speed={0.5}
-        >
-          <span>Layers can contain anything</span>
-        </Parallax.Layer>
-         */}
         <Parallax.Layer offset={1} speed={1} style={{ backgroundColor: '#243B4A' }} />
         <Parallax.Layer offset={2} speed={1} style={{ backgroundColor: '#805E73' }} />
         <Parallax.Layer offset={3} speed={1} style={{ backgroundColor: '#87BCDE' }} />
       </Parallax>
-      </div>
+      </_Container>
     );
   }
 }
