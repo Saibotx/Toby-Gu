@@ -17,14 +17,14 @@
         color: inherit;
         background: transparent;
       }
-      
+
       * {font-family: Arial, Helvetica, sans-serif}
 
 
       /*pass window height (w/o scroll bars) down to react app, note can't use vh becasue that
       includes scroll bars and mobile browser footer, etc so doesn't give viewable area*/
       html, body { height: 100%; }
-      html { background-color: white; }
+      html { background-color: white; overflow:hidden; }
       #root { background-color: #F0F0F0; min-height: 100%; }
 
       /*required for IE/Edge to be compatible with left:50vw & transform:translate(-50%, 0),
@@ -32,14 +32,6 @@
       that the window will scroll to. Note the left:50vw and transform is used to center content
       horizaontally based on vw to prevent content jump when vertical scroll bar show/hide.*/
       body { overflow-x: hidden; }
-
-      /*Default font sizes*/
-      h1 { font-size: 4.5em; margin-bottom:20px; }
-      h2 { font-size: 2.4em; margin-top:20px; margin-bottom:20px}
-      h3 { font-size: 1.4em; margin-bottom:10px }
-      h4 { font-size: 1em; margin-top:10px; margin-bottom:10px; font-weight:300 }
-      h5 { font-size: .83em; }
-      h6 { font-size: .75em; }
     </style>
 
     <!-- start favicon -->

@@ -15,6 +15,7 @@ import SplitSectionContainer from './SplitSectionContainer.jsx';
 
 //Import CSS
 import '../styles/transitions.css';
+import '../styles/styles.css';
 
 //Define helper functions
 const Transition = (props) => {

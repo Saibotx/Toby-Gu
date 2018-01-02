@@ -1,0 +1,17 @@
+/*Default font sizes*/
+h1 { font-size: 4.5em; margin-bottom:20px; }
+h2 { font-size: 2.4em; margin-top:20px; margin-bottom:20px}
+h3 { font-size: 1.4em; margin-bottom:10px }
+h4 { font-size: 1em; margin-top:10px; margin-bottom:10px; font-weight:300 }
+h5 { font-size: .83em; }
+h6 { font-size: .75em; }
+
+@media (max-width: 550px){
+  h1 { font-size: 3em; margin-bottom:15px; }
+  h2 { font-size: 1.8em; margin-top:10px; margin-bottom:10px}
+  h3 { font-size: 1em; margin-bottom:5px }
+  h4 { font-size: 0.8em; margin-top:5px; margin-bottom:5px; font-weight:300 }
+  h5 { font-size: .7em; }
+  h6 { font-size: .6em; }
+  p { font-size: 0.7em; }
+};

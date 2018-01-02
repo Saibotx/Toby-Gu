@@ -14,7 +14,8 @@ import cover from '../../../assets/cover.jpg';
 const _HeroTextDiv = styled('div')`
   color:white;
   max-width:600px;
-  width:50%;
+  ${'' /* width:50%; */}
+  padding:0 10px 0 10px;
   text-align:center;
   margin:auto;
   top:65vh;
@@ -67,7 +68,7 @@ class HeroText extends React.Component {
   }
 }
 
-SparkScroll['HeroText'] = sparkScrollFactory(HeroText);
+// SparkScroll['HeroText'] = sparkScrollFactory(HeroText);
 
 
 const _HeroContainer = styled('div')`
@@ -111,12 +112,13 @@ export default function Hero(props){
           AssHole with small face
         </_AnimatedText>
       </_AnimatedTextContainer>
-      <SparkScroll.HeroText
+      <HeroText/>
+      {/* <SparkScroll.HeroText
         timeline={{
           topTop: {opacity: 0},
           centerCenter: {opacity: 1}
         }}
-      />
+      /> */}
     </_HeroContainer>
   )
 }
