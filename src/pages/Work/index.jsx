@@ -61,11 +61,11 @@ const SubTitle = styled("h3")`
 const BadgeRow = styled("div")`
   display: flex;
   justify-content: center;
-  position:relative;
+  position: relative;
 `;
 const Badge = styled("img")`
-  width: ${props=>(props.scale || 1) * 15}vw;
-  height: ${props=>(props.scale || 1) * 15}vw;
+  width: ${props => (props.scale || 1) * 15}vw;
+  height: ${props => (props.scale || 1) * 15}vw;
   position: relative;
   ${"" /* margin:0 5px 0 5px; */} ${"" /* flex:1; */};
 `;
@@ -85,19 +85,18 @@ export default class WorkPortfolio extends React.Component {
     return (
       <_Container>
         <_FloatingCont>
-          <h1> {"< Developer >"} </h1>
+          <h1 style={{ marginTop: 10 }}> {"< Developer >"} </h1>
           <_PButton> P </_PButton>
         </_FloatingCont>
         <Parallax pages={3} ref={ref => (this.parallax = ref)}>
           <Parallax.Layer offset={0} speed={2}>
-            <SubTitle style={{marginTop:'10vh'}}>
-              My selected works have been built using some of
-              the following:
+            <SubTitle style={{ marginTop: "12vh" }}>
+              My selected works have been built using some of the following:
             </SubTitle>
           </Parallax.Layer>
 
           <Parallax.Layer offset={0} speed={2}>
-            <BadgeRow style={{top:'20vh'}}>
+            <BadgeRow style={{ top: "20vh" }}>
               <Badge src={swift} />
               <BadgePlaceHolder width={3} />
               <Badge src={java} />
@@ -105,36 +104,44 @@ export default class WorkPortfolio extends React.Component {
           </Parallax.Layer>
 
           <Parallax.Layer offset={0} speed={1.6}>
-            <BadgeRow style={{top:'20vh'}}>
-            <Badge src={redux} />
-            <BadgePlaceHolder width={1} />
-            <Badge src={node} />
-          </BadgeRow>
+            <BadgeRow style={{ top: "20vh" }}>
+              <Badge src={redux} />
+              <BadgePlaceHolder width={1} />
+              <Badge src={node} />
+            </BadgeRow>
+            <BadgeRow style={{ top: "20vh" }}>
+              <Badge src={javascript} />
+              <BadgePlaceHolder width={1} />
+              <Badge src={css} />
+            </BadgeRow>
           </Parallax.Layer>
 
           <Parallax.Layer offset={0} speed={1.2}>
-            <BadgeRow style={{top:'20vh'}}>
-            <Badge src={react} />
-          </BadgeRow>
+            <BadgeRow style={{ top: "20vh" }}>
+              <Badge src={react} />
+            </BadgeRow>
+            <BadgeRow style={{ top: "20vh" }}>
+              <Badge src={html} />
+            </BadgeRow>
           </Parallax.Layer>
 
           <Parallax.Layer offset={0} speed={1.4}>
-            <SubTitle style={{marginTop:'35vh'}}>
+            <SubTitle style={{ marginTop: "calc(20vh + 35vw)" }}>
               With designs created using
             </SubTitle>
           </Parallax.Layer>
 
           <Parallax.Layer offset={0} speed={1.4}>
-            <BadgeRow style={{top:'45vh'}}>
-            <Badge src={photoshop} />
-          </BadgeRow>
+            <BadgeRow style={{ top: "calc(25vh + 35vw)" }}>
+              <Badge src={photoshop} />
+            </BadgeRow>
           </Parallax.Layer>
           <Parallax.Layer offset={0} speed={1.2}>
-            <BadgeRow style={{top:'45vh'}}>
-            <Badge style={{padding:10}} scale={0.7} src={illustrator} />
-            <BadgePlaceHolder width={1}/>
-            <Badge style={{padding:10}} scale={0.7} src={aftereffects} />
-          </BadgeRow>
+            <BadgeRow style={{ top: "calc(25vh + 35vw)" }}>
+              <Badge style={{ padding: 10 }} scale={0.7} src={illustrator} />
+              <BadgePlaceHolder width={1} />
+              <Badge style={{ padding: 10 }} scale={0.7} src={aftereffects} />
+            </BadgeRow>
           </Parallax.Layer>
 
           {/* <Parallax.Layer
@@ -147,7 +154,7 @@ export default class WorkPortfolio extends React.Component {
           <Parallax.Layer
             offset={0.95}
             speed={1}
-            style={{ backgroundColor: 'red' }}
+            style={{ backgroundColor: "red" }}
           />
 
           <Parallax.Layer
