@@ -5,21 +5,20 @@ import { Switch, Route } from "react-router-dom";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 //Import Pages
-import Home from "../pages/home/Home.jsx";
-import WorkPortfolio from "./WorkPortfolio.js";
-import PageNotFound from "./PageNotFound";
+import Home from "./pages/Home";
+import WorkPortfolio from "./pages/Work";
+import PageNotFound from "./pages/PageNotFound";
 
 //Import Components
-import FadeIn from "./FadeIn.js";
-import SplitSectionContainer from "./SplitSectionContainer.jsx";
+import FadeIn from "./components/FadeIn.js";
+import SplitSection from "./components/SplitSection";
 
 //Import CSS
-import "../styles/transitions.css";
-import "../styles/styles.css";
+import "./styles/transitions.css";
+import "./styles/styles.css";
 
 //Define helper functions
 const Transition = props => {
-
   return (
     <ReactCSSTransitionGroup
       transitionEnterTimeout={800}
@@ -57,7 +56,7 @@ export default function App() {
         <Route path="/photographer" component={FadeIn(WorkPortfolio)} />
       </Switch>
       {/* background render depending on side */}
-      <SplitSectionContainer side={side} />
+      <SplitSection side={side} />
     </div>
   );
 }

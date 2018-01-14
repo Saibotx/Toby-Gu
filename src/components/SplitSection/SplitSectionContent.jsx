@@ -2,13 +2,13 @@ import styled, { css } from 'react-emotion';
 import React from 'react';
 import {withRouter} from 'react-router-dom';
 
-import _Button from './core/_Button.jsx';
+import _Button from 'core/Button.jsx';
 
 
-import splitleft from '../assets/splitleft.png';
-import splitright from '../assets/splitright.png';
-import left from '../assets/left.png';
-import right from '../assets/right.png';
+import splitleft from 'assets/splitleft.png';
+import splitright from 'assets/splitright.png';
+import left from 'assets/left.png';
+import right from 'assets/right.png';
 
 //helper function
 function calcHovSideVal(left,right,def,val){

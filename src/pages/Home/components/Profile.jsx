@@ -3,7 +3,7 @@ import styled, { css } from 'react-emotion';
 import React from 'react';
 
 //import components
-import _Button from '../../../components/core/_Button.jsx';
+import _Button from 'core/Button.jsx';
 
 //import assets
 import profile from '../../../assets/profile.jpg';

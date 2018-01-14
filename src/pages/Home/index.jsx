@@ -1,7 +1,7 @@
 
 //Import components
-import Hero from './presentational/Hero.jsx';
-import Profile from './presentational/Profile.jsx';
+import Hero from './components/Hero.jsx';
+import Profile from './components/Profile.jsx';
 // import SplitSectionContainer from './functional/SplitSectionContainer.jsx';
 // import LeftModal from './presentational/'
 
