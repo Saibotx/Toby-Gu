@@ -21,8 +21,8 @@ import "./styles/styles.css";
 const Transition = props => {
   return (
     <ReactCSSTransitionGroup
-      transitionEnterTimeout={800}
-      transitionLeaveTimeout={800}
+      transitionEnterTimeout={1200}
+      transitionLeaveTimeout={1200}
       transitionName={"undefined"}
     >
       {props.children}

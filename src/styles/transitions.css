@@ -6,7 +6,7 @@
 .FadeIn-appear.FadeIn-appear-active {
   opacity: 1;
   transition: all 1.2s ease-in;
-  transition-delay:0.85s;
+  transition-delay:1s;
 }
 .FadeIn-enter {
     opacity: 0;
@@ -14,7 +14,7 @@
 .FadeIn-enter.FadeIn-enter-active {
     opacity: 1;
     transition: all 1.2s ease-in;
-    transition-delay:0.85s;
+    transition-delay:1s;
 }
 .FadeIn-leave {
     opacity: 1.0;
@@ -24,7 +24,7 @@
     position: fixed;
     width: 100%;
     transition: all 1.2s ease-in;
-    transition-delay:0.85s;
+    transition-delay:1s;
 }
 
 

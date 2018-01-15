@@ -2,19 +2,24 @@ import React from "react";
 import Parallax from "react-springy-parallax";
 import styled from "react-emotion";
 
-//Import Images
-import swift from "assets/badges/swift.png";
-import redux from "assets/badges/redux.png";
-import react from "assets/badges/react.png";
-import node from "assets/badges/node.png";
-import java from "assets/badges/java.png";
-import html from "assets/badges/html.png";
-import javascript from "assets/badges/javascript.png";
-import css from "assets/badges/css.png";
 
-import illustrator from "assets/badges/illustrator.png";
-import photoshop from "assets/badges/photoshop.png";
-import aftereffects from "assets/badges/aftereffects.png";
+
+import stars from "assets/stars.png";
+import satellite4 from "assets/satellite4.svg";
+
+
+import chrometab from "assets/chrometab.png";
+import clients from "assets/clients.svg";
+
+import applyboardSchool from "assets/applyboardSchool.png";
+import applyboardSearch from "assets/applyboardSearch.png";
+import applyboardEligibility from "assets/applyboardEligibility.png";
+
+//Import Components
+import BackgroundClouds from './components/BackgroundClouds';
+import Badges from './components/Badges';
+
+// const url = (name, wrap = false) => `${wrap ? ' : ''uild/assets/${name}.svg${wrap ? ')' : ''}`;
 
 const _Container = styled("div")`
   z-index: 5;
@@ -36,6 +41,9 @@ const _PButton = styled("button")`
   transform:translate(-130%);
   border-width: 3px;
   padding:10px;
+  @media (max-width:550px){
+    padding:5px;
+  }
   border-color: black;
   color:black;
   background-color: transparent;
@@ -50,31 +58,28 @@ const _PButton = styled("button")`
     background-color: black;
   }
 `;
-const SubTitle = styled("h3")`
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  width: 80%;
-  line-height: 1.5;
-`;
 
-const BadgeRow = styled("div")`
+
+const ParallaxFlex = styled(Parallax.Layer)`
   display: flex;
-  justify-content: center;
-  position: relative;
-`;
-const Badge = styled("img")`
-  width: ${props => (props.scale || 1) * 15}vw;
-  height: ${props => (props.scale || 1) * 15}vw;
-  position: relative;
-  ${"" /* margin:0 5px 0 5px; */} ${"" /* flex:1; */};
-`;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+  @media (max-width:550px){
+    flex-direction: column;
+    justify-content: center;
+  }
+`
 
-const BadgePlaceHolder = styled("div")`
-  width: ${props => props.width * 15}vw;
-  height: 15vw;
-  ${"" /* flex:${props=>props.flex}; */};
-`;
+const BrowserWindowImg = styled('img')`
+ width: ${props=>props.main ? '60%' : '40%'};
+ @media (max-width: 550px){
+   width:75%;
+   padding:10% 0 10% 0;
+   ${props=>props.main &&`width:90%;`}
+ }
+`
+
 
 export default class WorkPortfolio extends React.Component {
   constructor(props) {
@@ -88,90 +93,58 @@ export default class WorkPortfolio extends React.Component {
           <h1 style={{ marginTop: 10 }}> {"< Developer >"} </h1>
           <_PButton> P </_PButton>
         </_FloatingCont>
-        <Parallax pages={3} ref={ref => (this.parallax = ref)}>
-          <Parallax.Layer offset={0} speed={2}>
-            <SubTitle style={{ marginTop: "12vh" }}>
-              My selected works have been built using some of the following:
-            </SubTitle>
-          </Parallax.Layer>
-
-          <Parallax.Layer offset={0} speed={2}>
-            <BadgeRow style={{ top: "20vh" }}>
-              <Badge src={swift} />
-              <BadgePlaceHolder width={3} />
-              <Badge src={java} />
-            </BadgeRow>
-          </Parallax.Layer>
-
-          <Parallax.Layer offset={0} speed={1.6}>
-            <BadgeRow style={{ top: "20vh" }}>
-              <Badge src={redux} />
-              <BadgePlaceHolder width={1} />
-              <Badge src={node} />
-            </BadgeRow>
-            <BadgeRow style={{ top: "20vh" }}>
-              <Badge src={javascript} />
-              <BadgePlaceHolder width={1} />
-              <Badge src={css} />
-            </BadgeRow>
-          </Parallax.Layer>
-
-          <Parallax.Layer offset={0} speed={1.2}>
-            <BadgeRow style={{ top: "20vh" }}>
-              <Badge src={react} />
-            </BadgeRow>
-            <BadgeRow style={{ top: "20vh" }}>
-              <Badge src={html} />
-            </BadgeRow>
-          </Parallax.Layer>
-
-          <Parallax.Layer offset={0} speed={1.4}>
-            <SubTitle style={{ marginTop: "calc(20vh + 35vw)" }}>
-              With designs created using
-            </SubTitle>
-          </Parallax.Layer>
-
-          <Parallax.Layer offset={0} speed={1.4}>
-            <BadgeRow style={{ top: "calc(25vh + 35vw)" }}>
-              <Badge src={photoshop} />
-            </BadgeRow>
-          </Parallax.Layer>
-          <Parallax.Layer offset={0} speed={1.2}>
-            <BadgeRow style={{ top: "calc(25vh + 35vw)" }}>
-              <Badge style={{ padding: 10 }} scale={0.7} src={illustrator} />
-              <BadgePlaceHolder width={1} />
-              <Badge style={{ padding: 10 }} scale={0.7} src={aftereffects} />
-            </BadgeRow>
-          </Parallax.Layer>
-
-          {/* <Parallax.Layer
-            offset={0}
-            speed={1}
-            style={{ textAlign:'center' }}
-          >
-            Scroll Down!
-          </Parallax.Layer> */}
+        <Parallax pages={4} ref={ref => (this.parallax = ref)}>
           <Parallax.Layer
-            offset={0.95}
+            offset={3}
             speed={1}
-            style={{ backgroundColor: "red" }}
+            style={{ backgroundColor: "#87BCDE" }}
           />
+
+          {BackgroundClouds}
 
           <Parallax.Layer
             offset={1}
             speed={1}
-            style={{ backgroundColor: "#243B4A" }}
+            style={{ backgroundColor: "#243B4A", opacity: 0.5 }}
           />
           <Parallax.Layer
             offset={2}
             speed={1}
             style={{ backgroundColor: "#805E73" }}
           />
+
           <Parallax.Layer
-            offset={3}
-            speed={1}
-            style={{ backgroundColor: "#87BCDE" }}
+            offset={1}
+            speed={0}
+            factor={4}
+            style={{
+              color: "blue",
+              backgroundImage: `url(${stars})`,
+              backgroundSize: "cover"
+            }}
           />
+
+          {Badges}
+
+          <ParallaxFlex
+            offset={1}
+            speed={-0}
+          >
+            {" "}
+            <BrowserWindowImg src={applyboardSchool}/>
+            <BrowserWindowImg src={applyboardEligibility} />
+          </ParallaxFlex>
+          <ParallaxFlex
+            offset={1}
+            speed={-0.2}
+            style={{
+              // backgroundSize: "50%",
+              // backgroundPosition: "center",
+              // backgroundImage: `url(${applyboardSearch})`
+            }}
+          >
+          <BrowserWindowImg main src={applyboardSearch} />
+        </ParallaxFlex>
         </Parallax>
       </_Container>
     );
