@@ -2,11 +2,8 @@ import React from "react";
 import Parallax from "react-springy-parallax";
 import styled from "react-emotion";
 
-
-
 import stars from "assets/stars.png";
 import satellite4 from "assets/satellite4.svg";
-
 
 import chrometab from "assets/chrometab.png";
 import clients from "assets/clients.svg";
@@ -16,8 +13,8 @@ import applyboardSearch from "assets/applyboardSearch.png";
 import applyboardEligibility from "assets/applyboardEligibility.png";
 
 //Import Components
-import BackgroundClouds from './components/BackgroundClouds';
-import Badges from './components/Badges';
+import BackgroundClouds from "./components/BackgroundClouds";
+import Badges from "./components/Badges";
 
 // const url = (name, wrap = false) => `${wrap ? ' : ''uild/assets/${name}.svg${wrap ? ')' : ''}`;
 
@@ -59,27 +56,25 @@ const _PButton = styled("button")`
   }
 `;
 
-
 const ParallaxFlex = styled(Parallax.Layer)`
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 90%;
-  @media (max-width:550px){
+  @media (max-width: 550px) {
     flex-direction: column;
     justify-content: center;
   }
-`
+`;
 
-const BrowserWindowImg = styled('img')`
- width: ${props=>props.main ? '60%' : '40%'};
- @media (max-width: 550px){
-   width:75%;
-   padding:10% 0 10% 0;
-   ${props=>props.main &&`width:90%;`}
- }
-`
-
+const BrowserWindowImg = styled("img")`
+  width: ${props => (props.main ? "60%" : "40%")};
+  @media (max-width: 550px) {
+    width: 75%;
+    padding: 10% 0 10% 0;
+    ${props => props.main && `width:90%;`};
+  }
+`;
 
 export default class WorkPortfolio extends React.Component {
   constructor(props) {
@@ -123,28 +118,14 @@ export default class WorkPortfolio extends React.Component {
               backgroundSize: "cover"
             }}
           />
-
           {Badges}
-
-          <ParallaxFlex
-            offset={1}
-            speed={-0}
-          >
-            {" "}
-            <BrowserWindowImg src={applyboardSchool}/>
+          <ParallaxFlex offset={1} speed={0.1}>
+            <BrowserWindowImg src={applyboardSchool} />
             <BrowserWindowImg src={applyboardEligibility} />
           </ParallaxFlex>
-          <ParallaxFlex
-            offset={1}
-            speed={-0.2}
-            style={{
-              // backgroundSize: "50%",
-              // backgroundPosition: "center",
-              // backgroundImage: `url(${applyboardSearch})`
-            }}
-          >
-          <BrowserWindowImg main src={applyboardSearch} />
-        </ParallaxFlex>
+          <ParallaxFlex offset={1} speed={-0.1}>
+            <BrowserWindowImg main src={applyboardSearch} />
+          </ParallaxFlex>
         </Parallax>
       </_Container>
     );
