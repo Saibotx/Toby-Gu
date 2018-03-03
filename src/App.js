@@ -1,7 +1,7 @@
 //Import Packages
 import React from "react";
-import Interactive from "react-interactive";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, BrowserRouter, ServerRouter } from "react-router-dom";
+// import { Router, Link, Route, Switch } from 'react-static';
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 //Import Pages
@@ -30,33 +30,52 @@ const Transition = props => {
   );
 };
 
-export default function App() {
-  var pathname = window.location.pathname;
-  var side;
-  switch (pathname) {
-    case "/engineer":
-      side = "left";
-      break;
-    case "/photographer":
-      side = "right";
-      break;
-    default:
-      side = null;
+export default class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {};
   }
-  return (
-    <div style={{position:'relative'}}>
-      {/* hacky way of dismounting home section with animation. acutal animation happens
-        within the Home component.  */}
-      <Transition>
-        {pathname == "/" && <Home />}
-      </Transition>
-      {/* sub pages */}
-      <Switch>
-        <Route path="/engineer" component={FadeIn(WorkPortfolio)} />
-        <Route path="/photographer" component={FadeIn(WorkPortfolio)} />
-      </Switch>
-      {/* background render depending on side */}
-      <SplitSection side={side} />
-    </div>
-  );
+  componentDidMount() {
+    this.setState({
+      client: true
+    });
+  }
+  render() {
+    var side;
+    var pathname;
+    console.log("App Rerender!");
+    // var Router = (p)=><BrowserRouter>{p.children}</BrowserRouter>;
+    if (this.state.client){
+      //Set Router
+      // var Router = (p)=><BrowserRouter>{p.children}</BrowserRouter>;
+      //Deal with pathname and sides
+      console.log("client!");
+      pathname = window.location.pathname;
+      switch (pathname) {
+        case "/engineer":
+          side = "left";
+          break;
+        case "/photographer":
+          side = "right";
+          break;
+        default:
+          side = null;
+      }
+    }
+
+    return (
+        <div style={{ position: "relative" }}>
+          {/* hacky way of dismounting home section with animation. acutal animation happens
+          within the Home component.  */}
+          <Transition>{pathname == "/" && <Home client={this.state.client}/>}</Transition>
+          {/* sub pages */}
+          <Switch>
+            <Route path="/engineer" component={FadeIn(WorkPortfolio)} />
+            <Route path="/photographer" component={FadeIn(WorkPortfolio)} />
+          </Switch>
+          {/* background render depending on side */}
+          <SplitSection side={side} />
+        </div>
+    );
+  }
 }

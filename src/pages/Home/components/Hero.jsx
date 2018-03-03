@@ -1,9 +1,6 @@
 //import packages
 import React from 'react';
 import styled, { css } from 'react-emotion';
-import ReactSparkScroll from 'react-spark-scroll-rekapi';
-//set up sparkscroll
-var {SparkScroll, SparkProxy, sparkScrollFactory} = ReactSparkScroll({invalidateAutomatically:true});
 
 //Import components
 import _Button from 'core/Button.jsx';
@@ -68,11 +65,11 @@ class HeroText extends React.Component {
   }
 }
 
-// SparkScroll['HeroText'] = sparkScrollFactory(HeroText);
 
 
 const _HeroContainer = styled('div')`
   height:93vh;
+  padding-top: 2px;
   width:100%;
   position:relative;
   background-size: cover;
@@ -113,12 +110,6 @@ export default function Hero(props){
         </_AnimatedText>
       </_AnimatedTextContainer>
       <HeroText/>
-      {/* <SparkScroll.HeroText
-        timeline={{
-          topTop: {opacity: 0},
-          centerCenter: {opacity: 1}
-        }}
-      /> */}
     </_HeroContainer>
   )
 }

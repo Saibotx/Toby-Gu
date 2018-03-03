@@ -1,6 +1,7 @@
 import React from 'react';
 import SplitSection from './SplitSection.jsx';
 import {withRouter} from 'react-router-dom';
+// import {withRouter} from 'react-static';
 
 class SplitSectionContainer extends React.Component {
   constructor() {
@@ -31,6 +32,7 @@ class SplitSectionContainer extends React.Component {
   }
 
   render(){
+    // console.log("side is", this.props.side);
     return (
       <SplitSection
         hoverSide={this.state.hover}

@@ -1,6 +1,7 @@
 # Dependency directory
 node_modules
 mockup_assets
+backup
 
 # Source maps
 *.js.map
