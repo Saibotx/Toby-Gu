@@ -1,8 +1,8 @@
 //import packages
 import styled, { css } from 'react-emotion';
 import React from 'react';
-import {withRouter} from 'react-router-dom';
-// import {withRouter} from 'react-static';
+// import {withRouter} from 'react-router-dom';
+import {withRouter} from 'react-static';
 
 //import components
 import SplitSectionContent from './SplitSectionContent.jsx';

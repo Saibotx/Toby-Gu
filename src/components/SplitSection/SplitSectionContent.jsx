@@ -1,6 +1,7 @@
 import styled, { css } from 'react-emotion';
 import React from 'react';
-import {withRouter} from 'react-router-dom';
+// import {withRouter} from 'react-router-dom';
+import {withRouter} from 'react-static';
 
 import _Button from 'core/Button.jsx';
 
@@ -147,7 +148,7 @@ function SplitSectionContent(props){
           </_HiddenDescription>
           <_Button
             onClick={()=>{
-              props.history.push('/photographer');
+              props.history.push('/photographer', {scrollToTop:false});
             }}
             small whiteBg color='dark'>
             View Gallery

@@ -1,7 +1,7 @@
 import React from 'react';
 import SplitSection from './SplitSection.jsx';
-import {withRouter} from 'react-router-dom';
-// import {withRouter} from 'react-static';
+// import {withRouter} from 'react-router-dom';
+import {withRouter} from 'react-static';
 
 class SplitSectionContainer extends React.Component {
   constructor() {

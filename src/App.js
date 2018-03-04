@@ -1,7 +1,7 @@
 //Import Packages
 import React from "react";
-import { Switch, Route, BrowserRouter, ServerRouter } from "react-router-dom";
-// import { Router, Link, Route, Switch } from 'react-static';
+// import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import { Router, Link, Route, Switch } from 'react-static';
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 //Import Pages
@@ -64,6 +64,7 @@ export default class App extends React.Component {
     }
 
     return (
+
         <div style={{ position: "relative" }}>
           {/* hacky way of dismounting home section with animation. acutal animation happens
           within the Home component.  */}
@@ -76,6 +77,7 @@ export default class App extends React.Component {
           {/* background render depending on side */}
           <SplitSection side={side} />
         </div>
+
     );
   }
 }
