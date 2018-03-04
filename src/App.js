@@ -43,13 +43,11 @@ export default class App extends React.Component {
   render() {
     var side;
     var pathname;
-    console.log("App Rerender!");
     // var Router = (p)=><BrowserRouter>{p.children}</BrowserRouter>;
     if (this.state.client){
       //Set Router
       // var Router = (p)=><BrowserRouter>{p.children}</BrowserRouter>;
       //Deal with pathname and sides
-      console.log("client!");
       pathname = window.location.pathname;
       switch (pathname) {
         case "/engineer":

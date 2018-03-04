@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Router, Link, Route, Switch } from 'react-static';
+import { Router, Link, Route, Switch } from "react-static";
 // import { BrowserRouter as Router } from "react-router-dom";
 
 // Your top level component
 import App from "./App";
 
 // Export your top level component as JSX (for static rendering)
+// export default App;
 export default function WrappedApp(p) {
   return (
     <Router autoScrollToTop={false}>
@@ -32,11 +33,3 @@ if (typeof document !== "undefined") {
   // Render!
   render(App);
 }
-
-// ReactDOM.render(
-//   <Router>
-//     <App />
-//   </Router>,
-//   document.getElementById('root'),
-// );
-//

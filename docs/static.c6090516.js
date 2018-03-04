@@ -296,6 +296,7 @@ var _App2 = _interopRequireDefault(_App);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Export your top level component as JSX (for static rendering)
+// export default App;
 function WrappedApp(p) {
   return _react2.default.createElement(
     _reactStatic.Router,
@@ -322,14 +323,6 @@ if (typeof document !== "undefined") {
   // Render!
   render(_App2.default);
 }
-
-// ReactDOM.render(
-//   <Router>
-//     <App />
-//   </Router>,
-//   document.getElementById('root'),
-// );
-//
 
 /***/ }),
 /* 9 */
@@ -441,13 +434,11 @@ var App = function (_React$Component) {
     value: function render() {
       var side;
       var pathname;
-      console.log("App Rerender!");
       // var Router = (p)=><BrowserRouter>{p.children}</BrowserRouter>;
       if (this.state.client) {
         //Set Router
         // var Router = (p)=><BrowserRouter>{p.children}</BrowserRouter>;
         //Deal with pathname and sides
-        console.log("client!");
         pathname = window.location.pathname;
         switch (pathname) {
           case "/engineer":
@@ -1986,4 +1977,4 @@ module.exports = __webpack_require__.p + "static/right.13b4b995.png";
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.3baca2b9.js.map
+//# sourceMappingURL=static.c6090516.js.map
