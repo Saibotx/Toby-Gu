@@ -67,7 +67,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "https://saibotx.github.io/TobyGu/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 8);
@@ -1977,4 +1977,4 @@ module.exports = __webpack_require__.p + "static/right.13b4b995.png";
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.c6090516.js.map
+//# sourceMappingURL=static.a211e2b5.js.map
