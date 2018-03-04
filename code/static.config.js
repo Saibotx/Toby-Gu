@@ -4,10 +4,10 @@ import React from "react";
 export default {
   siteRoot: "https://saibotx.github.io/",
   paths: {
-    src: 'src', // The source directory. Must include an index.js entry file.
-    dist: 'docs', // The production output directory.
-    devDist: 'dist', // The development scratch directory.
-    public: 'public', // The public directory (files copied to dist during build)
+    src: "src", // The source directory. Must include an index.js entry file.
+    dist: "docs", // The production output directory.
+    devDist: "dist", // The development scratch directory.
+    public: "public" // The public directory (files copied to dist during build)
   },
   Document: class CustomHtml extends React.Component {
     render() {
@@ -23,15 +23,23 @@ export default {
               name="viewport"
               content="width=device-width, initial-scale=1"
             />
+            <link
+              href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/////1////9f////X////1////9f////UAAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////9f////X////1////9f////X////1////9f////X////1AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAA//////UAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA//////X////1AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAD/////9QAAAP/////1AAAA//////8AAAD//////wAAAP8AAAD/////9f////UAAAD/AAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP//////AAAA/wAAAP/////1////9QAAAP8AAAAAAAAAAAAAAP///////////wAAAP8AAAD/////////////////AAAA/wAAAP8AAAD/////9QAAAP/////1AAAA/wAAAAAAAAD//////////////////////wAAAP//////////////////////////9QAAAP8AAAD/////9QAAAP8AAAD///////////8AAAD/AAAA/////////////////wAAAP8AAAD//////wAAAP8AAAD/////9f////UAAAD/AAAA//////8AAAD/AAAA/wAAAP//////AAAA/wAAAP8AAAD/AAAA///////////1////9f////UAAAD/AAAAAAAAAAAAAAD/////////////////////////////////////////////////////9f////UAAAD/AAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////////////////X////1AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAIH/AAAAPwAAAA8AAAAHAACAAwAAgAEAAIAAAACAAAAAAAAAAAABAACAAwAAgAMAAMAHAAD//wAA//8AAA=="
+              rel="icon"
+              type="image/x-icon"
+            />
             <title>Toby Gu</title>
-            <meta name="description" content="Toby Gu - Senior Software Engineer, Designer, Front End Lead Developer. Photographer, Entrepreneur & world Traveller"/>
+            <meta
+              name="description"
+              content="Toby Gu - Senior Software Engineer, Designer, Front End Lead Developer. Photographer, Entrepreneur & world Traveller"
+            />
             {renderMeta.styleTags}
             {/* <script dangerouslySetInnerHTML={{ __html: script1 }} /> */}
             {/* <script dangerouslySetInnerHTML={{ __html: script2 }} /> */}
             {/* <script async defer src="https://apis.google.com/js/api.js" /> */}
             {/* <script src="https://www.paypalobjects.com/api/checkout.js" /> */}
           </Head>
-          <Body style={{margin:0}}>{children}</Body>
+          <Body style={{ margin: 0 }}>{children}</Body>
         </Html>
       );
     }
