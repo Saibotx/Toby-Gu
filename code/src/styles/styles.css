@@ -1,0 +1,43 @@
+html, body, div, span, a, p, ul, li, h1, code, nav {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: inherit;
+  text-decoration: inherit;
+  text-align: inherit;
+  color: inherit;
+  background: transparent;
+}
+
+* {font-family: Arial, Helvetica, sans-serif}
+
+
+/*pass window height (w/o scroll bars) down to react app, note can't use vh becasue that
+includes scroll bars and mobile browser footer, etc so doesn't give viewable area*/
+html, body { height: 100%; }
+html { background-color: white }
+#root { background-color: #F0F0F0; min-height: 100%; }
+
+/*required for IE/Edge to be compatible with left:50vw & transform:translate(-50%, 0),
+otherwise there is a phantom div on the right side of the screen (from the left:50vw),
+that the window will scroll to. Note the left:50vw and transform is used to center content
+horizaontally based on vw to prevent content jump when vertical scroll bar show/hide.*/
+body { overflow-x: hidden; }
+
+/*Default font sizes*/
+h1 { font-size: 4.5em; margin-bottom:20px; }
+h2 { font-size: 2.4em; margin-top:20px; margin-bottom:20px}
+h3 { font-size: 1.4em; margin-bottom:10px }
+h4 { font-size: 1em; margin-top:10px; margin-bottom:10px; font-weight:300 }
+h5 { font-size: .83em; }
+h6 { font-size: .75em; }
+
+@media (max-width: 550px){
+  h1 { font-size: 3em; margin-bottom:15px; }
+  h2 { font-size: 1.8em; margin-top:10px; margin-bottom:10px}
+  h3 { font-size: 1em; margin-bottom:5px }
+  h4 { font-size: 0.8em; margin-top:5px; margin-bottom:5px; font-weight:300 }
+  h5 { font-size: .7em; }
+  h6 { font-size: .6em; }
+  p { font-size: 0.7em; }
+};

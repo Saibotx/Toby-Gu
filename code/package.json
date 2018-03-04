@@ -1,0 +1,30 @@
+{
+  "name": "react-static-example-basic",
+  "version": "1.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "react-static start",
+    "stage": "react-static build --staging",
+    "build": "react-static build",
+    "serve": "serve docs -p 3000"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "emotion": "^8.0.10",
+    "react": "^16.0.0",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-dom": "^16.0.0",
+    "react-emotion": "^8.0.10",
+    "react-hot-loader": "^4.0.0-beta.21",
+    "react-image-gallery": "^0.8.6",
+    "react-router": "^4.2.0",
+    "react-springy-parallax": "^1.2.0",
+    "react-static": "^5.3.4",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "eslint-config-react-tools": "1.x.x",
+    "serve": "^6.1.0"
+  }
+}
