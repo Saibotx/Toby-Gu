@@ -4,6 +4,7 @@ import React from "react";
 export default {
   // siteRoot: "https://saibotx.github.io/anata-react-static/",
   paths: {
+    siteRoot: "https://saibotx.github.io/TobyGu/",
     src: 'src', // The source directory. Must include an index.js entry file.
     dist: 'docs', // The production output directory.
     devDist: 'dist', // The development scratch directory.
