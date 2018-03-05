@@ -6,7 +6,7 @@ const _Button = styled('button')`
   cursor: pointer;
   border-radius: 10px;
   background-color: rgba(0,0,0,0);
-  margin-top:10px
+  margin-top:10px;
   color: ${props => props.color == 'dark' ? 'rgb(73,73,73)' : 'white'};
   border-color: ${props => props.color == 'dark' ? 'rgb(73,73,73)' : 'white'};
   width:${props=>props.small ? '130px' : '175px'};

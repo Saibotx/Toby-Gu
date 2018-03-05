@@ -102,7 +102,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  cursor: pointer;\n  border-radius: 10px;\n  background-color: rgba(0,0,0,0);\n  margin-top:10px\n  color: ', ';\n  border-color: ', ';\n  width:', ';\n  font-size: ', ';\n  padding: ', ';\n  @media (max-width: 550px){\n    width:', ';\n    font-size: ', ';\n    padding: ', ';\n  }\n  font-weight: 200;\n  border-width: 2px;\n  transition: all 0.2s;\n  ', '\n\n  &:hover{\n    background-color: ', ';\n  }\n  &:active{\n    background-color: ', ';\n    }\n  }\n'], ['\n  cursor: pointer;\n  border-radius: 10px;\n  background-color: rgba(0,0,0,0);\n  margin-top:10px\n  color: ', ';\n  border-color: ', ';\n  width:', ';\n  font-size: ', ';\n  padding: ', ';\n  @media (max-width: 550px){\n    width:', ';\n    font-size: ', ';\n    padding: ', ';\n  }\n  font-weight: 200;\n  border-width: 2px;\n  transition: all 0.2s;\n  ', '\n\n  &:hover{\n    background-color: ', ';\n  }\n  &:active{\n    background-color: ', ';\n    }\n  }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  cursor: pointer;\n  border-radius: 10px;\n  background-color: rgba(0,0,0,0);\n  margin-top:10px;\n  color: ', ';\n  border-color: ', ';\n  width:', ';\n  font-size: ', ';\n  padding: ', ';\n  @media (max-width: 550px){\n    width:', ';\n    font-size: ', ';\n    padding: ', ';\n  }\n  font-weight: 200;\n  border-width: 2px;\n  transition: all 0.2s;\n  ', '\n\n  &:hover{\n    background-color: ', ';\n  }\n  &:active{\n    background-color: ', ';\n    }\n  }\n'], ['\n  cursor: pointer;\n  border-radius: 10px;\n  background-color: rgba(0,0,0,0);\n  margin-top:10px;\n  color: ', ';\n  border-color: ', ';\n  width:', ';\n  font-size: ', ';\n  padding: ', ';\n  @media (max-width: 550px){\n    width:', ';\n    font-size: ', ';\n    padding: ', ';\n  }\n  font-weight: 200;\n  border-width: 2px;\n  transition: all 0.2s;\n  ', '\n\n  &:hover{\n    background-color: ', ';\n  }\n  &:active{\n    background-color: ', ';\n    }\n  }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -2134,4 +2134,4 @@ module.exports = __webpack_require__.p + "static/right.13b4b995.png";
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.002bcc7f.js.map
+//# sourceMappingURL=static.7363c263.js.map
