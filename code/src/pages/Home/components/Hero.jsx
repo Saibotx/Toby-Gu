@@ -90,8 +90,6 @@ const HeroSvg = styled(Svg)`
     @media (max-width:1200px) and (min-height:800px ) and (max-height: 500px){
       display: none;
     }
-
-
 `
 
 const _HeroContainer = styled("div")`

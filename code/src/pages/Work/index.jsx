@@ -1,7 +1,9 @@
+//Import Packages
 import React from "react";
 import Parallax from "react-springy-parallax";
-import styled from "react-emotion";
+import styled, { css } from "react-emotion";
 
+//Import Assets
 import stars from "assets/stars.png";
 import satellite4 from "assets/satellite4.svg";
 
@@ -12,18 +14,18 @@ import applyboardSchool from "assets/applyboardSchool.png";
 import applyboardSearch from "assets/applyboardSearch.png";
 import applyboardEligibility from "assets/applyboardEligibility.png";
 
+//Import Core
+import _Button from "core/Button.jsx";
+
 //Import Components
 import BackgroundClouds from "./components/BackgroundClouds";
 import Badges from "./components/Badges";
-
-// const url = (name, wrap = false) => `${wrap ? ' : ''uild/assets/${name}.svg${wrap ? ')' : ''}`;
 
 const _Container = styled("div")`
   z-index: 5;
   height: 100vh;
   position: fixed;
   width: 100vw;
-  ${'' /* background-color: lightgrey; */}
 `;
 const _FloatingCont = styled("div")`
   width: 100vw;
@@ -61,20 +63,31 @@ const ParallaxFlex = styled(Parallax.Layer)`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 90%;
   @media (max-width: 550px) {
     flex-direction: column;
     justify-content: center;
   }
 `;
 
-const BrowserWindowImg = styled("img")`
-  width: ${props => (props.main ? "60%" : "40%")};
+const PFlexCont = styled("div")`
+  width: calc(90%-40px);
+  padding-right: 40px;
+`;
+
+const BrowserWindow = styled('div')`
+  width: ${props=>props.main ? '50%' : '35%' };
+  text-align: center;
   @media (max-width: 550px) {
     width: 75%;
     padding: 10% 0 10% 0;
     ${props => props.main && `width:90%;`};
   }
+`;
+
+const workText = css`
+  color: white;
+  opacity: 1;
+  text-shadow: 0px 0px 8px black;
 `;
 
 export default class WorkPortfolio extends React.Component {
@@ -95,9 +108,7 @@ export default class WorkPortfolio extends React.Component {
             speed={1}
             style={{ backgroundColor: "#87BCDE" }}
           />
-
           {BackgroundClouds}
-
           <Parallax.Layer
             offset={1}
             speed={1}
@@ -121,11 +132,38 @@ export default class WorkPortfolio extends React.Component {
           />
           {Badges}
           <ParallaxFlex offset={1} speed={0.1}>
-            <BrowserWindowImg src={applyboardSchool} />
-            <BrowserWindowImg src={applyboardEligibility} />
+            <BrowserWindow>
+            <img
+              // className={browserWindow}
+              src={applyboardSchool}
+              style={{ width: "100%" }}
+            />
+            </BrowserWindow>
+            <BrowserWindow>
+            <img
+              // className={browserWindow}
+              src={applyboardEligibility}
+              style={{ width: "100%" }}
+            />
+            </BrowserWindow>
           </ParallaxFlex>
           <ParallaxFlex offset={1} speed={-0.1}>
-            <BrowserWindowImg main src={applyboardSearch} />
+            <BrowserWindow main style={{ marginTop: "10vh" }}>
+              <img style={{ width: "100%" }} src={applyboardSearch} />
+
+              <h3 className={workText}>
+                Lead Front Engineer && UX/UI Designer
+              </h3>
+              <h4 className={workText}>
+                Applyboard allows international students find & apply to their
+                dream universities in 60 seconds flat. During my time leading
+                the front end team, we rebuilt the school/program search and
+                landing pages to improve UX, user retention, feel and speed.
+                (some of which have slow internet.)<br /> Oh yeah, I also did
+                some hiring and management 😇
+              </h4>
+              <_Button color="light">See Live</_Button>
+            </BrowserWindow>
           </ParallaxFlex>
         </Parallax>
       </_Container>
