@@ -63,19 +63,14 @@ const ParallaxFlex = styled(Parallax.Layer)`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  @media (max-width: 550px) {
+  ${"" /* width: calc(100% - 30px); */} @media (max-width: 550px) {
     flex-direction: column;
     justify-content: center;
   }
 `;
 
-const PFlexCont = styled("div")`
-  width: calc(90%-40px);
-  padding-right: 40px;
-`;
-
-const BrowserWindow = styled('div')`
-  width: ${props=>props.main ? '50%' : '35%' };
+const BrowserWindow = styled("div")`
+  width: ${props => (props.main ? "50%" : "40%")};
   text-align: center;
   @media (max-width: 550px) {
     width: 75%;
@@ -99,7 +94,14 @@ export default class WorkPortfolio extends React.Component {
     return (
       <_Container>
         <_FloatingCont>
-          <h1 style={{ marginTop: 10 }}> {"< Developer >"} </h1>
+          <h1
+            style={{
+              marginTop: 10,
+              fontSize: "2.7em"
+            }}
+          >
+            {"< Developer >"}
+          </h1>
           <_PButton> P </_PButton>
         </_FloatingCont>
         <Parallax pages={4} ref={ref => (this.parallax = ref)}>
@@ -133,24 +135,24 @@ export default class WorkPortfolio extends React.Component {
           {Badges}
           <ParallaxFlex offset={1} speed={0.1}>
             <BrowserWindow>
-            <img
-              // className={browserWindow}
-              src={applyboardSchool}
-              style={{ width: "100%" }}
-            />
+              <img
+                // className={browserWindow}
+                src={applyboardSchool}
+                style={{ width: "100%" }}
+              />
             </BrowserWindow>
             <BrowserWindow>
-            <img
-              // className={browserWindow}
-              src={applyboardEligibility}
-              style={{ width: "100%" }}
-            />
+              <img
+                // className={browserWindow}
+                src={applyboardEligibility}
+                style={{ width: "100%" }}
+              />
             </BrowserWindow>
           </ParallaxFlex>
-          <ParallaxFlex offset={1} speed={-0.1}>
-            <BrowserWindow main style={{ marginTop: "10vh" }}>
-              <img style={{ width: "100%" }} src={applyboardSearch} />
 
+          <ParallaxFlex offset={1} speed={-0.1}>
+            <BrowserWindow main>
+              <img style={{ width: "100%" }} src={applyboardSearch} />
               <h3 className={workText}>
                 Lead Front Engineer && UX/UI Designer
               </h3>
@@ -158,11 +160,15 @@ export default class WorkPortfolio extends React.Component {
                 Applyboard allows international students find & apply to their
                 dream universities in 60 seconds flat. During my time leading
                 the front end team, we rebuilt the school/program search and
-                landing pages to improve UX, user retention, feel and speed.
-                (some of which have slow internet.)<br /> Oh yeah, I also did
-                some hiring and management 😇
+                institution pages to improve UX, user retention, click-through,
+                feel and speed.
+                <br /> Oh yeah, I also did some hiring and management 😇
               </h4>
-              <_Button color="light">See Live</_Button>
+              <a target="_blank" href="http://applyboard.com/schools">
+                <_Button shadow color="light">
+                  See Live
+                </_Button>
+              </a>
             </BrowserWindow>
           </ParallaxFlex>
         </Parallax>

@@ -67,7 +67,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "https://saibotx.github.io/";
+/******/ 	__webpack_require__.p = "http://tobygu.com/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 8);
@@ -102,7 +102,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  border-radius: 10px;\n  background-color: rgba(0,0,0,0);\n\n  margin-top:10px\n  color: ', ';\n  border-color: ', ';\n  width:', ';\n  font-size: ', ';\n  padding: ', ';\n  @media (max-width: 550px){\n    width:', ';\n    font-size: ', ';\n    padding: ', ';\n  }\n  font-weight: 200;\n  border-width: 2px;\n  transition: all 0.2s;\n  &:hover{\n    background-color: ', ';\n  }\n  &:active{\n    background-color: ', ';\n    }\n  }\n'], ['\n  border-radius: 10px;\n  background-color: rgba(0,0,0,0);\n\n  margin-top:10px\n  color: ', ';\n  border-color: ', ';\n  width:', ';\n  font-size: ', ';\n  padding: ', ';\n  @media (max-width: 550px){\n    width:', ';\n    font-size: ', ';\n    padding: ', ';\n  }\n  font-weight: 200;\n  border-width: 2px;\n  transition: all 0.2s;\n  &:hover{\n    background-color: ', ';\n  }\n  &:active{\n    background-color: ', ';\n    }\n  }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  cursor: pointer;\n  border-radius: 10px;\n  background-color: rgba(0,0,0,0);\n  margin-top:10px\n  color: ', ';\n  border-color: ', ';\n  width:', ';\n  font-size: ', ';\n  padding: ', ';\n  @media (max-width: 550px){\n    width:', ';\n    font-size: ', ';\n    padding: ', ';\n  }\n  font-weight: 200;\n  border-width: 2px;\n  transition: all 0.2s;\n  ', '\n\n  &:hover{\n    background-color: ', ';\n  }\n  &:active{\n    background-color: ', ';\n    }\n  }\n'], ['\n  cursor: pointer;\n  border-radius: 10px;\n  background-color: rgba(0,0,0,0);\n  margin-top:10px\n  color: ', ';\n  border-color: ', ';\n  width:', ';\n  font-size: ', ';\n  padding: ', ';\n  @media (max-width: 550px){\n    width:', ';\n    font-size: ', ';\n    padding: ', ';\n  }\n  font-weight: 200;\n  border-width: 2px;\n  transition: all 0.2s;\n  ', '\n\n  &:hover{\n    background-color: ', ';\n  }\n  &:active{\n    background-color: ', ';\n    }\n  }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -132,6 +132,8 @@ var _Button = (0, _reactEmotion2.default)('button')(_templateObject, function (p
   return props.small ? '0.8em' : '1em';
 }, function (props) {
   return props.small ? '3px 5px 3px 5px' : '10px 15px 10px 15px';
+}, function (props) {
+  return props.shadow && 'text-shadow: 0px 0px 8px ' + (props.color == 'dark' ? 'white' : 'black') + ';\n    box-shadow: 0px 0px 3px ' + (props.color == 'dark' ? 'white' : 'black') + ';';
 }, function (props) {
   return props.whiteBg ? 'rgba(255,255,255,0.75)' : 'rgba(213, 217, 255,0.75)';
 }, function (props) {
@@ -572,7 +574,7 @@ var _templateObject = _taggedTemplateLiteral(["\n  color: white;\n  max-width: 6
     _templateObject4 = _taggedTemplateLiteral(["\n  color: #f7cb99;\n  display: inline;\n"], ["\n  color: #f7cb99;\n  display: inline;\n"]),
     _templateObject5 = _taggedTemplateLiteral(["\n  position: relative;\n  left: 50%;\n  white-space: nowrap;\n  width: 600px;\n  transform: translate(-50%);\n"], ["\n  position: relative;\n  left: 50%;\n  white-space: nowrap;\n  width: 600px;\n  transform: translate(-50%);\n"]),
     _templateObject6 = _taggedTemplateLiteral(["\n  text-shadow: 2px 2px 10px #000;\n"], ["\n  text-shadow: 2px 2px 10px #000;\n"]),
-    _templateObject7 = _taggedTemplateLiteral(["\n  width:11vw;\n  @media (max-width:1400px){\n    width:12vw;\n  }\n  @media (max-width:1200px){\n    width:14vw;\n  }\n    @media (max-width:1200px) and (max-height: 600px ){\n      width:10vw;\n    }\n    @media (max-width:1200px) and (min-height:800px ) and (max-height: 500px){\n      display: none;\n    }\n\n\n"], ["\n  width:11vw;\n  @media (max-width:1400px){\n    width:12vw;\n  }\n  @media (max-width:1200px){\n    width:14vw;\n  }\n    @media (max-width:1200px) and (max-height: 600px ){\n      width:10vw;\n    }\n    @media (max-width:1200px) and (min-height:800px ) and (max-height: 500px){\n      display: none;\n    }\n\n\n"]),
+    _templateObject7 = _taggedTemplateLiteral(["\n  width:11vw;\n  @media (max-width:1400px){\n    width:12vw;\n  }\n  @media (max-width:1200px){\n    width:14vw;\n  }\n    @media (max-width:1200px) and (max-height: 600px ){\n      width:10vw;\n    }\n    @media (max-width:1200px) and (min-height:800px ) and (max-height: 500px){\n      display: none;\n    }\n"], ["\n  width:11vw;\n  @media (max-width:1400px){\n    width:12vw;\n  }\n  @media (max-width:1200px){\n    width:14vw;\n  }\n    @media (max-width:1200px) and (max-height: 600px ){\n      width:10vw;\n    }\n    @media (max-width:1200px) and (min-height:800px ) and (max-height: 500px){\n      display: none;\n    }\n"]),
     _templateObject8 = _taggedTemplateLiteral(["\n  height:93vh;\n  padding-top: 2px;\n  width:100%;\n  position:relative;\n  background-size: cover;\n  background-image: url('", "');\n  background-attachment: fixed;\n  background-position: center top;\n"], ["\n  height:93vh;\n  padding-top: 2px;\n  width:100%;\n  position:relative;\n  background-size: cover;\n  background-image: url('", "');\n  background-attachment: fixed;\n  background-position: center top;\n"]),
     _templateObject9 = _taggedTemplateLiteral(["\n  @media (max-width: 550px) {\n    display: none;\n  }\n  position: fixed;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 0;\n  width: 100vw;\n  height: 57vw;\n  min-height: 92vh;\n  min-width: 161vh;\n"], ["\n  @media (max-width: 550px) {\n    display: none;\n  }\n  position: fixed;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 0;\n  width: 100vw;\n  height: 57vw;\n  min-height: 92vh;\n  min-width: 161vh;\n"]),
     _templateObject10 = _taggedTemplateLiteral(["\n  left: 20%;\n  top: 40%;\n  position: absolute;\n  color: white;\n"], ["\n  left: 20%;\n  top: 40%;\n  position: absolute;\n  color: white;\n"]);
@@ -909,11 +911,12 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(["\n  z-index: 5;\n  height: 100vh;\n  position: fixed;\n  width: 100vw;\n  ", "\n"], ["\n  z-index: 5;\n  height: 100vh;\n  position: fixed;\n  width: 100vw;\n  ", "\n"]),
+var _templateObject = _taggedTemplateLiteral(["\n  z-index: 5;\n  height: 100vh;\n  position: fixed;\n  width: 100vw;\n"], ["\n  z-index: 5;\n  height: 100vh;\n  position: fixed;\n  width: 100vw;\n"]),
     _templateObject2 = _taggedTemplateLiteral(["\n  width: 100vw;\n  z-index: 10;\n  text-align: center;\n  position: fixed;\n"], ["\n  width: 100vw;\n  z-index: 10;\n  text-align: center;\n  position: fixed;\n"]),
     _templateObject3 = _taggedTemplateLiteral(["\n  position:fixed;\n  left:100%;\n  top:50%;\n  transform:translate(-130%);\n  border-width: 3px;\n  padding:10px;\n  @media (max-width:550px){\n    padding:5px;\n  }\n  border-color: black;\n  color:black;\n  background-color: transparent;\n  font-size: 1.4em;\n  font-weight: 700;\n  &:hover{\n    background-color: grey\n    color:white;\n    border-color: transparent;\n  }\n  &:active{\n    background-color: black;\n  }\n"], ["\n  position:fixed;\n  left:100%;\n  top:50%;\n  transform:translate(-130%);\n  border-width: 3px;\n  padding:10px;\n  @media (max-width:550px){\n    padding:5px;\n  }\n  border-color: black;\n  color:black;\n  background-color: transparent;\n  font-size: 1.4em;\n  font-weight: 700;\n  &:hover{\n    background-color: grey\n    color:white;\n    border-color: transparent;\n  }\n  &:active{\n    background-color: black;\n  }\n"]),
-    _templateObject4 = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n  width: 90%;\n  @media (max-width: 550px) {\n    flex-direction: column;\n    justify-content: center;\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n  width: 90%;\n  @media (max-width: 550px) {\n    flex-direction: column;\n    justify-content: center;\n  }\n"]),
-    _templateObject5 = _taggedTemplateLiteral(["\n  width: ", ";\n  @media (max-width: 550px) {\n    width: 75%;\n    padding: 10% 0 10% 0;\n    ", ";\n  }\n"], ["\n  width: ", ";\n  @media (max-width: 550px) {\n    width: 75%;\n    padding: 10% 0 10% 0;\n    ", ";\n  }\n"]);
+    _templateObject4 = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n  ", " @media (max-width: 550px) {\n    flex-direction: column;\n    justify-content: center;\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n  ", " @media (max-width: 550px) {\n    flex-direction: column;\n    justify-content: center;\n  }\n"]),
+    _templateObject5 = _taggedTemplateLiteral(["\n  width: ", ";\n  text-align: center;\n  @media (max-width: 550px) {\n    width: 75%;\n    padding: 10% 0 10% 0;\n    ", ";\n  }\n"], ["\n  width: ", ";\n  text-align: center;\n  @media (max-width: 550px) {\n    width: 75%;\n    padding: 10% 0 10% 0;\n    ", ";\n  }\n"]),
+    _templateObject6 = _taggedTemplateLiteral(["\n  color: white;\n  opacity: 1;\n  text-shadow: 0px 0px 8px black;\n"], ["\n  color: white;\n  opacity: 1;\n  text-shadow: 0px 0px 8px black;\n"]);
 
 var _react = __webpack_require__(0);
 
@@ -955,6 +958,10 @@ var _applyboardEligibility = __webpack_require__(25);
 
 var _applyboardEligibility2 = _interopRequireDefault(_applyboardEligibility);
 
+var _Button2 = __webpack_require__(3);
+
+var _Button3 = _interopRequireDefault(_Button2);
+
 var _BackgroundClouds = __webpack_require__(26);
 
 var _BackgroundClouds2 = _interopRequireDefault(_BackgroundClouds);
@@ -971,25 +978,32 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); } //Import Packages
+
+
+//Import Assets
+
+
+//Import Core
+
 
 //Import Components
 
 
-// const url = (name, wrap = false) => `${wrap ? ' : ''uild/assets/${name}.svg${wrap ? ')' : ''}`;
-
-var _Container = (0, _reactEmotion2.default)("div")(_templateObject, '' /* background-color: lightgrey; */);
+var _Container = (0, _reactEmotion2.default)("div")(_templateObject);
 var _FloatingCont = (0, _reactEmotion2.default)("div")(_templateObject2);
 
 var _PButton = (0, _reactEmotion2.default)("button")(_templateObject3);
 
-var ParallaxFlex = (0, _reactEmotion2.default)(_reactSpringyParallax2.default.Layer)(_templateObject4);
+var ParallaxFlex = (0, _reactEmotion2.default)(_reactSpringyParallax2.default.Layer)(_templateObject4, "" /* width: calc(100% - 30px); */);
 
-var BrowserWindowImg = (0, _reactEmotion2.default)("img")(_templateObject5, function (props) {
-  return props.main ? "60%" : "40%";
+var BrowserWindow = (0, _reactEmotion2.default)("div")(_templateObject5, function (props) {
+  return props.main ? "50%" : "40%";
 }, function (props) {
   return props.main && "width:90%;";
 });
+
+var workText = (0, _reactEmotion.css)(_templateObject6);
 
 var WorkPortfolio = function (_React$Component) {
   _inherits(WorkPortfolio, _React$Component);
@@ -1013,10 +1027,13 @@ var WorkPortfolio = function (_React$Component) {
           null,
           _react2.default.createElement(
             "h1",
-            { style: { marginTop: 10 } },
-            " ",
-            "< Developer >",
-            " "
+            {
+              style: {
+                marginTop: 10,
+                fontSize: "2.7em"
+              }
+            },
+            "< Developer >"
           ),
           _react2.default.createElement(
             _PButton,
@@ -1059,13 +1076,54 @@ var WorkPortfolio = function (_React$Component) {
           _react2.default.createElement(
             ParallaxFlex,
             { offset: 1, speed: 0.1 },
-            _react2.default.createElement(BrowserWindowImg, { src: _applyboardSchool2.default }),
-            _react2.default.createElement(BrowserWindowImg, { src: _applyboardEligibility2.default })
+            _react2.default.createElement(
+              BrowserWindow,
+              null,
+              _react2.default.createElement("img", {
+                // className={browserWindow}
+                src: _applyboardSchool2.default,
+                style: { width: "100%" }
+              })
+            ),
+            _react2.default.createElement(
+              BrowserWindow,
+              null,
+              _react2.default.createElement("img", {
+                // className={browserWindow}
+                src: _applyboardEligibility2.default,
+                style: { width: "100%" }
+              })
+            )
           ),
           _react2.default.createElement(
             ParallaxFlex,
             { offset: 1, speed: -0.1 },
-            _react2.default.createElement(BrowserWindowImg, { main: true, src: _applyboardSearch2.default })
+            _react2.default.createElement(
+              BrowserWindow,
+              { main: true },
+              _react2.default.createElement("img", { style: { width: "100%" }, src: _applyboardSearch2.default }),
+              _react2.default.createElement(
+                "h3",
+                { className: workText },
+                "Lead Front Engineer && UX/UI Designer"
+              ),
+              _react2.default.createElement(
+                "h4",
+                { className: workText },
+                "Applyboard allows international students find & apply to their dream universities in 60 seconds flat. During my time leading the front end team, we rebuilt the school/program search and institution pages to improve UX, user retention, click-through, feel and speed.",
+                _react2.default.createElement("br", null),
+                " Oh yeah, I also did some hiring and management \uD83D\uDE07"
+              ),
+              _react2.default.createElement(
+                "a",
+                { target: "_blank", href: "http://applyboard.com/schools" },
+                _react2.default.createElement(
+                  _Button3.default,
+                  { shadow: true, color: "light" },
+                  "See Live"
+                )
+              )
+            )
           )
         )
       );
@@ -2076,4 +2134,4 @@ module.exports = __webpack_require__.p + "static/right.13b4b995.png";
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.2388cbf7.js.map
+//# sourceMappingURL=static.002bcc7f.js.map

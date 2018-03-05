@@ -3,9 +3,9 @@ import React from 'react';
 import styled, { css } from 'react-emotion';
 
 const _Button = styled('button')`
+  cursor: pointer;
   border-radius: 10px;
   background-color: rgba(0,0,0,0);
-
   margin-top:10px
   color: ${props => props.color == 'dark' ? 'rgb(73,73,73)' : 'white'};
   border-color: ${props => props.color == 'dark' ? 'rgb(73,73,73)' : 'white'};
@@ -20,6 +20,11 @@ const _Button = styled('button')`
   font-weight: 200;
   border-width: 2px;
   transition: all 0.2s;
+  ${props => props.shadow && (
+    `text-shadow: 0px 0px 8px ${props.color == 'dark' ? 'white' : 'black'};
+    box-shadow: 0px 0px 3px ${props.color == 'dark' ? 'white' : 'black'};`
+    )}
+
   &:hover{
     background-color: ${props=>props.whiteBg ?
       'rgba(255,255,255,0.75)' : 'rgba(213, 217, 255,0.75)'};
