@@ -2,6 +2,7 @@
 import React from "react";
 import Parallax from "react-springy-parallax";
 import styled, { css } from "react-emotion";
+import {withRouter} from 'react-static';
 
 //Import Assets
 import stars from "assets/stars.png";
@@ -70,7 +71,7 @@ const ParallaxFlex = styled(Parallax.Layer)`
 `;
 
 const BrowserWindow = styled("div")`
-  width: ${props => (props.main ? "50%" : "40%")};
+  width: ${props => (props.main ? "50%" : "38%")};
   text-align: center;
   @media (max-width: 550px) {
     width: 75%;
@@ -85,12 +86,14 @@ const workText = css`
   text-shadow: 0px 0px 8px black;
 `;
 
-export default class WorkPortfolio extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+//Sections:
+// RageON
+// Applyboard
+// AnataMassage
+// OkeyLabs
+// ReportOn!
 
-  render() {
+function WorkPortfolio(props){
     return (
       <_Container>
         <_FloatingCont>
@@ -102,9 +105,11 @@ export default class WorkPortfolio extends React.Component {
           >
             {"< Developer >"}
           </h1>
-          <_PButton> P </_PButton>
+          <_PButton onClick={()=>{
+            props.history.push('/',{ scrollTop: 1000});
+          }}> P </_PButton>
         </_FloatingCont>
-        <Parallax pages={4} ref={ref => (this.parallax = ref)}>
+        <Parallax pages={4}>
           <Parallax.Layer
             offset={3}
             speed={1}
@@ -136,14 +141,12 @@ export default class WorkPortfolio extends React.Component {
           <ParallaxFlex offset={1} speed={0.1}>
             <BrowserWindow>
               <img
-                // className={browserWindow}
                 src={applyboardSchool}
                 style={{ width: "100%" }}
               />
             </BrowserWindow>
             <BrowserWindow>
               <img
-                // className={browserWindow}
                 src={applyboardEligibility}
                 style={{ width: "100%" }}
               />
@@ -175,4 +178,4 @@ export default class WorkPortfolio extends React.Component {
       </_Container>
     );
   }
-}
+export default withRouter(WorkPortfolio);

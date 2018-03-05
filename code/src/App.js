@@ -1,8 +1,9 @@
 //Import Packages
 import React from "react";
 // import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
-import { Router, Link, Route, Switch } from 'react-static';
+import { Router, Link, Route, Switch } from "react-static";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import { withRouter } from "react-static";
 
 //Import Pages
 import Home from "./pages/Home";
@@ -30,7 +31,7 @@ const Transition = props => {
   );
 };
 
-export default class App extends React.Component {
+class App extends React.Component {
   constructor() {
     super();
     this.state = {};
@@ -40,11 +41,20 @@ export default class App extends React.Component {
       client: true
     });
   }
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      if (this.props.location && this.props.location.pathname === "/") {
+        if (this.state.client) {
+          window.scrollTo(0, document.body.scrollHeight);
+        }
+      }
+    }
+  }
   render() {
     var side;
     var pathname;
     // var Router = (p)=><BrowserRouter>{p.children}</BrowserRouter>;
-    if (this.state.client){
+    if (this.state.client) {
       //Set Router
       // var Router = (p)=><BrowserRouter>{p.children}</BrowserRouter>;
       //Deal with pathname and sides
@@ -62,20 +72,22 @@ export default class App extends React.Component {
     }
 
     return (
-
-        <div style={{ position: "relative" }}>
-          {/* hacky way of dismounting home section with animation. acutal animation happens
+      <div style={{ position: "relative" }}>
+        {/* hacky way of dismounting home section with animation. acutal animation happens
           within the Home component.  */}
-          <Transition>{pathname == "/" && <Home client={this.state.client}/>}</Transition>
-          {/* sub pages */}
-          <Switch>
-            <Route path="/engineer" component={FadeIn(WorkPortfolio)} />
-            <Route path="/photographer" component={FadeIn(WorkPortfolio)} />
-          </Switch>
-          {/* background render depending on side */}
-          <SplitSection side={side} />
-        </div>
-
+        <Transition>
+          {pathname == "/" && <Home client={this.state.client} />}
+        </Transition>
+        {/* sub pages */}
+        <Switch>
+          <Route path="/engineer" component={FadeIn(WorkPortfolio)} />
+          <Route path="/photographer" component={FadeIn(WorkPortfolio)} />
+        </Switch>
+        {/* background render depending on side */}
+        <SplitSection side={side} />
+      </div>
     );
   }
 }
+
+export default withRouter(App);
