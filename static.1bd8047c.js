@@ -102,7 +102,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  cursor: pointer;\n  border-radius: 10px;\n  background-color: rgba(0,0,0,0);\n  margin-top:10px;\n  color: ', ';\n  border-color: ', ';\n  width:', ';\n  font-size: ', ';\n  padding: ', ';\n  @media (max-width: 550px){\n    width:', ';\n    font-size: ', ';\n    padding: ', ';\n  }\n  font-weight: 200;\n  border-width: 2px;\n  transition: all 0.2s;\n  ', '\n\n  &:hover{\n    background-color: ', ';\n  }\n  &:active{\n    background-color: ', ';\n    }\n  }\n'], ['\n  cursor: pointer;\n  border-radius: 10px;\n  background-color: rgba(0,0,0,0);\n  margin-top:10px;\n  color: ', ';\n  border-color: ', ';\n  width:', ';\n  font-size: ', ';\n  padding: ', ';\n  @media (max-width: 550px){\n    width:', ';\n    font-size: ', ';\n    padding: ', ';\n  }\n  font-weight: 200;\n  border-width: 2px;\n  transition: all 0.2s;\n  ', '\n\n  &:hover{\n    background-color: ', ';\n  }\n  &:active{\n    background-color: ', ';\n    }\n  }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  cursor: pointer;\n  border-radius: 10px;\n  border-style: solid;\n  background-color: rgba(0,0,0,0);\n  margin-top:10px;\n  color: ', ';\n  border-color: ', ';\n  width:', ';\n  font-size: ', ';\n  padding: ', ';\n  @media (max-width: 550px){\n    width:', ';\n    font-size: ', ';\n    padding: ', ';\n  }\n  font-weight: 200;\n  border-width: 2px;\n  transition: all 0.2s;\n  ', '\n\n  &:hover{\n    background-color: ', ';\n  }\n  &:active{\n    background-color: ', ';\n    }\n  }\n'], ['\n  cursor: pointer;\n  border-radius: 10px;\n  border-style: solid;\n  background-color: rgba(0,0,0,0);\n  margin-top:10px;\n  color: ', ';\n  border-color: ', ';\n  width:', ';\n  font-size: ', ';\n  padding: ', ';\n  @media (max-width: 550px){\n    width:', ';\n    font-size: ', ';\n    padding: ', ';\n  }\n  font-weight: 200;\n  border-width: 2px;\n  transition: all 0.2s;\n  ', '\n\n  &:hover{\n    background-color: ', ';\n  }\n  &:active{\n    background-color: ', ';\n    }\n  }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -432,6 +432,17 @@ var App = function (_React$Component) {
       });
     }
   }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      if (this.props.location !== prevProps.location) {
+        if (this.props.location && this.props.location.pathname === "/") {
+          if (this.state.client) {
+            window.scrollTo(0, document.body.scrollHeight);
+          }
+        }
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       var side;
@@ -476,7 +487,7 @@ var App = function (_React$Component) {
   return App;
 }(_react2.default.Component);
 
-exports.default = App;
+exports.default = (0, _reactStatic.withRouter)(App);
 
 /***/ }),
 /* 11 */
@@ -548,7 +559,7 @@ function Home(props) {
     null,
     _react2.default.createElement(
       _disspearingDiv,
-      { height: hidden ? "0vh" : "150vh" },
+      { height: hidden ? "0vh" : "200vh" },
       _react2.default.createElement(_Hero2.default, null),
       _react2.default.createElement(_Profile2.default, null)
     )
@@ -568,16 +579,16 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(["\n  color: white;\n  max-width: 600px;\n  ", " padding:0 10px 0 10px;\n  text-align: center;\n  margin: auto;\n  top: 65vh;\n  transform: translateY(-100%);\n  position: relative;\n  font-weight: 200;\n  z-index: 2;\n"], ["\n  color: white;\n  max-width: 600px;\n  ", " padding:0 10px 0 10px;\n  text-align: center;\n  margin: auto;\n  top: 65vh;\n  transform: translateY(-100%);\n  position: relative;\n  font-weight: 200;\n  z-index: 2;\n"]),
+var _templateObject = _taggedTemplateLiteral(["\n  color: white;\n  max-width: 600px;\n  ", " padding:0 10px 0 10px;\n  text-align: center;\n  margin: auto;\n  top: 65vh;\n  transform: translateY(-100%);\n  position: relative;\n  font-weight: 200;\n  z-index: 2;\n  text-shadow: 0px 0px 10px rgb(100, 100, 100);\n"], ["\n  color: white;\n  max-width: 600px;\n  ", " padding:0 10px 0 10px;\n  text-align: center;\n  margin: auto;\n  top: 65vh;\n  transform: translateY(-100%);\n  position: relative;\n  font-weight: 200;\n  z-index: 2;\n  text-shadow: 0px 0px 10px rgb(100, 100, 100);\n"]),
     _templateObject2 = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  flex-wrap: wrap;\n  max-width: 400px;\n  margin: auto;\n"], ["\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  flex-wrap: wrap;\n  max-width: 400px;\n  margin: auto;\n"]),
     _templateObject3 = _taggedTemplateLiteral(["\n  color: #c1c7fa;\n  display: inline;\n"], ["\n  color: #c1c7fa;\n  display: inline;\n"]),
     _templateObject4 = _taggedTemplateLiteral(["\n  color: #f7cb99;\n  display: inline;\n"], ["\n  color: #f7cb99;\n  display: inline;\n"]),
     _templateObject5 = _taggedTemplateLiteral(["\n  position: relative;\n  left: 50%;\n  white-space: nowrap;\n  width: 600px;\n  transform: translate(-50%);\n"], ["\n  position: relative;\n  left: 50%;\n  white-space: nowrap;\n  width: 600px;\n  transform: translate(-50%);\n"]),
-    _templateObject6 = _taggedTemplateLiteral(["\n  text-shadow: 2px 2px 10px #000;\n"], ["\n  text-shadow: 2px 2px 10px #000;\n"]),
-    _templateObject7 = _taggedTemplateLiteral(["\n  width:11vw;\n  @media (max-width:1400px){\n    width:12vw;\n  }\n  @media (max-width:1200px){\n    width:14vw;\n  }\n    @media (max-width:1200px) and (max-height: 600px ){\n      width:10vw;\n    }\n    @media (max-width:1200px) and (min-height:800px ) and (max-height: 500px){\n      display: none;\n    }\n"], ["\n  width:11vw;\n  @media (max-width:1400px){\n    width:12vw;\n  }\n  @media (max-width:1200px){\n    width:14vw;\n  }\n    @media (max-width:1200px) and (max-height: 600px ){\n      width:10vw;\n    }\n    @media (max-width:1200px) and (min-height:800px ) and (max-height: 500px){\n      display: none;\n    }\n"]),
+    _templateObject6 = _taggedTemplateLiteral([""], [""]),
+    _templateObject7 = _taggedTemplateLiteral(["\n  width: 11vw;\n  @media (max-width: 1400px) {\n    width: 12vw;\n  }\n  @media (max-width: 1200px) {\n    width: 14vw;\n  }\n  @media (max-width: 1200px) and (max-height: 900px){\n    width: 10vw;\n  }\n  @media (max-width: 1200px) and (max-height: 600px) {\n    width: 10vw;\n  }\n  @media (max-width: 1200px) and (min-height: 800px) and (max-height: 500px) {\n    display: none;\n  }\n\n"], ["\n  width: 11vw;\n  @media (max-width: 1400px) {\n    width: 12vw;\n  }\n  @media (max-width: 1200px) {\n    width: 14vw;\n  }\n  @media (max-width: 1200px) and (max-height: 900px){\n    width: 10vw;\n  }\n  @media (max-width: 1200px) and (max-height: 600px) {\n    width: 10vw;\n  }\n  @media (max-width: 1200px) and (min-height: 800px) and (max-height: 500px) {\n    display: none;\n  }\n\n"]),
     _templateObject8 = _taggedTemplateLiteral(["\n  height:93vh;\n  padding-top: 2px;\n  width:100%;\n  position:relative;\n  background-size: cover;\n  background-image: url('", "');\n  background-attachment: fixed;\n  background-position: center top;\n"], ["\n  height:93vh;\n  padding-top: 2px;\n  width:100%;\n  position:relative;\n  background-size: cover;\n  background-image: url('", "');\n  background-attachment: fixed;\n  background-position: center top;\n"]),
-    _templateObject9 = _taggedTemplateLiteral(["\n  @media (max-width: 550px) {\n    display: none;\n  }\n  position: fixed;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 0;\n  width: 100vw;\n  height: 57vw;\n  min-height: 92vh;\n  min-width: 161vh;\n"], ["\n  @media (max-width: 550px) {\n    display: none;\n  }\n  position: fixed;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 0;\n  width: 100vw;\n  height: 57vw;\n  min-height: 92vh;\n  min-width: 161vh;\n"]),
-    _templateObject10 = _taggedTemplateLiteral(["\n  left: 20%;\n  top: 40%;\n  position: absolute;\n  color: white;\n"], ["\n  left: 20%;\n  top: 40%;\n  position: absolute;\n  color: white;\n"]);
+    _templateObject9 = _taggedTemplateLiteral(["\n  @media (max-width: 600px) {\n    display: none;\n  }\n  @media (max-width: 710px) and (min-height:1000px) {\n    display: none;\n  }\n  position: fixed;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 0;\n  width: 100vw;\n  height: 57vw;\n  min-height: 92vh;\n  min-width: 161vh;\n"], ["\n  @media (max-width: 600px) {\n    display: none;\n  }\n  @media (max-width: 710px) and (min-height:1000px) {\n    display: none;\n  }\n  position: fixed;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 0;\n  width: 100vw;\n  height: 57vw;\n  min-height: 92vh;\n  min-width: 161vh;\n"]),
+    _templateObject10 = _taggedTemplateLiteral(["\n  left: 25%;\n  top: 40%;\n  position: absolute;\n  color: white;\n  @media (max-width: 800px) and (min-height: 900px){\n    left:27%;\n  }\n"], ["\n  left: 25%;\n  top: 40%;\n  position: absolute;\n  color: white;\n  @media (max-width: 800px) and (min-height: 900px){\n    left:27%;\n  }\n"]);
 
 exports.default = Hero;
 
@@ -671,7 +682,7 @@ var HeroText = function (_React$Component) {
         _react2.default.createElement(
           _SubTitle,
           null,
-          "Photographer, Entrepreneur & World Traveller"
+          "Photographer, Entrepreneur & Digital Nomad"
         ),
         _react2.default.createElement(
           _ButtonRow,
@@ -762,7 +773,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var HeroSvg = function HeroSvg(props) {
 	return _react2.default.createElement(
 		'svg',
-		{ className: props.className, viewBox: '0 0 284 157.3', style: _extends({}, props.style, { color: 'white' })
+		{ className: props.className, viewBox: '0 0 284 172.7', style: _extends({}, props.style, { color: 'white' })
 		},
 		_react2.default.createElement(
 			'g',
@@ -799,7 +810,7 @@ var HeroSvg = function HeroSvg(props) {
 			_react2.default.createElement('path', { 'class': 'st0', d: 'M190.6,64.7l6.3,17.6' }),
 			_react2.default.createElement('path', { 'class': 'st0', d: 'M192.4,69.7l2.4-5.1l2.1-2.2l3.8-1.4l3,0.4l2.6,3.3l4.5,12.6' }),
 			_react2.default.createElement('path', { 'class': 'st0', d: 'M206.2,64.7l2.4-5.1l2.1-2.2l3.8-1.4l3,0.4l2.6,3.3l4.5,12.6' }),
-			_react2.default.createElement('path', { 'class': 'st0', d: 'M202.7,92c8.7,25.8,30.2,48.2,58.9,61.6c-3.7-5.7-8.2-11.1-13.3-16c-3.9,5-7.7,10-11.6,15 c8.3,0.2,16.5,0.4,24.8,0.6' })
+			_react2.default.createElement('path', { 'class': 'st0', d: 'M142.1,116.4c4,19.1,18,37.1,38.5,49.4c-2.2-4.4-5.1-8.6-8.5-12.6c-3.5,3.2-6.9,6.3-10.4,9.5 c6.3,1,12.6,1.9,18.8,2.9' })
 		)
 	);
 };
@@ -909,8 +920,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _templateObject = _taggedTemplateLiteral(["\n  z-index: 5;\n  height: 100vh;\n  position: fixed;\n  width: 100vw;\n"], ["\n  z-index: 5;\n  height: 100vh;\n  position: fixed;\n  width: 100vw;\n"]),
     _templateObject2 = _taggedTemplateLiteral(["\n  width: 100vw;\n  z-index: 10;\n  text-align: center;\n  position: fixed;\n"], ["\n  width: 100vw;\n  z-index: 10;\n  text-align: center;\n  position: fixed;\n"]),
     _templateObject3 = _taggedTemplateLiteral(["\n  position:fixed;\n  left:100%;\n  top:50%;\n  transform:translate(-130%);\n  border-width: 3px;\n  padding:10px;\n  @media (max-width:550px){\n    padding:5px;\n  }\n  border-color: black;\n  color:black;\n  background-color: transparent;\n  font-size: 1.4em;\n  font-weight: 700;\n  &:hover{\n    background-color: grey\n    color:white;\n    border-color: transparent;\n  }\n  &:active{\n    background-color: black;\n  }\n"], ["\n  position:fixed;\n  left:100%;\n  top:50%;\n  transform:translate(-130%);\n  border-width: 3px;\n  padding:10px;\n  @media (max-width:550px){\n    padding:5px;\n  }\n  border-color: black;\n  color:black;\n  background-color: transparent;\n  font-size: 1.4em;\n  font-weight: 700;\n  &:hover{\n    background-color: grey\n    color:white;\n    border-color: transparent;\n  }\n  &:active{\n    background-color: black;\n  }\n"]),
@@ -929,6 +938,8 @@ var _reactSpringyParallax2 = _interopRequireDefault(_reactSpringyParallax);
 var _reactEmotion = __webpack_require__(1);
 
 var _reactEmotion2 = _interopRequireDefault(_reactEmotion);
+
+var _reactStatic = __webpack_require__(2);
 
 var _stars = __webpack_require__(19);
 
@@ -972,12 +983,6 @@ var _Badges2 = _interopRequireDefault(_Badges);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); } //Import Packages
 
 
@@ -998,142 +1003,129 @@ var _PButton = (0, _reactEmotion2.default)("button")(_templateObject3);
 var ParallaxFlex = (0, _reactEmotion2.default)(_reactSpringyParallax2.default.Layer)(_templateObject4, "" /* width: calc(100% - 30px); */);
 
 var BrowserWindow = (0, _reactEmotion2.default)("div")(_templateObject5, function (props) {
-  return props.main ? "50%" : "40%";
+  return props.main ? "50%" : "38%";
 }, function (props) {
   return props.main && "width:90%;";
 });
 
 var workText = (0, _reactEmotion.css)(_templateObject6);
 
-var WorkPortfolio = function (_React$Component) {
-  _inherits(WorkPortfolio, _React$Component);
+//Sections:
+// RageON
+// Applyboard
+// AnataMassage
+// OkeyLabs
+// ReportOn!
 
-  function WorkPortfolio(props) {
-    _classCallCheck(this, WorkPortfolio);
-
-    return _possibleConstructorReturn(this, (WorkPortfolio.__proto__ || Object.getPrototypeOf(WorkPortfolio)).call(this, props));
-  }
-
-  _createClass(WorkPortfolio, [{
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      return _react2.default.createElement(
-        _Container,
-        null,
+function WorkPortfolio(props) {
+  return _react2.default.createElement(
+    _Container,
+    null,
+    _react2.default.createElement(
+      _FloatingCont,
+      null,
+      _react2.default.createElement(
+        "h1",
+        {
+          style: {
+            marginTop: 10,
+            fontSize: "2.7em"
+          }
+        },
+        "< Developer >"
+      ),
+      _react2.default.createElement(
+        _PButton,
+        { onClick: function onClick() {
+            props.history.push('/', { scrollTop: 1000 });
+          } },
+        " P "
+      )
+    ),
+    _react2.default.createElement(
+      _reactSpringyParallax2.default,
+      { pages: 4 },
+      _react2.default.createElement(_reactSpringyParallax2.default.Layer, {
+        offset: 3,
+        speed: 1,
+        style: { backgroundColor: "#87BCDE" }
+      }),
+      _BackgroundClouds2.default,
+      _react2.default.createElement(_reactSpringyParallax2.default.Layer, {
+        offset: 1,
+        speed: 1,
+        style: { backgroundColor: "#243B4A", opacity: 0.5 }
+      }),
+      _react2.default.createElement(_reactSpringyParallax2.default.Layer, {
+        offset: 2,
+        speed: 1,
+        style: { backgroundColor: "#805E73" }
+      }),
+      _react2.default.createElement(_reactSpringyParallax2.default.Layer, {
+        offset: 1,
+        speed: 0,
+        factor: 4,
+        style: {
+          color: "blue",
+          backgroundImage: "url(" + _stars2.default + ")",
+          backgroundSize: "cover"
+        }
+      }),
+      _Badges2.default,
+      _react2.default.createElement(
+        ParallaxFlex,
+        { offset: 1, speed: 0.1 },
         _react2.default.createElement(
-          _FloatingCont,
+          BrowserWindow,
           null,
-          _react2.default.createElement(
-            "h1",
-            {
-              style: {
-                marginTop: 10,
-                fontSize: "2.7em"
-              }
-            },
-            "< Developer >"
-          ),
-          _react2.default.createElement(
-            _PButton,
-            null,
-            " P "
-          )
+          _react2.default.createElement("img", {
+            src: _applyboardSchool2.default,
+            style: { width: "100%" }
+          })
         ),
         _react2.default.createElement(
-          _reactSpringyParallax2.default,
-          { pages: 4, ref: function ref(_ref) {
-              return _this2.parallax = _ref;
-            } },
-          _react2.default.createElement(_reactSpringyParallax2.default.Layer, {
-            offset: 3,
-            speed: 1,
-            style: { backgroundColor: "#87BCDE" }
-          }),
-          _BackgroundClouds2.default,
-          _react2.default.createElement(_reactSpringyParallax2.default.Layer, {
-            offset: 1,
-            speed: 1,
-            style: { backgroundColor: "#243B4A", opacity: 0.5 }
-          }),
-          _react2.default.createElement(_reactSpringyParallax2.default.Layer, {
-            offset: 2,
-            speed: 1,
-            style: { backgroundColor: "#805E73" }
-          }),
-          _react2.default.createElement(_reactSpringyParallax2.default.Layer, {
-            offset: 1,
-            speed: 0,
-            factor: 4,
-            style: {
-              color: "blue",
-              backgroundImage: "url(" + _stars2.default + ")",
-              backgroundSize: "cover"
-            }
-          }),
-          _Badges2.default,
+          BrowserWindow,
+          null,
+          _react2.default.createElement("img", {
+            src: _applyboardEligibility2.default,
+            style: { width: "100%" }
+          })
+        )
+      ),
+      _react2.default.createElement(
+        ParallaxFlex,
+        { offset: 1, speed: -0.1 },
+        _react2.default.createElement(
+          BrowserWindow,
+          { main: true },
+          _react2.default.createElement("img", { style: { width: "100%" }, src: _applyboardSearch2.default }),
           _react2.default.createElement(
-            ParallaxFlex,
-            { offset: 1, speed: 0.1 },
-            _react2.default.createElement(
-              BrowserWindow,
-              null,
-              _react2.default.createElement("img", {
-                // className={browserWindow}
-                src: _applyboardSchool2.default,
-                style: { width: "100%" }
-              })
-            ),
-            _react2.default.createElement(
-              BrowserWindow,
-              null,
-              _react2.default.createElement("img", {
-                // className={browserWindow}
-                src: _applyboardEligibility2.default,
-                style: { width: "100%" }
-              })
-            )
+            "h3",
+            { className: workText },
+            "Lead Front Engineer && UX/UI Designer"
           ),
           _react2.default.createElement(
-            ParallaxFlex,
-            { offset: 1, speed: -0.1 },
+            "h4",
+            { className: workText },
+            "Applyboard allows international students find & apply to their dream universities in 60 seconds flat. During my time leading the front end team, we rebuilt the school/program search and institution pages to improve UX, user retention, click-through, feel and speed.",
+            _react2.default.createElement("br", null),
+            " Oh yeah, I also did some hiring and management \uD83D\uDE07"
+          ),
+          _react2.default.createElement(
+            "a",
+            { target: "_blank", href: "http://applyboard.com/schools" },
             _react2.default.createElement(
-              BrowserWindow,
-              { main: true },
-              _react2.default.createElement("img", { style: { width: "100%" }, src: _applyboardSearch2.default }),
-              _react2.default.createElement(
-                "h3",
-                { className: workText },
-                "Lead Front Engineer && UX/UI Designer"
-              ),
-              _react2.default.createElement(
-                "h4",
-                { className: workText },
-                "Applyboard allows international students find & apply to their dream universities in 60 seconds flat. During my time leading the front end team, we rebuilt the school/program search and institution pages to improve UX, user retention, click-through, feel and speed.",
-                _react2.default.createElement("br", null),
-                " Oh yeah, I also did some hiring and management \uD83D\uDE07"
-              ),
-              _react2.default.createElement(
-                "a",
-                { target: "_blank", href: "http://applyboard.com/schools" },
-                _react2.default.createElement(
-                  _Button3.default,
-                  { shadow: true, color: "light" },
-                  "See Live"
-                )
-              )
+              _Button3.default,
+              { shadow: true, color: "light" },
+              "See Live"
             )
           )
         )
-      );
-    }
-  }]);
-
-  return WorkPortfolio;
-}(_react2.default.Component);
-
-exports.default = WorkPortfolio;
+      )
+    )
+  );
+}
+exports.default = (0, _reactStatic.withRouter)(WorkPortfolio);
 
 /***/ }),
 /* 19 */
@@ -1737,28 +1729,38 @@ var SplitSectionContainer = function (_React$Component) {
   }
 
   _createClass(SplitSectionContainer, [{
-    key: '_isInSubPath',
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      if (this.props.location !== prevProps.location) {
+        if (this.props.location && this.props.location.pathname === "/") {
+          // let side = this.state.hover === "left" ? "right" : 'left';
+          this.setState({ hover: null });
+        }
+      }
+    }
+  }, {
+    key: "_isInSubPath",
     value: function _isInSubPath() {
       var pathname = this.props.location.pathname;
-      if (pathname != '/') {
+      if (pathname != "/") {
         return true;
       }
       return false;
     }
   }, {
-    key: 'onMouseLeave',
+    key: "onMouseLeave",
     value: function onMouseLeave() {
       if (this.state.hover != null && !this._isInSubPath()) this.setState({ hover: null });
     }
   }, {
-    key: 'onMouseEnter',
+    key: "onMouseEnter",
     value: function onMouseEnter(side) {
       if (side && !this._isInSubPath()) {
         this.setState({ hover: side });
       }
     }
   }, {
-    key: 'render',
+    key: "render",
     value: function render() {
       // console.log("side is", this.props.side);
       return _react2.default.createElement(_SplitSection2.default, {
@@ -1807,8 +1809,6 @@ var _SplitSectionContent2 = _interopRequireDefault(_SplitSectionContent);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); } //import packages
-
-// import {withRouter} from 'react-router-dom';
 
 
 //import components
@@ -2134,4 +2134,4 @@ module.exports = __webpack_require__.p + "static/right.13b4b995.png";
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.7363c263.js.map
+//# sourceMappingURL=static.1bd8047c.js.map
