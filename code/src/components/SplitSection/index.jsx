@@ -14,8 +14,8 @@ class SplitSectionContainer extends React.Component {
   componentDidUpdate(prevProps) {
     if (this.props.location !== prevProps.location) {
       if (this.props.location && this.props.location.pathname === "/") {
-        let side = this.state.hover === "left" ? "right" : 'left';
-        this.setState({ hover: side });
+        // let side = this.state.hover === "left" ? "right" : 'left';
+        this.setState({ hover: null });
       }
     }
   }

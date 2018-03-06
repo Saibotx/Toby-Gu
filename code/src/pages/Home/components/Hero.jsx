@@ -21,6 +21,7 @@ const _HeroTextDiv = styled("div")`
   position: relative;
   font-weight: 200;
   z-index: 2;
+  text-shadow: 0px 0px 10px rgb(100, 100, 100);
 `;
 
 const _ButtonRow = styled("div")`
@@ -49,9 +50,7 @@ const _Title = styled("h1")`
   transform: translate(-50%);
 `;
 
-const _SubTitle = styled("h4")`
-  text-shadow: 2px 2px 10px #000;
-`;
+const _SubTitle = styled("h4")``;
 
 class HeroText extends React.Component {
   constructor(props) {
@@ -66,7 +65,7 @@ class HeroText extends React.Component {
         <_SubTitle>
           Senior Software Engineer | Designer | Front End Lead Developer
         </_SubTitle>
-        <_SubTitle>Photographer, Entrepreneur & World Traveller</_SubTitle>
+        <_SubTitle>Photographer, Entrepreneur & Digital Nomad</_SubTitle>
         <_ButtonRow>
           <_Button>Learn More</_Button>
           <_Button>See Work</_Button>
@@ -77,20 +76,24 @@ class HeroText extends React.Component {
 }
 
 const HeroSvg = styled(Svg)`
-  width:11vw;
-  @media (max-width:1400px){
-    width:12vw;
+  width: 11vw;
+  @media (max-width: 1400px) {
+    width: 12vw;
   }
-  @media (max-width:1200px){
-    width:14vw;
+  @media (max-width: 1200px) {
+    width: 14vw;
   }
-    @media (max-width:1200px) and (max-height: 600px ){
-      width:10vw;
-    }
-    @media (max-width:1200px) and (min-height:800px ) and (max-height: 500px){
-      display: none;
-    }
-`
+  @media (max-width: 1200px) and (max-height: 900px){
+    width: 10vw;
+  }
+  @media (max-width: 1200px) and (max-height: 600px) {
+    width: 10vw;
+  }
+  @media (max-width: 1200px) and (min-height: 800px) and (max-height: 500px) {
+    display: none;
+  }
+
+`;
 
 const _HeroContainer = styled("div")`
   height:93vh;
@@ -104,7 +107,10 @@ const _HeroContainer = styled("div")`
 `;
 
 const _AnimatedTextContainer = styled("div")`
-  @media (max-width: 550px) {
+  @media (max-width: 600px) {
+    display: none;
+  }
+  @media (max-width: 710px) and (min-height:1000px) {
     display: none;
   }
   position: fixed;
@@ -118,10 +124,13 @@ const _AnimatedTextContainer = styled("div")`
 `;
 
 const _AnimatedText = styled("div")`
-  left: 20%;
+  left: 25%;
   top: 40%;
   position: absolute;
   color: white;
+  @media (max-width: 800px) and (min-height: 900px){
+    left:27%;
+  }
 `;
 
 export default function Hero(props) {

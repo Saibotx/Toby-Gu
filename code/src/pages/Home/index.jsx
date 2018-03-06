@@ -44,7 +44,7 @@ export default function Home(props) {
   }
   return (
     <div>
-      <_disspearingDiv height={hidden ? "0vh" : "150vh"}>
+      <_disspearingDiv height={hidden ? "0vh" : "200vh"}>
         <Hero />
         <Profile />
       </_disspearingDiv>
