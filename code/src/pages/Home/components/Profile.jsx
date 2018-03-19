@@ -30,6 +30,10 @@ const _PortHole = styled('img')`
   width:200px;
   border-radius: 50%;
   display:inline-block;
+  @media (max-width: 500px) {
+    width:150px
+  }
+
 `
 
 export default function Profile(props){

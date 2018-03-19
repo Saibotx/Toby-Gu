@@ -76,12 +76,12 @@ class HeroText extends React.Component {
 }
 
 const HeroSvg = styled(Svg)`
-  width: 11vw;
+  width: 9vw;
   @media (max-width: 1400px) {
     width: 12vw;
   }
   @media (max-width: 1200px) {
-    width: 14vw;
+    width: 13vw;
   }
   @media (max-width: 1200px) and (max-height: 900px){
     width: 10vw;
@@ -130,6 +130,11 @@ const _AnimatedText = styled("div")`
   color: white;
   @media (max-width: 800px) and (min-height: 900px){
     left:27%;
+    top: 43%;
+  }
+  @media (max-width: 1200px) and (min-height: 1300px){
+    left:27%;
+    top: 43%;
   }
 `;
 
