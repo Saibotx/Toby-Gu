@@ -17,7 +17,7 @@ const ParallaxFlex = styled(Parallax.Layer)`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  ${"" /* width: calc(100% - 30px); */} @media (max-width: 550px) {
+  @media (max-width: 550px) {
     flex-direction: column;
     justify-content: center;
   }
@@ -52,7 +52,7 @@ const workText = css`
 
 const Applyboard = (
   <div>
-    <ParallaxFlex offset={1} speed={0.1}>
+    <ParallaxFlex offset={2} speed={0.1}>
       <BrowserWindow>
         <img
           src={applyboardSchool}
@@ -67,12 +67,12 @@ const Applyboard = (
       </BrowserWindow>
     </ParallaxFlex>
 
-    <ParallaxFlex offset={1} speed={-0.1}>
+    <ParallaxFlex offset={2} speed={-0.1}>
       <BrowserWindow main>
         <img style={{ width: "100%" }} src={applyboardSearch} />
       </BrowserWindow>
     </ParallaxFlex>
-    <ParallaxFlex offset={1} speed={0.7}>
+    <ParallaxFlex offset={2} speed={0.7}>
       <Desc>
         <img style={{width:'80%', maxWidth:250}} src={applyboardLogo}/>
       <h3 className={workText} style={{marginTop:5}}>

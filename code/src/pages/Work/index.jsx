@@ -14,8 +14,11 @@ import chrometab from "assets/chrometab.png";
 //Import Components
 import BackgroundClouds from "./components/BackgroundClouds";
 import Badges from "./components/Badges";
+import RageOn from "./components/RageOn";
 import Applyboard from "./components/Applyboard";
+import AnataMassage from "./components/AnataMassage";
 import ReportOn from "./components/ReportOn";
+
 
 const _Container = styled("div")`
   z-index: 5;
@@ -57,11 +60,12 @@ const _PButton = styled("button")`
 
 
 //Sections:
-// RageON
-// Applyboard
-// AnataMassage
-// OkeyLabs
-// ReportOn!
+// RageON page 1 grey
+// Applyboard page 2 purp
+// AnataMassage page 3 green
+// OkeyLabs page 4 oj
+// ReportOn! page 5 blue
+// Work with me bitch page 6
 
 function WorkPortfolio(props){
     return (
@@ -79,24 +83,15 @@ function WorkPortfolio(props){
             props.history.push('/',{ scrollTop: 1000});
           }}> P </_PButton>
         </_FloatingCont>
-        <Parallax pages={4}>
+        <Parallax pages={7}>
+          {/*  last page has no transpaency. we want clouds above it. */}
           <Parallax.Layer
-            offset={3}
+            offset={6}
             speed={1}
-            style={{ backgroundColor: "#87BCDE" }}
+            style={{ backgroundColor: "#87BCDE", opacity: 1 }}
           />
+          {/* background floating things */}
           {BackgroundClouds}
-          <Parallax.Layer
-            offset={1}
-            speed={1}
-            style={{ backgroundColor: "#243B4A", opacity: 0.5 }}
-          />
-          <Parallax.Layer
-            offset={2}
-            speed={1}
-            style={{ backgroundColor: "#805E73" }}
-          />
-
           <Parallax.Layer
             offset={1}
             speed={0}
@@ -107,8 +102,38 @@ function WorkPortfolio(props){
               backgroundSize: "cover"
             }}
           />
+          <Parallax.Layer
+            offset={5}
+            speed={1}
+            style={{ backgroundColor: "#e7f187", opacity: 0.5 }}
+          />
+          <Parallax.Layer
+            offset={4}
+            speed={1}
+            style={{ backgroundColor: "#f1c687", opacity: 0.5 }}
+          />
+          <Parallax.Layer
+            offset={3}
+            speed={1}
+            style={{ backgroundColor: "#b2f187", opacity: 0.5 }}
+          />
+
+          <Parallax.Layer
+            offset={2}
+            speed={1}
+            style={{ backgroundColor: "#805E73", opacity: 0.5 }}
+          />
+          <Parallax.Layer
+            offset={1}
+            speed={1}
+            style={{ backgroundColor: "#243B4A", opacity: 0.5 }}
+          />
+
+          {/* Actual content */}
           {Badges}
+          {RageOn}
           {Applyboard}
+          {AnataMassage}
           {ReportOn}
 
         </Parallax>

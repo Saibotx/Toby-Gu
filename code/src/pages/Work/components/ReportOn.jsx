@@ -62,18 +62,18 @@ const IPad = styled("img")`
 
 const ReportOn = (
   <div>
-    <ParallaxFlex offset={2} speed={0.1}>
+    <ParallaxFlex offset={5} speed={0.1}>
       <BrowserWindow>
         <img src={reportOnLaptop} style={{ width: "100%" }} />
       </BrowserWindow>
     </ParallaxFlex>
-    <ParallaxFlex offset={2} speed={-0.1}>
+    <ParallaxFlex offset={5} speed={-0.1}>
       <BrowserWindow iPad>
         <IPad src={reportOniPad} />
       </BrowserWindow>
     </ParallaxFlex>
 
-    <ParallaxFlex offset={2} speed={0.8}>
+    <ParallaxFlex offset={5} speed={0.8}>
       <Desc>
         <img style={{ width: "80%", maxWidth: 250 }} src={rippleLogo} />
         <h3 className={workText} style={{ marginTop: 5 }}>
