@@ -4,10 +4,12 @@ import React from "react";
 import { Router, Link, Route, Switch } from "react-static";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import { withRouter } from "react-static";
+import Scroll from "react-scroll";
 
 //Import Pages
 import Home from "./pages/Home";
 import WorkPortfolio from "./pages/Work";
+import Photography from "./pages/Photography";
 import PageNotFound from "./pages/PageNotFound";
 
 //Import Components
@@ -17,6 +19,9 @@ import SplitSection from "./components/SplitSection";
 //Import CSS
 import "./styles/transitions.css";
 import "./styles/styles.css";
+
+//Initialize Scroll
+var scroll = Scroll.animateScroll;
 
 //Define helper functions
 const Transition = props => {
@@ -34,6 +39,7 @@ const Transition = props => {
 class App extends React.Component {
   constructor() {
     super();
+    this.scrollToBottom = this.scrollToBottom.bind(this);
     this.state = {};
   }
   componentDidMount() {
@@ -50,15 +56,14 @@ class App extends React.Component {
       }
     }
   }
+  scrollToBottom() {
+    if (this.state.client) {
+      scroll.scrollTo(document.body.scrollHeight);
+    }
+  }
   render() {
     var side;
     var pathname = this.props.location.pathname;
-    // var Router = (p)=><BrowserRouter>{p.children}</BrowserRouter>;
-
-    //Set Router
-    // var Router = (p)=><BrowserRouter>{p.children}</BrowserRouter>;
-    //Deal with pathname and sides
-    // pathname = window.location.pathname;
 
     switch (pathname) {
       case "/engineer":
@@ -76,12 +81,17 @@ class App extends React.Component {
         {/* hacky way of dismounting home section with animation. acutal animation happens
           within the Home component.  */}
         <Transition>
-          {pathname == "/" && <Home client={this.state.client} />}
+          {pathname == "/" && (
+            <Home
+              scrollToBottom={this.scrollToBottom}
+              client={this.state.client}
+            />
+          )}
         </Transition>
         {/* sub pages */}
         <Switch>
           <Route path="/engineer" component={FadeIn(WorkPortfolio)} />
-          <Route path="/photographer" component={FadeIn(WorkPortfolio)} />
+          <Route path="/photographer" component={FadeIn(Photography)} />
         </Switch>
         {/* background render depending on side */}
         <SplitSection side={side} />

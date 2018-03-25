@@ -6,9 +6,7 @@ import { withRouter } from "react-static";
 
 //Import Assets
 import stars from "assets/stars.svg";
-import chrometab from "assets/chrometab.png";
 import earth from "assets/earth.svg";
-import bashWindow from "assets/window.png";
 
 //Import Core
 import _Button from "core/Button.jsx";

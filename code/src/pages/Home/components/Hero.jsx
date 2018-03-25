@@ -67,8 +67,10 @@ class HeroText extends React.Component {
         </_SubTitle>
         <_SubTitle>Photographer, Entrepreneur & Digital Nomad</_SubTitle>
         <_ButtonRow>
-          <_Button>Learn More</_Button>
-          <_Button>See Work</_Button>
+          <_Button onClick={this.props.scrollToBottom}>Learn More</_Button>
+          <a target="_blank" href="mailto:tobiasgoo@gmail.com?Subject=Hello!">
+            <_Button>Hire Me!</_Button>
+          </a>
         </_ButtonRow>
       </_HeroTextDiv>
     );
@@ -156,7 +158,7 @@ export default function Hero(props) {
           </div>
         </_AnimatedText>
       </_AnimatedTextContainer>
-      <HeroText />
+      <HeroText scrollToBottom={props.scrollToBottom} />
     </_HeroContainer>
   );
 }

@@ -45,7 +45,7 @@ export default function Home(props) {
   return (
     <div>
       <_disspearingDiv height={hidden ? "0vh" : "200vh"}>
-        <Hero />
+        <Hero scrollToBottom={props.scrollToBottom}/>
         <Profile />
       </_disspearingDiv>
     </div>
