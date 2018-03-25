@@ -54,6 +54,7 @@ export default {
             />
             <meta property="og:title" content="Toby Gu"/>
             <meta property="og:image" content="https://instagram.fsnc1-1.fna.fbcdn.net/vp/7dbcb722211942948e69d139644ce6b7/5B3F184A/t51.2885-19/s320x320/27892524_148576692477522_3328026375050231808_n.jpg"/>
+            <meta property="image" content="https://instagram.fsnc1-1.fna.fbcdn.net/vp/7dbcb722211942948e69d139644ce6b7/5B3F184A/t51.2885-19/s320x320/27892524_148576692477522_3328026375050231808_n.jpg"/>
             {renderMeta.styleTags}
             {/* <script dangerouslySetInnerHTML={{ __html: script1 }} /> */}
             <style type="text/css">{extractedComp.css}</style>
