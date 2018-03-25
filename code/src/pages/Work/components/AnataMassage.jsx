@@ -43,9 +43,9 @@ const Desc = styled(BrowserWindow)`
 `;
 
 const workText = css`
-  color: white;
+  color:black;
   opacity: 1;
-  text-shadow: 0px 0px 8px black;
+  ${'' /* text-shadow: 0px 0px 8px black; */}
 `;
 
 const AnataMassage = (
@@ -69,9 +69,9 @@ const AnataMassage = (
 
     <ParallaxFlex offset={3} speed={0.7}>
       <Desc>
-        <img style={{ width: "80%", maxWidth: 250 }} src={rageonLogo} />
+        <h2>Anata Massage</h2>
         <h3 className={workText} style={{ marginTop: 5 }}>
-          Lead Front Engineer
+          Freelance Project Lead
         </h3>
         <h4 className={workText}>
           RageOn is the world's largest online all over print shop! We empower
@@ -81,7 +81,7 @@ const AnataMassage = (
           and search page!
         </h4>
         <a target="_blank" href="http://rageon.com/">
-          <_Button shadow color="light">
+          <_Button color="dark">
             See Live
           </_Button>
         </a>

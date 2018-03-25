@@ -67,7 +67,7 @@ const Applyboard = (
       </BrowserWindow>
     </ParallaxFlex>
 
-    <ParallaxFlex offset={2} speed={-0.1}>
+    <ParallaxFlex offset={2} speed={-0.05}>
       <BrowserWindow main>
         <img style={{ width: "100%" }} src={applyboardSearch} />
       </BrowserWindow>

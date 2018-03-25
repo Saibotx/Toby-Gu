@@ -123,14 +123,14 @@ const BackgroundClouds = (
       />
     </Parallax.Layer>
 
-    <Parallax.Layer offset={5} speed={0.8} style={{ opacity: 0.5 }}>
+    <Parallax.Layer offset={5.2} speed={0.8} style={{ opacity: 0.5 }}>
       <img
         src={cloud}
-        style={{ display: "block", width: "20%", marginLeft: "55%" }}
+        style={{ display: "block", width: "10%", marginLeft: "55%" }}
       />
       <img
         src={cloud}
-        style={{ display: "block", width: "10%", marginLeft: "15%" }}
+        style={{ display: "block", width: "30%", marginLeft: "5%" }}
       />
     </Parallax.Layer>
 
@@ -145,7 +145,7 @@ const BackgroundClouds = (
       />
     </Parallax.Layer>
 
-    <Parallax.Layer offset={6} speed={0.2} style={{ opacity: 0.7 }}>
+    {/* <Parallax.Layer offset={5.8} speed={0.2} style={{ opacity: 0.7 }}>
       <img
         src={cloud}
         style={{ display: "block", width: "10%", marginLeft: "10%" }}
@@ -154,9 +154,9 @@ const BackgroundClouds = (
         src={cloud}
         style={{ display: "block", width: "20%", marginLeft: "75%" }}
       />
-    </Parallax.Layer>
+    </Parallax.Layer> */}
 
-    <Parallax.Layer offset={6.6} speed={-0.1} style={{ opacity: 0.9 }}>
+    {/* <Parallax.Layer offset={6.6} speed={-0.1} style={{ opacity: 0.9 }}>
       <img
         src={cloud}
         style={{ display: "block", width: "20%", marginLeft: "60%" }}
@@ -180,7 +180,7 @@ const BackgroundClouds = (
         src={cloud}
         style={{ display: "block", width: "15%", marginLeft: "75%" }}
       />
-    </Parallax.Layer>
+    </Parallax.Layer> */}
   </div>
 );
 

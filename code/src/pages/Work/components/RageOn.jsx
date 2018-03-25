@@ -15,7 +15,7 @@ import rageonLogo from "assets/rageonLogo.png";
 const ParallaxFlex = styled(Parallax.Layer)`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   @media (max-width: 550px) {
     ${'' /* flex-direction: column; */}
     justify-content: center;
@@ -24,6 +24,7 @@ const ParallaxFlex = styled(Parallax.Layer)`
 
 const BrowserWindow = styled("div")`
   width: ${props => (props.main ? "60%" : "38%")};
+  max-width: 900px;
   text-align: center;
   margin-top: -25vh;
   @media (max-width: 550px) {
@@ -51,13 +52,15 @@ const workText = css`
 `;
 
 const MobilePhoneImg = styled('img')`
-    height:50vh;
+    ${'' /* height:50vh; */}
+    width:15vw;
     margin-top:10vh;
+    max-width: 300px;
     @media (max-width: 550px) {
       ${props=>props.left && 'padding-right: 10vh;'}
       ${props=>props.right && 'padding-left: 10vh;'}
       height:auto;
-      width:20vw;
+      width:25vw;
     }
 `
 
@@ -68,7 +71,7 @@ const RageOn = (
         <img style={{ width: "100%" }} src={rageonIMac} />
       </BrowserWindow>
     </ParallaxFlex>
-    <ParallaxFlex offset={1} speed={0.1}>
+    <ParallaxFlex offset={1} speed={0.2}>
       <BrowserWindow>
         <MobilePhoneImg left src={rageonIphonex}/>
       </BrowserWindow>
@@ -80,16 +83,16 @@ const RageOn = (
       </BrowserWindow>
     </ParallaxFlex>
 
-    <ParallaxFlex offset={1} speed={0.7}>
+    <ParallaxFlex offset={1} speed={0.9}>
       <Desc>
         <img style={{ width: "80%", maxWidth: 250 }} src={rageonLogo} />
         <h3 className={workText} style={{ marginTop: 5 }}>
-          Lead Front Engineer
+          Lead Front End Engineer
         </h3>
         <h4 className={workText}>
           RageOn is the world's largest online all over print shop! We empower
           creators and artists to design and sell garments and products with
-          their art from the comfort of their own home. We've been working on
+          their art from the comfort of their own home. This is where I currently work and we've been building
           lots of new web stuff including a web builder, product customization
           and search page!
         </h4>

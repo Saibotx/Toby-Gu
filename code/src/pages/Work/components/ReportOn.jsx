@@ -24,16 +24,16 @@ const ParallaxFlex = styled(Parallax.Layer)`
 const BrowserWindow = styled("div")`
   width: 90%;
   text-align: center;
+  max-width: 1300px;
   margin-top: -10vh;
   position: absolute;
-  ${props=>props.iPad && 'left:calc(30% - 10px);'}
-  @media (max-width: 550px) {
-    left:-10px;
-    ${props=>props.iPad && 'left:calc(30% - 30px);'}
+  ${props => props.iPad && "left:calc(30% - 10px);"} @media (max-width: 550px) {
+    left: -10px;
+    ${props => props.iPad && "left:calc(30% - 30px);"};
   }
 `;
 
-const Desc = styled('div')`
+const Desc = styled("div")`
   padding-bottom: 30px;
   width: 50%;
   margin-top: 50vh;
@@ -54,6 +54,7 @@ const workText = css`
 
 const IPad = styled("img")`
   height: 60vh;
+  max-width: 800px;
   @media (max-width: 550px) {
     height: auto;
     width: 50vw;
@@ -62,18 +63,18 @@ const IPad = styled("img")`
 
 const ReportOn = (
   <div>
-    <ParallaxFlex offset={5} speed={0.1}>
+    <ParallaxFlex offset={3} speed={0.1}>
       <BrowserWindow>
         <img src={reportOnLaptop} style={{ width: "100%" }} />
       </BrowserWindow>
     </ParallaxFlex>
-    <ParallaxFlex offset={5} speed={-0.1}>
+    <ParallaxFlex offset={3} speed={-0.1}>
       <BrowserWindow iPad>
         <IPad src={reportOniPad} />
       </BrowserWindow>
     </ParallaxFlex>
 
-    <ParallaxFlex offset={5} speed={0.8}>
+    <ParallaxFlex offset={3} speed={0.8}>
       <Desc>
         <img style={{ width: "80%", maxWidth: 250 }} src={rippleLogo} />
         <h3 className={workText} style={{ marginTop: 5 }}>
@@ -81,11 +82,12 @@ const ReportOn = (
         </h3>
         <h4 className={workText}>
           ReportON is a B2B web & mobile app to manage marketing merchandisers
-          in the retail space. My team and I built a web dashboard and two
-          mobile apps for employees to input data in real time so that managers
-          at head office can see what's happening in field. ReportON also
-          generates analytics, reports to improve the efficiency of
-          merchandising employees working for their CPG clients.
+          in the retail space. My team and I were contracted for a web dashboard
+          and two mobile apps for employees to input data in real time so that
+          managers at head office can see what's happening in field. The project
+          was funded by Ripple Effect Marketing and also generates analytics,
+          reports to improve the efficiency of merchandising employees working
+          for their CPG clients. I built the front end web app and both mobile apps.
         </h4>
       </Desc>
     </ParallaxFlex>
