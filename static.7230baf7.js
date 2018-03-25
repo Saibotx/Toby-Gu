@@ -70,7 +70,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "http://tobygu.com/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 14);
+/******/ 	return __webpack_require__(__webpack_require__.s = 15);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -192,12 +192,143 @@ module.exports = __webpack_require__.p + "static/window.4f6d8fb6.png";
 
 /***/ }),
 /* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _templateObject = _taggedTemplateLiteral(['\n  display:flex;\n  max-height: 100vh;\n  max-width: 100vw;\n  overflow:hidden;\n  flex-direction: row;\n  position: ', ';\n  ', ';\n  background: ', ';\n'], ['\n  display:flex;\n  max-height: 100vh;\n  max-width: 100vw;\n  overflow:hidden;\n  flex-direction: row;\n  position: ', ';\n  ', ';\n  background: ', ';\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  height:0;\n  z-index: 0;\n  width: ', ';\n  @media (max-width: ', '){\n    border-bottom: ', ';\n    border-left: ', ';\n  }\n  @media (min-width: ', '){\n    border-bottom: ', ';\n    border-left: ', ';\n  }\n  transition:all 0.5s;\n'], ['\n  height:0;\n  z-index: 0;\n  width: ', ';\n  @media (max-width: ', '){\n    border-bottom: ', ';\n    border-left: ', ';\n  }\n  @media (min-width: ', '){\n    border-bottom: ', ';\n    border-left: ', ';\n  }\n  transition:all 0.5s;\n']),
+    _templateObject3 = _taggedTemplateLiteral(['\n  height:0;\n  z-index: 0;\n  width: ', ';\n  @media (max-width: ', '){\n    border-top: ', ';\n    border-right: ', ';\n  }\n  @media (min-width: ', '){\n    border-top: ', ';\n    border-right: ', ';\n  }\n  transition:all 0.3s;\n'], ['\n  height:0;\n  z-index: 0;\n  width: ', ';\n  @media (max-width: ', '){\n    border-top: ', ';\n    border-right: ', ';\n  }\n  @media (min-width: ', '){\n    border-top: ', ';\n    border-right: ', ';\n  }\n  transition:all 0.3s;\n']);
+
+var _reactEmotion = __webpack_require__(1);
+
+var _reactEmotion2 = _interopRequireDefault(_reactEmotion);
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactStatic = __webpack_require__(4);
+
+var _SplitSectionContent = __webpack_require__(28);
+
+var _SplitSectionContent2 = _interopRequireDefault(_SplitSectionContent);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); } //import packages
+
+
+//import components
+
+
+//helper function
+function calcHovSideVal(left, right, def, val) {
+  switch (val) {
+    case 'left':
+      return left;
+    case 'right':
+      return right;
+    default:
+      return def;
+  }
+};
+
+//styling media queries
+var mediumWidth = '799px';
+var largeWidth = '800px';
+
+var _SplitContainer = (0, _reactEmotion2.default)('div')(_templateObject, function (props) {
+  return props.fixed ? 'fixed' : 'relative';
+}, function (props) {
+  return props.fixed && 'height:100%; width:100%';
+}, function (props) {
+  return props.side != 'right' ? '#e2e2e2' : '#d5d9ff';
+});
+
+var _RightBg = (0, _reactEmotion2.default)('div')(_templateObject2, function (props) {
+  if (props.side) {
+    return props.side == 'left' ? '3%' : '97%';
+  }
+  return calcHovSideVal('30%', '70%', '50%', props.hoverSide);
+}, mediumWidth, function (props) {
+  if (props.side) {
+    return '100vh solid #d5d9ff';
+  }
+  return '60vh solid #d5d9ff';
+}, function (props) {
+  if (props.side) {
+    return '11vh solid transparent';
+  }
+  return '6.75vh solid transparent';
+}, largeWidth, function (props) {
+  if (props.side) {
+    return '100vh solid #d5d9ff';
+  }
+  return '80vh solid #d5d9ff';
+}, function (props) {
+  if (props.side) {
+    return '11vh solid transparent';
+  }
+  return '9vh solid transparent';
+});
+
+var _LeftBg = (0, _reactEmotion2.default)('div')(_templateObject3, function (props) {
+  if (props.side) {
+    return props.side == 'left' ? '97%' : '3%';
+  }
+  return calcHovSideVal('70%', '30%', '50%', props.hoverSide);
+}, mediumWidth, function (props) {
+  if (props.side) {
+    return '100vh solid #e2e2e2';
+  }
+  return '60vh solid #e2e2e2';
+}, function (props) {
+  if (props.side) {
+    return '11vh solid transparent';
+  }
+  return '6.75vh solid transparent';
+}, largeWidth, function (props) {
+  if (props.side) {
+    return '100vh solid #e2e2e2';
+  }
+  return '80vh solid #e2e2e2';
+}, function (props) {
+  if (props.side) {
+    return '11vh solid transparent';
+  }
+  return '9vh solid transparent';
+});
+
+function SplitSection(props) {
+  return _react2.default.createElement(
+    _SplitContainer,
+    {
+      fixed: props.fixed,
+      onMouseLeave: props.onMouseLeave,
+      side: props.side
+    },
+    _react2.default.createElement(_SplitSectionContent2.default, props),
+    _react2.default.createElement(_LeftBg, { side: props.side, hoverSide: props.hoverSide }),
+    _react2.default.createElement(_RightBg, { side: props.side, hoverSide: props.hoverSide })
+  );
+}
+
+exports.default = (0, _reactStatic.withRouter)(SplitSection);
+
+/***/ }),
+/* 13 */
 /***/ (function(module, exports) {
 
 module.exports = require("prop-types");
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -214,7 +345,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(12);
+var _propTypes = __webpack_require__(13);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -306,7 +437,7 @@ Li.propTypes = {
 };
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -321,13 +452,13 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(15);
+var _reactDom = __webpack_require__(16);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _reactStatic = __webpack_require__(4);
 
-var _App = __webpack_require__(16);
+var _App = __webpack_require__(17);
 
 var _App2 = _interopRequireDefault(_App);
 
@@ -363,13 +494,13 @@ if (typeof document !== "undefined") {
 }
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-dom");
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -391,23 +522,23 @@ var _reactAddonsCssTransitionGroup = __webpack_require__(9);
 
 var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
 
-var _Home = __webpack_require__(17);
+var _Home = __webpack_require__(18);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _Work = __webpack_require__(24);
+var _Work = __webpack_require__(25);
 
 var _Work2 = _interopRequireDefault(_Work);
 
-var _PageNotFound = __webpack_require__(58);
+var _PageNotFound = __webpack_require__(64);
 
 var _PageNotFound2 = _interopRequireDefault(_PageNotFound);
 
-var _FadeIn = __webpack_require__(60);
+var _FadeIn = __webpack_require__(66);
 
 var _FadeIn2 = _interopRequireDefault(_FadeIn);
 
-var _SplitSection = __webpack_require__(61);
+var _SplitSection = __webpack_require__(67);
 
 var _SplitSection2 = _interopRequireDefault(_SplitSection);
 
@@ -526,7 +657,7 @@ var App = function (_React$Component) {
 exports.default = (0, _reactStatic.withRouter)(App);
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -542,11 +673,11 @@ var _templateObject = _taggedTemplateLiteral(["\n  position: fixed;\n  z-index: 
 
 exports.default = Home;
 
-var _Hero = __webpack_require__(18);
+var _Hero = __webpack_require__(19);
 
 var _Hero2 = _interopRequireDefault(_Hero);
 
-var _Profile = __webpack_require__(22);
+var _Profile = __webpack_require__(23);
 
 var _Profile2 = _interopRequireDefault(_Profile);
 
@@ -603,7 +734,7 @@ function Home(props) {
 }
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -636,7 +767,7 @@ var _reactEmotion = __webpack_require__(1);
 
 var _reactEmotion2 = _interopRequireDefault(_reactEmotion);
 
-var _reactMtSvgLines = __webpack_require__(19);
+var _reactMtSvgLines = __webpack_require__(20);
 
 var _reactMtSvgLines2 = _interopRequireDefault(_reactMtSvgLines);
 
@@ -644,11 +775,11 @@ var _Button2 = __webpack_require__(2);
 
 var _Button3 = _interopRequireDefault(_Button2);
 
-var _HeroSvg = __webpack_require__(20);
+var _HeroSvg = __webpack_require__(21);
 
 var _HeroSvg2 = _interopRequireDefault(_HeroSvg);
 
-var _cover = __webpack_require__(21);
+var _cover = __webpack_require__(22);
 
 var _cover2 = _interopRequireDefault(_cover);
 
@@ -782,13 +913,13 @@ function Hero(props) {
 }
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-mt-svg-lines");
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -854,13 +985,13 @@ var HeroSvg = function HeroSvg(props) {
 exports.default = HeroSvg;
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/cover.7b9fe997.jpg";
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -888,7 +1019,7 @@ var _Button2 = __webpack_require__(2);
 
 var _Button3 = _interopRequireDefault(_Button2);
 
-var _profile = __webpack_require__(23);
+var _profile = __webpack_require__(24);
 
 var _profile2 = _interopRequireDefault(_profile);
 
@@ -935,13 +1066,13 @@ function Profile(props) {
 }
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/profile.11ff6a57.jpg";
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -969,11 +1100,11 @@ var _reactEmotion2 = _interopRequireDefault(_reactEmotion);
 
 var _reactStatic = __webpack_require__(4);
 
-var _stars = __webpack_require__(25);
+var _stars = __webpack_require__(26);
 
 var _stars2 = _interopRequireDefault(_stars);
 
-var _chrometab = __webpack_require__(26);
+var _chrometab = __webpack_require__(27);
 
 var _chrometab2 = _interopRequireDefault(_chrometab);
 
@@ -989,41 +1120,51 @@ var _Button2 = __webpack_require__(2);
 
 var _Button3 = _interopRequireDefault(_Button2);
 
-var _BackgroundClouds = __webpack_require__(27);
+var _SplitSection = __webpack_require__(12);
+
+var _SplitSection2 = _interopRequireDefault(_SplitSection);
+
+var _BackgroundClouds = __webpack_require__(33);
 
 var _BackgroundClouds2 = _interopRequireDefault(_BackgroundClouds);
 
-var _Badges = __webpack_require__(29);
+var _Badges = __webpack_require__(35);
 
 var _Badges2 = _interopRequireDefault(_Badges);
 
-var _RageOn = __webpack_require__(41);
+var _RageOn = __webpack_require__(47);
 
 var _RageOn2 = _interopRequireDefault(_RageOn);
 
-var _Applyboard = __webpack_require__(42);
+var _Applyboard = __webpack_require__(48);
 
 var _Applyboard2 = _interopRequireDefault(_Applyboard);
 
-var _AnataMassage = __webpack_require__(47);
+var _AnataMassage = __webpack_require__(53);
 
 var _AnataMassage2 = _interopRequireDefault(_AnataMassage);
 
-var _Okey = __webpack_require__(48);
+var _Okey = __webpack_require__(54);
 
 var _Okey2 = _interopRequireDefault(_Okey);
 
-var _ReportOn = __webpack_require__(53);
+var _ReportOn = __webpack_require__(59);
 
 var _ReportOn2 = _interopRequireDefault(_ReportOn);
 
-var _ContactMe = __webpack_require__(57);
+var _ContactMe = __webpack_require__(63);
 
 var _ContactMe2 = _interopRequireDefault(_ContactMe);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); } //Import Packages
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //Import Packages
 
 
 //Import Assets
@@ -1034,6 +1175,21 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 
 //Import Components
 
+
+var ParallaxFixed = function (_Parallax) {
+  _inherits(ParallaxFixed, _Parallax);
+
+  function ParallaxFixed(props) {
+    _classCallCheck(this, ParallaxFixed);
+
+    var _this = _possibleConstructorReturn(this, (ParallaxFixed.__proto__ || Object.getPrototypeOf(ParallaxFixed)).call(this, props));
+
+    _this.state = { ready: true };
+    return _this;
+  }
+
+  return ParallaxFixed;
+}(_reactSpringyParallax2.default);
 
 var _Container = (0, _reactEmotion2.default)("div")(_templateObject);
 var _FloatingCont = (0, _reactEmotion2.default)("div")(_templateObject2);
@@ -1077,7 +1233,7 @@ function WorkPortfolio(props) {
       )
     ),
     _react2.default.createElement(
-      _reactSpringyParallax2.default,
+      ParallaxFixed,
       { pages: 6 },
       _react2.default.createElement(_reactSpringyParallax2.default.Layer, {
         offset: 5,
@@ -1121,25 +1277,250 @@ function WorkPortfolio(props) {
       _Okey2.default,
       _ReportOn2.default,
       _ContactMe2.default
+    ),
+    _react2.default.createElement(
+      "div",
+      { style: { position: 'fixed', zIndex: -1 } },
+      _react2.default.createElement(_SplitSection2.default, {
+        fixed: true,
+        hoverSide: null,
+        side: 'left'
+      })
     )
   );
 }
 exports.default = (0, _reactStatic.withRouter)(WorkPortfolio);
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/stars.5546c7c6.svg";
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/chrometab.c7fb842f.png";
 
 /***/ }),
-/* 27 */
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _templateObject = _taggedTemplateLiteral(['\n  z-index: 4;\n  opacity:', ';\n  transition: all 0.5s;\n'], ['\n  z-index: 4;\n  opacity:', ';\n  transition: all 0.5s;\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  @media (max-width: ', '){\n    height:60vh;\n  }\n  @media (min-width: ', '){\n    height:80vh;\n  }\n  opacity: ', ';\n  position:absolute;\n  z-index: 1;\n  bottom:0px;\n  left: ', ';\n  transform:translate(-50%);\n  transition:all 0.5s;\n'], ['\n  @media (max-width: ', '){\n    height:60vh;\n  }\n  @media (min-width: ', '){\n    height:80vh;\n  }\n  opacity: ', ';\n  position:absolute;\n  z-index: 1;\n  bottom:0px;\n  left: ', ';\n  transform:translate(-50%);\n  transition:all 0.5s;\n']),
+    _templateObject3 = _taggedTemplateLiteral(['\n  width:50%;\n  height:100%;\n  position:absolute;\n  z-index:3;\n  text-align: center;\n'], ['\n  width:50%;\n  height:100%;\n  position:absolute;\n  z-index:3;\n  text-align: center;\n']),
+    _templateObject4 = _taggedTemplateLiteral(['\n  transition:all 0.5s;\n  @media (max-width: ', '){\n    width:28vw;\n    font-size: 0.9em;\n  }\n  @media (min-width: ', '){\n    width:34vw;\n  }\n  margin-top: 8vw;\n  display:inline-block;\n  opacity: ', ';\n  margin-left: ', ';\n'], ['\n  transition:all 0.5s;\n  @media (max-width: ', '){\n    width:28vw;\n    font-size: 0.9em;\n  }\n  @media (min-width: ', '){\n    width:34vw;\n  }\n  margin-top: 8vw;\n  display:inline-block;\n  opacity: ', ';\n  margin-left: ', ';\n']),
+    _templateObject5 = _taggedTemplateLiteral(['\n  @media (max-width: ', '){\n    font-size: 1.3em;\n  }\n'], ['\n  @media (max-width: ', '){\n    font-size: 1.3em;\n  }\n']),
+    _templateObject6 = _taggedTemplateLiteral(['\n  padding:10px;\n  @media (max-width: ', '){\n    display: none;\n  }\n'], ['\n  padding:10px;\n  @media (max-width: ', '){\n    display: none;\n  }\n']);
+
+var _reactEmotion = __webpack_require__(1);
+
+var _reactEmotion2 = _interopRequireDefault(_reactEmotion);
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactStatic = __webpack_require__(4);
+
+var _Button2 = __webpack_require__(2);
+
+var _Button3 = _interopRequireDefault(_Button2);
+
+var _splitleft = __webpack_require__(29);
+
+var _splitleft2 = _interopRequireDefault(_splitleft);
+
+var _splitright = __webpack_require__(30);
+
+var _splitright2 = _interopRequireDefault(_splitright);
+
+var _left = __webpack_require__(31);
+
+var _left2 = _interopRequireDefault(_left);
+
+var _right = __webpack_require__(32);
+
+var _right2 = _interopRequireDefault(_right);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+// import {withRouter} from 'react-router-dom';
+
+
+//helper function
+function calcHovSideVal(left, right, def, val) {
+  switch (val) {
+    case 'left':
+      return left;
+    case 'right':
+      return right;
+    default:
+      return def;
+  }
+};
+
+//styling media queries
+var mediumWidth = '799px';
+var largeWidth = '800px';
+
+var _ContentContainer = (0, _reactEmotion2.default)('div')(_templateObject, function (props) {
+  return props.side ? '0' : '1';
+});
+
+var _SplitImage = (0, _reactEmotion2.default)('img')(_templateObject2, mediumWidth, largeWidth, function (props) {
+  return calcHovSideVal(props.left ? '1' : '0', props.left ? '0' : '1', '1', props.hoverSide);
+}, function (props) {
+  return calcHovSideVal('60%', '40%', '50%', props.hoverSide);
+});
+
+var _MouseOverCont = (0, _reactEmotion2.default)('div')(_templateObject3);
+
+var _Profession = (0, _reactEmotion2.default)('div')(_templateObject4, mediumWidth, largeWidth, function (props) {
+  return calcHovSideVal(props.left ? '1' : '0.1', props.left ? '0.1' : '1', '1', props.hoverSide);
+}, function (props) {
+  return calcHovSideVal('30%', '-30%', '0', props.hoverSide);
+});
+
+var _Title = (0, _reactEmotion2.default)('h2')(_templateObject5, mediumWidth);
+
+var _HiddenDescription = (0, _reactEmotion2.default)('div')(_templateObject6, mediumWidth);
+
+function SplitSectionContent(props) {
+  return _react2.default.createElement(
+    _ContentContainer,
+    { side: props.side },
+    _react2.default.createElement(
+      _MouseOverCont,
+      {
+        onMouseEnter: function onMouseEnter() {
+          return props.onMouseEnter('left');
+        } },
+      _react2.default.createElement(
+        _Profession,
+        {
+          left: true,
+          hoverSide: props.hoverSide
+        },
+        _react2.default.createElement(
+          _Title,
+          null,
+          '<Developer>'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'Software engineer, front end specialist & React.JS rockstar.'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          _HiddenDescription,
+          null,
+          _react2.default.createElement(
+            'p',
+            null,
+            'I love making visual things sexy with clean, elegant and efficient code.'
+          ),
+          _react2.default.createElement('br', null)
+        ),
+        _react2.default.createElement(
+          _Button3.default,
+          {
+            onClick: function onClick() {
+              props.history.push('/engineer');
+            },
+            small: true, whiteBg: true, color: 'dark' },
+          'See Work'
+        )
+      )
+    ),
+    _react2.default.createElement(_SplitImage, { hoverSide: props.hoverSide, left: true, src: '' + _splitleft2.default }),
+    _react2.default.createElement(
+      _MouseOverCont,
+      {
+        style: { left: '50%' },
+        onMouseEnter: function onMouseEnter() {
+          return props.onMouseEnter('right');
+        } },
+      _react2.default.createElement(
+        _Profession,
+        {
+          hoverSide: props.hoverSide
+        },
+        _react2.default.createElement(
+          _Title,
+          null,
+          'Photographer'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'Travelling, exploring and learning new things is my passion.'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          _HiddenDescription,
+          null,
+          _react2.default.createElement(
+            'p',
+            null,
+            'I\'m a hobby photographer that shares my stories & journeys with the world'
+          ),
+          _react2.default.createElement('br', null)
+        ),
+        _react2.default.createElement(
+          _Button3.default,
+          {
+            onClick: function onClick() {
+              props.history.push('/photographer', { scrollToTop: false });
+            },
+            small: true, whiteBg: true, color: 'dark' },
+          'View Gallery'
+        )
+      )
+    ),
+    _react2.default.createElement(_SplitImage, { hoverSide: props.hoverSide, src: '' + _splitright2.default }),
+    _react2.default.createElement(_SplitImage, { hoverSide: props.hoverSide, style: { opacity: props.hoverSide == 'left' ? 1 : 0 }, src: '' + _left2.default }),
+    _react2.default.createElement(_SplitImage, { hoverSide: props.hoverSide, style: { opacity: props.hoverSide == 'right' ? 1 : 0 }, src: '' + _right2.default })
+  );
+}
+exports.default = SplitSectionContent;
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/splitleft.da6e67a3.png";
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/splitright.06a569ec.png";
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/left.39c35abf.png";
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/right.13b4b995.png";
+
+/***/ }),
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1161,7 +1542,7 @@ var _reactSpringyParallax = __webpack_require__(3);
 
 var _reactSpringyParallax2 = _interopRequireDefault(_reactSpringyParallax);
 
-var _cloud = __webpack_require__(28);
+var _cloud = __webpack_require__(34);
 
 var _cloud2 = _interopRequireDefault(_cloud);
 
@@ -1321,13 +1702,13 @@ var BackgroundClouds = _react2.default.createElement(
 exports.default = BackgroundClouds;
 
 /***/ }),
-/* 28 */
+/* 34 */
 /***/ (function(module, exports) {
 
 module.exports = "data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjQxN3B4IiBoZWlnaHQ9IjI1NnB4IiB2aWV3Qm94PSIwIDAgNDE3IDI1NiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDxwYXRoIGQ9Ik00MTYuNSwxOTEuNSBDNDE2LjUsMjI2Ljg0NCAzODcuODQ0LDI1NS41IDM1Mi41LDI1NS41IEwzNTIuNSwyNTYgTDgwLjUsMjU2IEMzNi4zMTIsMjU2IDAuNSwyMjAuMTg3IDAuNSwxNzYgQzAuNSwxMzcuMjUgMjguMDYzLDEwNC45MzcgNjQuNjU2LDk3LjU5NCBDNjQuNjU2LDk3LjA2MyA2NC41LDk2LjU2MyA2NC41LDk2IEM2NC41LDQyLjk2OSAxMDcuNDY5LDAgMTYwLjUsMCBDMTk3LjkzOCwwIDIzMCwyMS42MjUgMjQ1Ljg0NCw1Mi44NzUgQzI1NC4yMTksNDkuOTM3IDI2My4wOTQsNDggMjcyLjUsNDggQzMxNi4zNDQsNDggMzUxLjg0NCw4My4yNSAzNTIuNDA2LDEyNyBMMzUyLjUsMTI3IEwzNTIuNSwxMjcuNSBDMzg3Ljg0NCwxMjcuNSA0MTYuNSwxNTYuMTU2IDQxNi41LDE5MS41IFoiIGlkPSJTaGFwZSIgc3Ryb2tlPSJub25lIiBmaWxsPSIjRkZGRkZGIiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcGF0aD4KPC9zdmc+Cg=="
 
 /***/ }),
-/* 29 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1356,47 +1737,47 @@ var _reactSpringyParallax = __webpack_require__(3);
 
 var _reactSpringyParallax2 = _interopRequireDefault(_reactSpringyParallax);
 
-var _swift = __webpack_require__(30);
+var _swift = __webpack_require__(36);
 
 var _swift2 = _interopRequireDefault(_swift);
 
-var _redux = __webpack_require__(31);
+var _redux = __webpack_require__(37);
 
 var _redux2 = _interopRequireDefault(_redux);
 
-var _react3 = __webpack_require__(32);
+var _react3 = __webpack_require__(38);
 
 var _react4 = _interopRequireDefault(_react3);
 
-var _node = __webpack_require__(33);
+var _node = __webpack_require__(39);
 
 var _node2 = _interopRequireDefault(_node);
 
-var _java = __webpack_require__(34);
+var _java = __webpack_require__(40);
 
 var _java2 = _interopRequireDefault(_java);
 
-var _html = __webpack_require__(35);
+var _html = __webpack_require__(41);
 
 var _html2 = _interopRequireDefault(_html);
 
-var _javascript = __webpack_require__(36);
+var _javascript = __webpack_require__(42);
 
 var _javascript2 = _interopRequireDefault(_javascript);
 
-var _css = __webpack_require__(37);
+var _css = __webpack_require__(43);
 
 var _css2 = _interopRequireDefault(_css);
 
-var _illustrator = __webpack_require__(38);
+var _illustrator = __webpack_require__(44);
 
 var _illustrator2 = _interopRequireDefault(_illustrator);
 
-var _photoshop = __webpack_require__(39);
+var _photoshop = __webpack_require__(45);
 
 var _photoshop2 = _interopRequireDefault(_photoshop);
 
-var _aftereffects = __webpack_require__(40);
+var _aftereffects = __webpack_require__(46);
 
 var _aftereffects2 = _interopRequireDefault(_aftereffects);
 
@@ -1526,73 +1907,73 @@ var Badges = _react2.default.createElement(
 exports.default = Badges;
 
 /***/ }),
-/* 30 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/swift.d540c67b.png";
 
 /***/ }),
-/* 31 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/redux.d48bec4a.png";
 
 /***/ }),
-/* 32 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/react.0288e93c.png";
 
 /***/ }),
-/* 33 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/node.bee7ff2a.png";
 
 /***/ }),
-/* 34 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/java.befdb05b.png";
 
 /***/ }),
-/* 35 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/html.73f12929.png";
 
 /***/ }),
-/* 36 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/javascript.a90c08be.png";
 
 /***/ }),
-/* 37 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/css3.97024fc0.png";
 
 /***/ }),
-/* 38 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/illustrator.613f9f61.png";
 
 /***/ }),
-/* 39 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/photoshop.89b02948.png";
 
 /***/ }),
-/* 40 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/aftereffects.0ccded69.png";
 
 /***/ }),
-/* 41 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1732,7 +2113,7 @@ var RageOn = _react2.default.createElement(
 exports.default = RageOn;
 
 /***/ }),
-/* 42 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1763,19 +2144,19 @@ var _Button2 = __webpack_require__(2);
 
 var _Button3 = _interopRequireDefault(_Button2);
 
-var _applyboardSchool = __webpack_require__(43);
+var _applyboardSchool = __webpack_require__(49);
 
 var _applyboardSchool2 = _interopRequireDefault(_applyboardSchool);
 
-var _applyboardSearch = __webpack_require__(44);
+var _applyboardSearch = __webpack_require__(50);
 
 var _applyboardSearch2 = _interopRequireDefault(_applyboardSearch);
 
-var _applyboardEligibility = __webpack_require__(45);
+var _applyboardEligibility = __webpack_require__(51);
 
 var _applyboardEligibility2 = _interopRequireDefault(_applyboardEligibility);
 
-var _applyboardLogo = __webpack_require__(46);
+var _applyboardLogo = __webpack_require__(52);
 
 var _applyboardLogo2 = _interopRequireDefault(_applyboardLogo);
 
@@ -1869,31 +2250,31 @@ var Applyboard = _react2.default.createElement(
 exports.default = Applyboard;
 
 /***/ }),
-/* 43 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/applyboardSchool.f85cd392.png";
 
 /***/ }),
-/* 44 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/applyboardSearch.fb67f312.png";
 
 /***/ }),
-/* 45 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/applyboardEligibility.647e50e9.png";
 
 /***/ }),
-/* 46 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/applyboardLogo.f70a2dae.png";
 
 /***/ }),
-/* 47 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2031,7 +2412,7 @@ var AnataMassage = _react2.default.createElement(
 exports.default = AnataMassage;
 
 /***/ }),
-/* 48 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2063,19 +2444,19 @@ var _Button2 = __webpack_require__(2);
 
 var _Button3 = _interopRequireDefault(_Button2);
 
-var _okeyImac = __webpack_require__(49);
+var _okeyImac = __webpack_require__(55);
 
 var _okeyImac2 = _interopRequireDefault(_okeyImac);
 
-var _okeywatch = __webpack_require__(50);
+var _okeywatch = __webpack_require__(56);
 
 var _okeywatch2 = _interopRequireDefault(_okeywatch);
 
-var _okeyphone = __webpack_require__(51);
+var _okeyphone = __webpack_require__(57);
 
 var _okeyphone2 = _interopRequireDefault(_okeyphone);
 
-var _okeyLogo = __webpack_require__(52);
+var _okeyLogo = __webpack_require__(58);
 
 var _okeyLogo2 = _interopRequireDefault(_okeyLogo);
 
@@ -2170,31 +2551,31 @@ var Okey = _react2.default.createElement(
 exports.default = Okey;
 
 /***/ }),
-/* 49 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/okeyImac.28fa3a46.png";
 
 /***/ }),
-/* 50 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/okeywatch.027df9a0.png";
 
 /***/ }),
-/* 51 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/okeyphone.cd835957.png";
 
 /***/ }),
-/* 52 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/okeyLogo.aca94c0a.png";
 
 /***/ }),
-/* 53 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2226,15 +2607,15 @@ var _Button2 = __webpack_require__(2);
 
 var _Button3 = _interopRequireDefault(_Button2);
 
-var _reportOniPad = __webpack_require__(54);
+var _reportOniPad = __webpack_require__(60);
 
 var _reportOniPad2 = _interopRequireDefault(_reportOniPad);
 
-var _reportOnLaptop = __webpack_require__(55);
+var _reportOnLaptop = __webpack_require__(61);
 
 var _reportOnLaptop2 = _interopRequireDefault(_reportOnLaptop);
 
-var _rippleLogo = __webpack_require__(56);
+var _rippleLogo = __webpack_require__(62);
 
 var _rippleLogo2 = _interopRequireDefault(_rippleLogo);
 
@@ -2308,25 +2689,25 @@ var ReportOn = _react2.default.createElement(
 exports.default = ReportOn;
 
 /***/ }),
-/* 54 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/reportOniPad.32d3e04a.png";
 
 /***/ }),
-/* 55 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/reportOnLaptop.a3e31140.png";
 
 /***/ }),
-/* 56 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/rippleLogo.a0af312e.png";
 
 /***/ }),
-/* 57 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2337,7 +2718,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _templateObject = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n  @media (max-width: 550px) {\n    ", "\n    justify-content: center;\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n  @media (max-width: 550px) {\n    ", "\n    justify-content: center;\n  }\n"]),
-    _templateObject2 = _taggedTemplateLiteral(["\n  width: 60%;\n  display: block !important;\n  max-width: 800px;\n  text-align: center;\n  margin-top: -25vh;\n  @media (max-width: 550px) {\n    padding: 10% 0 10% 0;\n    width:90%;\n  }\n"], ["\n  width: 60%;\n  display: block !important;\n  max-width: 800px;\n  text-align: center;\n  margin-top: -25vh;\n  @media (max-width: 550px) {\n    padding: 10% 0 10% 0;\n    width:90%;\n  }\n"]),
+    _templateObject2 = _taggedTemplateLiteral(["\n  width: 60%;\n  display: block !important;\n  max-width: 800px;\n  color:black;\n  text-align: center;\n  margin-top: -25vh;\n  @media (max-width: 550px) {\n    padding: 10% 0 10% 0;\n    width:90%;\n  }\n"], ["\n  width: 60%;\n  display: block !important;\n  max-width: 800px;\n  color:black;\n  text-align: center;\n  margin-top: -25vh;\n  @media (max-width: 550px) {\n    padding: 10% 0 10% 0;\n    width:90%;\n  }\n"]),
     _templateObject3 = _taggedTemplateLiteral(["\n  width:60%;\n  @media (max-width:550px){\n    width:100%;\n  }\n"], ["\n  width:60%;\n  @media (max-width:550px){\n    width:100%;\n  }\n"]);
 
 var _react = __webpack_require__(0);
@@ -2435,7 +2816,7 @@ var RageOn = _react2.default.createElement(
 exports.default = RageOn;
 
 /***/ }),
-/* 58 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2450,13 +2831,13 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(12);
+var _propTypes = __webpack_require__(13);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _style = __webpack_require__(13);
+var _style = __webpack_require__(14);
 
-var _pageNotFound = __webpack_require__(59);
+var _pageNotFound = __webpack_require__(65);
 
 var _pageNotFound2 = _interopRequireDefault(_pageNotFound);
 
@@ -2485,7 +2866,7 @@ function PageNotFound(_ref) {
 PageNotFound.propTypes = propTypes;
 
 /***/ }),
-/* 59 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2495,7 +2876,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _style = __webpack_require__(13);
+var _style = __webpack_require__(14);
 
 var _style2 = _interopRequireDefault(_style);
 
@@ -2506,7 +2887,7 @@ var s = Object.create(_style2.default);
 exports.default = s;
 
 /***/ }),
-/* 60 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2545,7 +2926,7 @@ function FadeIn(Page, method) {
 exports.default = FadeIn;
 
 /***/ }),
-/* 61 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2561,7 +2942,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _SplitSection = __webpack_require__(62);
+var _SplitSection = __webpack_require__(12);
 
 var _SplitSection2 = _interopRequireDefault(_SplitSection);
 
@@ -2642,348 +3023,6 @@ var SplitSectionContainer = function (_React$Component) {
 exports.default = (0, _reactStatic.withRouter)(SplitSectionContainer);
 
 /***/ }),
-/* 62 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _templateObject = _taggedTemplateLiteral(['\n  display:flex;\n  max-height: 100vh;\n  max-width: 100vw;\n  overflow:hidden;\n  flex-direction: row;\n  position:relative;\n  background: ', ';\n'], ['\n  display:flex;\n  max-height: 100vh;\n  max-width: 100vw;\n  overflow:hidden;\n  flex-direction: row;\n  position:relative;\n  background: ', ';\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  height:0;\n  z-index: 0;\n  width: ', ';\n  @media (max-width: ', '){\n    border-bottom: ', ';\n    border-left: ', ';\n  }\n  @media (min-width: ', '){\n    border-bottom: ', ';\n    border-left: ', ';\n  }\n  transition:all 0.5s;\n'], ['\n  height:0;\n  z-index: 0;\n  width: ', ';\n  @media (max-width: ', '){\n    border-bottom: ', ';\n    border-left: ', ';\n  }\n  @media (min-width: ', '){\n    border-bottom: ', ';\n    border-left: ', ';\n  }\n  transition:all 0.5s;\n']),
-    _templateObject3 = _taggedTemplateLiteral(['\n  height:0;\n  z-index: 0;\n  width: ', ';\n  @media (max-width: ', '){\n    border-top: ', ';\n    border-right: ', ';\n  }\n  @media (min-width: ', '){\n    border-top: ', ';\n    border-right: ', ';\n  }\n  transition:all 0.3s;\n'], ['\n  height:0;\n  z-index: 0;\n  width: ', ';\n  @media (max-width: ', '){\n    border-top: ', ';\n    border-right: ', ';\n  }\n  @media (min-width: ', '){\n    border-top: ', ';\n    border-right: ', ';\n  }\n  transition:all 0.3s;\n']);
-
-var _reactEmotion = __webpack_require__(1);
-
-var _reactEmotion2 = _interopRequireDefault(_reactEmotion);
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactStatic = __webpack_require__(4);
-
-var _SplitSectionContent = __webpack_require__(63);
-
-var _SplitSectionContent2 = _interopRequireDefault(_SplitSectionContent);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); } //import packages
-
-
-//import components
-
-
-//helper function
-function calcHovSideVal(left, right, def, val) {
-  switch (val) {
-    case 'left':
-      return left;
-    case 'right':
-      return right;
-    default:
-      return def;
-  }
-};
-
-//styling media queries
-var mediumWidth = '799px';
-var largeWidth = '800px';
-
-var _SplitContainer = (0, _reactEmotion2.default)('div')(_templateObject, function (props) {
-  return props.side != 'right' ? '#e2e2e2' : '#d5d9ff';
-});
-
-var _RightBg = (0, _reactEmotion2.default)('div')(_templateObject2, function (props) {
-  if (props.side) {
-    return props.side == 'left' ? '3%' : '97%';
-  }
-  return calcHovSideVal('30%', '70%', '50%', props.hoverSide);
-}, mediumWidth, function (props) {
-  if (props.side) {
-    return '100vh solid #d5d9ff';
-  }
-  return '60vh solid #d5d9ff';
-}, function (props) {
-  if (props.side) {
-    return '11vh solid transparent';
-  }
-  return '6.75vh solid transparent';
-}, largeWidth, function (props) {
-  if (props.side) {
-    return '100vh solid #d5d9ff';
-  }
-  return '80vh solid #d5d9ff';
-}, function (props) {
-  if (props.side) {
-    return '11vh solid transparent';
-  }
-  return '9vh solid transparent';
-});
-
-var _LeftBg = (0, _reactEmotion2.default)('div')(_templateObject3, function (props) {
-  if (props.side) {
-    return props.side == 'left' ? '97%' : '3%';
-  }
-  return calcHovSideVal('70%', '30%', '50%', props.hoverSide);
-}, mediumWidth, function (props) {
-  if (props.side) {
-    return '100vh solid #e2e2e2';
-  }
-  return '60vh solid #e2e2e2';
-}, function (props) {
-  if (props.side) {
-    return '11vh solid transparent';
-  }
-  return '6.75vh solid transparent';
-}, largeWidth, function (props) {
-  if (props.side) {
-    return '100vh solid #e2e2e2';
-  }
-  return '80vh solid #e2e2e2';
-}, function (props) {
-  if (props.side) {
-    return '11vh solid transparent';
-  }
-  return '9vh solid transparent';
-});
-
-function SplitSection(props) {
-  return _react2.default.createElement(
-    _SplitContainer,
-    {
-      onMouseLeave: props.onMouseLeave,
-      side: props.side
-    },
-    _react2.default.createElement(_SplitSectionContent2.default, props),
-    _react2.default.createElement(_LeftBg, { side: props.side, hoverSide: props.hoverSide }),
-    _react2.default.createElement(_RightBg, { side: props.side, hoverSide: props.hoverSide })
-  );
-}
-
-exports.default = (0, _reactStatic.withRouter)(SplitSection);
-
-/***/ }),
-/* 63 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _templateObject = _taggedTemplateLiteral(['\n  z-index: 4;\n  opacity:', ';\n  transition: all 0.5s;\n'], ['\n  z-index: 4;\n  opacity:', ';\n  transition: all 0.5s;\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  @media (max-width: ', '){\n    height:60vh;\n  }\n  @media (min-width: ', '){\n    height:80vh;\n  }\n  opacity: ', ';\n  position:absolute;\n  z-index: 1;\n  bottom:0px;\n  left: ', ';\n  transform:translate(-50%);\n  transition:all 0.5s;\n'], ['\n  @media (max-width: ', '){\n    height:60vh;\n  }\n  @media (min-width: ', '){\n    height:80vh;\n  }\n  opacity: ', ';\n  position:absolute;\n  z-index: 1;\n  bottom:0px;\n  left: ', ';\n  transform:translate(-50%);\n  transition:all 0.5s;\n']),
-    _templateObject3 = _taggedTemplateLiteral(['\n  width:50%;\n  height:100%;\n  position:absolute;\n  z-index:3;\n  text-align: center;\n'], ['\n  width:50%;\n  height:100%;\n  position:absolute;\n  z-index:3;\n  text-align: center;\n']),
-    _templateObject4 = _taggedTemplateLiteral(['\n  transition:all 0.5s;\n  @media (max-width: ', '){\n    width:28vw;\n    font-size: 0.9em;\n  }\n  @media (min-width: ', '){\n    width:34vw;\n  }\n  margin-top: 8vw;\n  display:inline-block;\n  opacity: ', ';\n  margin-left: ', ';\n'], ['\n  transition:all 0.5s;\n  @media (max-width: ', '){\n    width:28vw;\n    font-size: 0.9em;\n  }\n  @media (min-width: ', '){\n    width:34vw;\n  }\n  margin-top: 8vw;\n  display:inline-block;\n  opacity: ', ';\n  margin-left: ', ';\n']),
-    _templateObject5 = _taggedTemplateLiteral(['\n  @media (max-width: ', '){\n    font-size: 1.3em;\n  }\n'], ['\n  @media (max-width: ', '){\n    font-size: 1.3em;\n  }\n']),
-    _templateObject6 = _taggedTemplateLiteral(['\n  padding:10px;\n  @media (max-width: ', '){\n    display: none;\n  }\n'], ['\n  padding:10px;\n  @media (max-width: ', '){\n    display: none;\n  }\n']);
-
-var _reactEmotion = __webpack_require__(1);
-
-var _reactEmotion2 = _interopRequireDefault(_reactEmotion);
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactStatic = __webpack_require__(4);
-
-var _Button2 = __webpack_require__(2);
-
-var _Button3 = _interopRequireDefault(_Button2);
-
-var _splitleft = __webpack_require__(64);
-
-var _splitleft2 = _interopRequireDefault(_splitleft);
-
-var _splitright = __webpack_require__(65);
-
-var _splitright2 = _interopRequireDefault(_splitright);
-
-var _left = __webpack_require__(66);
-
-var _left2 = _interopRequireDefault(_left);
-
-var _right = __webpack_require__(67);
-
-var _right2 = _interopRequireDefault(_right);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-// import {withRouter} from 'react-router-dom';
-
-
-//helper function
-function calcHovSideVal(left, right, def, val) {
-  switch (val) {
-    case 'left':
-      return left;
-    case 'right':
-      return right;
-    default:
-      return def;
-  }
-};
-
-//styling media queries
-var mediumWidth = '799px';
-var largeWidth = '800px';
-
-var _ContentContainer = (0, _reactEmotion2.default)('div')(_templateObject, function (props) {
-  return props.side ? '0' : '1';
-});
-
-var _SplitImage = (0, _reactEmotion2.default)('img')(_templateObject2, mediumWidth, largeWidth, function (props) {
-  return calcHovSideVal(props.left ? '1' : '0', props.left ? '0' : '1', '1', props.hoverSide);
-}, function (props) {
-  return calcHovSideVal('60%', '40%', '50%', props.hoverSide);
-});
-
-var _MouseOverCont = (0, _reactEmotion2.default)('div')(_templateObject3);
-
-var _Profession = (0, _reactEmotion2.default)('div')(_templateObject4, mediumWidth, largeWidth, function (props) {
-  return calcHovSideVal(props.left ? '1' : '0.1', props.left ? '0.1' : '1', '1', props.hoverSide);
-}, function (props) {
-  return calcHovSideVal('30%', '-30%', '0', props.hoverSide);
-});
-
-var _Title = (0, _reactEmotion2.default)('h2')(_templateObject5, mediumWidth);
-
-var _HiddenDescription = (0, _reactEmotion2.default)('div')(_templateObject6, mediumWidth);
-
-function SplitSectionContent(props) {
-  return _react2.default.createElement(
-    _ContentContainer,
-    { side: props.side },
-    _react2.default.createElement(
-      _MouseOverCont,
-      {
-        onMouseEnter: function onMouseEnter() {
-          return props.onMouseEnter('left');
-        } },
-      _react2.default.createElement(
-        _Profession,
-        {
-          left: true,
-          hoverSide: props.hoverSide
-        },
-        _react2.default.createElement(
-          _Title,
-          null,
-          '<Developer>'
-        ),
-        _react2.default.createElement(
-          'p',
-          null,
-          'Software engineer, front end specialist & React.JS rockstar.'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          _HiddenDescription,
-          null,
-          _react2.default.createElement(
-            'p',
-            null,
-            'I love making visual things sexy with clean, elegant and efficient code.'
-          ),
-          _react2.default.createElement('br', null)
-        ),
-        _react2.default.createElement(
-          _Button3.default,
-          {
-            onClick: function onClick() {
-              props.history.push('/engineer');
-            },
-            small: true, whiteBg: true, color: 'dark' },
-          'See Work'
-        )
-      )
-    ),
-    _react2.default.createElement(_SplitImage, { hoverSide: props.hoverSide, left: true, src: '' + _splitleft2.default }),
-    _react2.default.createElement(
-      _MouseOverCont,
-      {
-        style: { left: '50%' },
-        onMouseEnter: function onMouseEnter() {
-          return props.onMouseEnter('right');
-        } },
-      _react2.default.createElement(
-        _Profession,
-        {
-          hoverSide: props.hoverSide
-        },
-        _react2.default.createElement(
-          _Title,
-          null,
-          'Photographer'
-        ),
-        _react2.default.createElement(
-          'p',
-          null,
-          'Travelling, exploring and learning new things is my passion.'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          _HiddenDescription,
-          null,
-          _react2.default.createElement(
-            'p',
-            null,
-            'I\'m a hobby photographer that shares my stories & journeys with the world'
-          ),
-          _react2.default.createElement('br', null)
-        ),
-        _react2.default.createElement(
-          _Button3.default,
-          {
-            onClick: function onClick() {
-              props.history.push('/photographer', { scrollToTop: false });
-            },
-            small: true, whiteBg: true, color: 'dark' },
-          'View Gallery'
-        )
-      )
-    ),
-    _react2.default.createElement(_SplitImage, { hoverSide: props.hoverSide, src: '' + _splitright2.default }),
-    _react2.default.createElement(_SplitImage, { hoverSide: props.hoverSide, style: { opacity: props.hoverSide == 'left' ? 1 : 0 }, src: '' + _left2.default }),
-    _react2.default.createElement(_SplitImage, { hoverSide: props.hoverSide, style: { opacity: props.hoverSide == 'right' ? 1 : 0 }, src: '' + _right2.default })
-  );
-}
-exports.default = SplitSectionContent;
-
-/***/ }),
-/* 64 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/splitleft.da6e67a3.png";
-
-/***/ }),
-/* 65 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/splitright.06a569ec.png";
-
-/***/ }),
-/* 66 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/left.39c35abf.png";
-
-/***/ }),
-/* 67 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/right.13b4b995.png";
-
-/***/ }),
 /* 68 */
 /***/ (function(module, exports) {
 
@@ -2998,4 +3037,4 @@ module.exports = __webpack_require__.p + "static/right.13b4b995.png";
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.0488abdc.js.map
+//# sourceMappingURL=static.7230baf7.js.map

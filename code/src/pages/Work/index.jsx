@@ -12,6 +12,7 @@ import bashWindow from "assets/window.png";
 
 //Import Core
 import _Button from "core/Button.jsx";
+import SplitSection from "components/SplitSection/SplitSection.jsx";
 
 //Import Components
 import BackgroundClouds from "./components/BackgroundClouds";
@@ -22,6 +23,13 @@ import AnataMassage from "./components/AnataMassage";
 import Okey from "./components/Okey";
 import ReportOn from "./components/ReportOn";
 import ContactMe from './components/ContactMe';
+
+class ParallaxFixed extends Parallax {
+	constructor(props) {
+		super(props);
+		this.state = {ready: true};
+	}
+}
 
 const _Container = styled("div")`
   z-index: 5;
@@ -89,7 +97,7 @@ function WorkPortfolio(props) {
           P{" "}
         </_PButton>
       </_FloatingCont>
-      <Parallax pages={6}>
+      <ParallaxFixed pages={6}>
         {/*  last page has no transpaency. we want clouds above it. */}
         <Parallax.Layer
           offset={5}
@@ -145,7 +153,14 @@ function WorkPortfolio(props) {
         {ReportOn}
         {ContactMe}
 
-      </Parallax>
+      </ParallaxFixed>
+      <div style={{position:'fixed', zIndex:-1}}>
+        <SplitSection
+          fixed
+          hoverSide={null}
+          side={'left'}
+        />
+      </div>
     </_Container>
   );
 }

@@ -28,6 +28,7 @@ const Cont = styled("div")`
   width: 60%;
   display: block !important;
   max-width: 800px;
+  color:black;
   text-align: center;
   margin-top: -25vh;
   @media (max-width: 550px) {
