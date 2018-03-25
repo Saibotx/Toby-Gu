@@ -482,23 +482,23 @@ var App = function (_React$Component) {
     key: "render",
     value: function render() {
       var side;
-      var pathname;
+      var pathname = this.props.location.pathname;
       // var Router = (p)=><BrowserRouter>{p.children}</BrowserRouter>;
-      if (this.state.client) {
-        //Set Router
-        // var Router = (p)=><BrowserRouter>{p.children}</BrowserRouter>;
-        //Deal with pathname and sides
-        pathname = window.location.pathname;
-        switch (pathname) {
-          case "/engineer":
-            side = "left";
-            break;
-          case "/photographer":
-            side = "right";
-            break;
-          default:
-            side = null;
-        }
+
+      //Set Router
+      // var Router = (p)=><BrowserRouter>{p.children}</BrowserRouter>;
+      //Deal with pathname and sides
+      // pathname = window.location.pathname;
+
+      switch (pathname) {
+        case "/engineer":
+          side = "left";
+          break;
+        case "/photographer":
+          side = "right";
+          break;
+        default:
+          side = null;
       }
 
       return _react2.default.createElement(
@@ -2998,4 +2998,4 @@ module.exports = __webpack_require__.p + "static/right.13b4b995.png";
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.fdcaf5fe.js.map
+//# sourceMappingURL=static.0488abdc.js.map

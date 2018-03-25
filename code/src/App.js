@@ -52,23 +52,23 @@ class App extends React.Component {
   }
   render() {
     var side;
-    var pathname;
+    var pathname = this.props.location.pathname;
     // var Router = (p)=><BrowserRouter>{p.children}</BrowserRouter>;
-    if (this.state.client) {
-      //Set Router
-      // var Router = (p)=><BrowserRouter>{p.children}</BrowserRouter>;
-      //Deal with pathname and sides
-      pathname = window.location.pathname;
-      switch (pathname) {
-        case "/engineer":
-          side = "left";
-          break;
-        case "/photographer":
-          side = "right";
-          break;
-        default:
-          side = null;
-      }
+
+    //Set Router
+    // var Router = (p)=><BrowserRouter>{p.children}</BrowserRouter>;
+    //Deal with pathname and sides
+    // pathname = window.location.pathname;
+
+    switch (pathname) {
+      case "/engineer":
+        side = "left";
+        break;
+      case "/photographer":
+        side = "right";
+        break;
+      default:
+        side = null;
     }
 
     return (
