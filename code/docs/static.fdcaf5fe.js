@@ -870,9 +870,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  width:100%;\n  background-color:white;\n  z-index:2;\n  position:relative\n'], ['\n  width:100%;\n  background-color:white;\n  z-index:2;\n  position:relative\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n    width:80%;\n    transform:translateY(-110px);\n    text-align: center;\n    margin-left: 10%;\n    margin-right: 10%;\n    color:#494949;\n    z-index: 2;\n    position:relative;\n'], ['\n    width:80%;\n    transform:translateY(-110px);\n    text-align: center;\n    margin-left: 10%;\n    margin-right: 10%;\n    color:#494949;\n    z-index: 2;\n    position:relative;\n']),
-    _templateObject3 = _taggedTemplateLiteral(['\n  width:200px;\n  border-radius: 50%;\n  display:inline-block;\n  @media (max-width: 500px) {\n    width:150px\n  }\n\n'], ['\n  width:200px;\n  border-radius: 50%;\n  display:inline-block;\n  @media (max-width: 500px) {\n    width:150px\n  }\n\n']);
+var _templateObject = _taggedTemplateLiteral(["\n  width: 100%;\n  background-color: white;\n  z-index: 2;\n  position: relative;\n"], ["\n  width: 100%;\n  background-color: white;\n  z-index: 2;\n  position: relative;\n"]),
+    _templateObject2 = _taggedTemplateLiteral(["\n  width: 80%;\n  transform: translateY(-110px);\n  text-align: center;\n  margin-left: 10%;\n  margin-right: 10%;\n  color: #494949;\n  z-index: 2;\n  position: relative;\n"], ["\n  width: 80%;\n  transform: translateY(-110px);\n  text-align: center;\n  margin-left: 10%;\n  margin-right: 10%;\n  color: #494949;\n  z-index: 2;\n  position: relative;\n"]),
+    _templateObject3 = _taggedTemplateLiteral(["\n  width: 200px;\n  border-radius: 50%;\n  display: inline-block;\n  @media (max-width: 500px) {\n    width: 150px;\n  }\n"], ["\n  width: 200px;\n  border-radius: 50%;\n  display: inline-block;\n  @media (max-width: 500px) {\n    width: 150px;\n  }\n"]);
 
 exports.default = Profile;
 
@@ -903,11 +903,11 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 //import assets
 
 
-var _ProfileBackground = (0, _reactEmotion2.default)('div')(_templateObject);
+var _ProfileBackground = (0, _reactEmotion2.default)("div")(_templateObject);
 
-var _ProfileContainer = (0, _reactEmotion2.default)('div')(_templateObject2);
+var _ProfileContainer = (0, _reactEmotion2.default)("div")(_templateObject2);
 
-var _PortHole = (0, _reactEmotion2.default)('img')(_templateObject3);
+var _PortHole = (0, _reactEmotion2.default)("img")(_templateObject3);
 
 function Profile(props) {
   return _react2.default.createElement(
@@ -916,24 +916,19 @@ function Profile(props) {
     _react2.default.createElement(
       _ProfileContainer,
       null,
-      _react2.default.createElement(_PortHole, { src: '' + _profile2.default }),
+      _react2.default.createElement(_PortHole, { src: "" + _profile2.default }),
       _react2.default.createElement(
-        'h2',
+        "h2",
         null,
-        'Hey! I\'m Toby'
+        "Hey! I'm Toby"
       ),
       _react2.default.createElement(
-        'h3',
+        "h3",
         null,
-        ' A Canadian software engineer specializing in front-end development and design. ',
-        _react2.default.createElement('br', null),
-        _react2.default.createElement('br', null),
-        ' I\'ve founded two startups and have been coding since before facebook was cool.'
-      ),
-      _react2.default.createElement(
-        _Button3.default,
-        { color: 'dark' },
-        'Learn More'
+        "A Canadian software engineer specializing in front-end development and design.",
+        _react2.default.createElement("br", null),
+        _react2.default.createElement("br", null),
+        "I've founded two startups and have been coding since before facebook was cool."
       )
     )
   );
@@ -3003,4 +2998,4 @@ module.exports = __webpack_require__.p + "static/right.13b4b995.png";
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.b134ebc4.js.map
+//# sourceMappingURL=static.fdcaf5fe.js.map
