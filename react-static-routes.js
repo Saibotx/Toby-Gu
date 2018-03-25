@@ -16,15 +16,17 @@
     }
 
       const t_0 = universal(import('../src/pages/Work'), universalOptions)
+const t_1 = universal(import('../src/pages/Photography'), universalOptions)
     
 
     // Template Map
     const templateMap = {
-      t_0
+      t_0,
+t_1
     }
 
     // Template Tree
-    const templateTree = {c:{"engineer":{t:"t_0"}}}
+    const templateTree = {c:{"engineer":{t:"t_0"},"photographer":{t:"t_1"}}}
 
     // Get template for given path
     const getComponentForPath = path => {

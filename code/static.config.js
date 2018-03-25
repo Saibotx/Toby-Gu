@@ -16,6 +16,10 @@ export default {
       path: "engineer",
       component: "src/pages/Work"
     },
+    {
+      path: "photographer",
+      component: "src/pages/Photography"
+    },
     // A route with data
     // {
     //   path: "portfolio",
