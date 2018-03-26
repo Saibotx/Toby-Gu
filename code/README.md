@@ -1,10 +1,6 @@
-# React-Static - Basic Example
+# MY Portfolio!
 
-This example is the most basic version of react-static available. It includes:
-- Babel
-- CSS imports
-- Image imports
-- File imports
-- Automatic Routing
+Hey-yo! Welcome. All my stuff is built super responsive. Feel free to mess with your screen size ;)
 
-To get started, run `react-static create` and use the `basic` template.
+- Enjoy!
+- Toby.

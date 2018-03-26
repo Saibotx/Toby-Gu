@@ -25,6 +25,9 @@ const ParallaxFlex = styled(Parallax.Layer)`
 const BrowserWindow = styled("div")`
   width: ${props => (props.main ? "60%" : "38%")};
   max-width: 900px;
+  @media(max-height: 800px){
+    max-width: 500px;
+  }
   text-align: center;
   margin-top: -25vh;
   @media (max-width: 550px) {
@@ -40,6 +43,7 @@ const BrowserWindow = styled("div")`
 const Desc = styled(BrowserWindow)`
   padding-bottom: 30px;
   width: 50%;
+  max-width: 100% !important;
   margin-top: 100vh;
   transform: translateY(-50%);
   display: block !important;
@@ -56,6 +60,9 @@ const MobilePhoneImg = styled('img')`
     width:15vw;
     margin-top:10vh;
     max-width: 300px;
+    @media(max-height: 800px){
+      max-width: 250px;
+    }
     @media (max-width: 550px) {
       ${props=>props.left && 'padding-right: 10vh;'}
       ${props=>props.right && 'padding-left: 10vh;'}

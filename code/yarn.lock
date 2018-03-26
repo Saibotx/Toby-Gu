@@ -6298,7 +6298,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.6.0:
+prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@~15.6.0:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.1.tgz#36644453564255ddda391191fb3a125cbdf654ca"
   dependencies:
@@ -6494,12 +6494,6 @@ react-error-overlay@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-3.0.0.tgz#c2bc8f4d91f1375b3dad6d75265d51cd5eeaf655"
 
-react-grid-gallery@^0.4.8:
-  version "0.4.8"
-  resolved "https://registry.yarnpkg.com/react-grid-gallery/-/react-grid-gallery-0.4.8.tgz#fe1626f099bbbd3a9241a4658beeb6aeeaf9f066"
-  dependencies:
-    react-images "^0.5.6"
-
 react-helmet@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/react-helmet/-/react-helmet-5.2.0.tgz#a81811df21313a6d55c5f058c4aeba5d6f3d97a7"
@@ -6525,7 +6519,7 @@ react-html-parser@^2.0.2:
   dependencies:
     htmlparser2 "^3.9.0"
 
-react-images@^0.5.6:
+react-images@^0.5.17:
   version "0.5.17"
   resolved "https://registry.yarnpkg.com/react-images/-/react-images-0.5.17.tgz#6f76fd03b370176bead7d22cec06afe82fe1cec0"
   dependencies:
@@ -6539,6 +6533,12 @@ react-mt-svg-lines@^0.8.3:
   resolved "https://registry.yarnpkg.com/react-mt-svg-lines/-/react-mt-svg-lines-0.8.3.tgz#7654b9c8af0cb4a92dbe80d75ab93c412712c59d"
   dependencies:
     "@tweenjs/tween.js" "16.7.0"
+
+react-photo-gallery@^6.0.22:
+  version "6.0.22"
+  resolved "https://registry.yarnpkg.com/react-photo-gallery/-/react-photo-gallery-6.0.22.tgz#733126f9a4c420af8977f868222b074faa0c764a"
+  dependencies:
+    prop-types "~15.6.0"
 
 react-router-dom@^4.2.2:
   version "4.2.2"

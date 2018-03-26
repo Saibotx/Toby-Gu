@@ -64,24 +64,24 @@ class App extends React.Component {
   render() {
     var side;
     var pathname = this.props.location.pathname;
-
+    pathname = pathname.replace(/\//gi, '')
     switch (pathname) {
-      case "/engineer":
+      case ("engineer"):
         side = "left";
         break;
-      case "/photographer":
+      case ("photographer"):
         side = "right";
         break;
       default:
         side = null;
     }
-
+    console.log("app side", side, pathname);
     return (
       <div style={{ position: "relative" }}>
         {/* hacky way of dismounting home section with animation. acutal animation happens
           within the Home component.  */}
         <Transition>
-          {pathname == "/" && (
+          {pathname == "" && (
             <Home
               scrollToBottom={this.scrollToBottom}
               client={this.state.client}

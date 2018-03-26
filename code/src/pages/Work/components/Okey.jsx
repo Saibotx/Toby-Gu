@@ -26,6 +26,9 @@ const BrowserWindow = styled("div")`
   max-width: 700px;
   text-align: center;
   margin-top: -25vh;
+  @media (max-height: 800px) {
+    max-width: 400px;
+  }
   @media (max-width: 550px) {
     width: 75%;
     ${"" /* margin-top: -15vh; */} padding: 10% 0 10% 0;
@@ -51,14 +54,18 @@ const workText = css`
 `;
 
 const MobilePhoneImg = styled("img")`
-  width:20vw;
-  margin-top: 20vh;
-  max-width: 150px;
-  ${props =>
-    props.left && "width:30vw;max-width:260px;margin-top:30vh;"} @media (max-width: 550px) {
-    ${props => props.left && "padding-right: 10vh;"} ${props =>
-        props.right && "padding-left: 10vh;"} height:auto;
-    width: 30vw;
+  width: ${props => (props.left ? "30vw" : "20vw")};
+  margin-top: ${props => (props.left ? "30vh" : "20vh")};
+  max-width: ${props => (props.left ? "260px" : "150px")};
+  @media (max-height: 800px) {
+    max-width: ${props => (props.left ? "180px" : "120px")};
+    margin-top: ${props => (props.left ? "18vh" : "15vh")};
+  }
+  @media (max-width: 550px) {
+    ${props => props.left && "padding-right: 10vh;"};
+    ${props => props.right && "padding-left: 10vh;"};
+    height: auto;
+    width: ${props=>props.left ? '35vw' : '20vw'};
   }
 `;
 
@@ -87,7 +94,7 @@ const Okey = (
         <h4 className={workText}>
           Over a few short months, Okey was built natively on Android, iOS,
           Apple Watch and OSX. Our products had a combined 30,000 downloads and
-          raised nearly $100k in investment money. I was handled all the
+          raised nearly $100k in investment money. I handled all the
           business, fund raising and built the mobile and web apps.
         </h4>
         <a target="_blank" href="https://okeytest.herokuapp.com/">

@@ -13,6 +13,10 @@ export default {
   },
   getRoutes: async ({ dev }) => [
     {
+      path: "",
+      component: "src/pages/Home"
+    },
+    {
       path: "engineer",
       component: "src/pages/Work"
     },

@@ -15,18 +15,20 @@
       },
     }
 
-      const t_0 = universal(import('../src/pages/Work'), universalOptions)
-const t_1 = universal(import('../src/pages/Photography'), universalOptions)
+      const t_0 = universal(import('../src/pages/Home'), universalOptions)
+const t_1 = universal(import('../src/pages/Work'), universalOptions)
+const t_2 = universal(import('../src/pages/Photography'), universalOptions)
     
 
     // Template Map
     const templateMap = {
       t_0,
-t_1
+t_1,
+t_2
     }
 
     // Template Tree
-    const templateTree = {c:{"engineer":{t:"t_0"},"photographer":{t:"t_1"}}}
+    const templateTree = {c:{"/":{t:"t_0"},"engineer":{t:"t_1"},"photographer":{t:"t_2"}}}
 
     // Get template for given path
     const getComponentForPath = path => {

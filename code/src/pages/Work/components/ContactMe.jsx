@@ -31,6 +31,9 @@ const Cont = styled("div")`
   color:black;
   text-align: center;
   margin-top: -25vh;
+  @media (max-height: 800px) {
+    max-width: 500px;
+  }
   @media (max-width: 550px) {
     padding: 10% 0 10% 0;
     width:90%;

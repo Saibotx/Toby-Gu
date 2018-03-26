@@ -27,6 +27,9 @@ const BrowserWindow = styled("div")`
   width: ${props => (props.main ? "50%" : "38%")};
   text-align: center;
   margin-top:-25vh;
+  @media(max-height: 800px){
+    max-width: ${props => (props.main ? "500px" : "400px")};
+  }
   @media (max-width: 550px) {
     width: 75%;
     padding: 10% 0 10% 0;
@@ -37,6 +40,7 @@ const BrowserWindow = styled("div")`
 
 const Desc = styled(BrowserWindow)`
   padding-bottom: 30px;
+  max-width: 100% !important;
   width:50%;
   margin-top:100vh;
   transform:translateY(-50%);

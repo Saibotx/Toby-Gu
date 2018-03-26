@@ -152,13 +152,13 @@ function WorkPortfolio(props) {
         {ContactMe}
 
       </ParallaxFixed>
-      <div style={{position:'fixed', zIndex:-1}}>
+      {/* <div style={{position:'fixed', zIndex:-1}}>
         <SplitSection
           fixed
           hoverSide={null}
           side={'left'}
         />
-      </div>
+      </div> */}
     </_Container>
   );
 }

@@ -26,6 +26,10 @@ const BrowserWindow = styled("div")`
   text-align: center;
   max-width: 1300px;
   margin-top: -10vh;
+  @media (max-height: 800px) {
+    max-width: 500px;
+    ${props => props.iPad && "left:calc(45% - 10px);"};
+  }
   position: absolute;
   ${props => props.iPad && "left:calc(30% - 10px);"} @media (max-width: 550px) {
     left: -10px;
@@ -34,9 +38,10 @@ const BrowserWindow = styled("div")`
 `;
 
 const Desc = styled("div")`
-  padding-bottom: 30px;
+  padding-bottom: 60px;
   width: 50%;
   margin-top: 50vh;
+  max-width: 100% !important;
   transform: translateY(-50%);
   text-align: center;
   position: absolute;
@@ -54,10 +59,15 @@ const workText = css`
 
 const IPad = styled("img")`
   height: 60vh;
-  max-width: 800px;
+  text-align: right;
+  @media (max-height: 800px) {
+    height: auto;
+    width: 300px;
+  }
   @media (max-width: 550px) {
     height: auto;
     width: 50vw;
+    transform: translate(0%);
   }
 `;
 
@@ -81,13 +91,10 @@ const ReportOn = (
           Freelance Project Lead - Mobile & Web Engineer
         </h3>
         <h4 className={workText}>
-          ReportON is a B2B web & mobile app to manage marketing merchandisers
-          in the retail space. My team and I were contracted for a web dashboard
-          and two mobile apps for employees to input data in real time so that
-          managers at head office can see what's happening in field. The project
-          was funded by Ripple Effect Marketing and also generates analytics,
-          reports to improve the efficiency of merchandising employees working
-          for their CPG clients. I built the front end web app and both mobile apps.
+          My team and I were contracted to build a B2B web dashboard and two mobile apps
+          for marketing managers to see what employees were doing in real time. Funded by
+          Ripple Effect Marketing, we vastly improved the efficiency of their
+          employees. I built the front end web app and both mobile apps.
         </h4>
       </Desc>
     </ParallaxFlex>

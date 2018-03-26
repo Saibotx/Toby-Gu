@@ -3,15 +3,19 @@
     import { Route } from 'react-router-dom'
     import universal, { setHasBabelPlugin } from 'react-universal-component'
 
-    import t_0 from '../src/pages/Work'
+    import t_0 from '../src/pages/Home'
+import t_1 from '../src/pages/Work'
+import t_2 from '../src/pages/Photography'
 
     // Template Map
     const templateMap = {
-      t_0
+      t_0,
+t_1,
+t_2
     }
 
     // Template Tree
-    const templateTree = {c:{"engineer":{t:"t_0"}}}
+    const templateTree = {c:{"/":{t:"t_0"},"engineer":{t:"t_1"},"photographer":{t:"t_2"}}}
 
     // Get template for given path
     const getComponentForPath = path => {

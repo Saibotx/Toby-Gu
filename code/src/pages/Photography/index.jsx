@@ -1,6 +1,8 @@
 //Import Packages
 import React from "react";
-import Gallery from "react-grid-gallery";
+import Gallery from "react-photo-gallery";
+import Lightbox from "react-images";
+
 import styled, { css } from "react-emotion";
 import { withRouter } from "react-static";
 import SplitSection from "components/SplitSection/SplitSection.jsx";
@@ -48,15 +50,61 @@ const _DButton = styled("button")`
 `;
 
 const GalleryContainer = styled("div")`
-  width: calc(100% - 200px);
-  margin-top: 115px;
-  padding-left: 100px;
-  height: calc(100vh - 115px);
+  width: calc(100% - 105px);
+  margin-top: 125px;
+  margin-left: 75px;
+  @media (max-width:550px){
+    margin-left: 55px;
+    width: calc(100% - 75px);
+  }
+  height: calc(100vh - 135px);
   overflow: scroll;
 `;
 
 class PhotographyPortfolio extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = { currentImage: 0 };
+    this.closeLightbox = this.closeLightbox.bind(this);
+    this.openLightbox = this.openLightbox.bind(this);
+    this.gotoNext = this.gotoNext.bind(this);
+    this.gotoPrevious = this.gotoPrevious.bind(this);
+  }
+  componentDidMount() {
+    this.setState({
+      client: true
+    });
+  }
+  openLightbox(event, obj) {
+    this.setState({
+      currentImage: obj.index,
+      lightboxIsOpen: true
+    });
+  }
+  closeLightbox() {
+    this.setState({
+      currentImage: 0,
+      lightboxIsOpen: false
+    });
+  }
+  gotoPrevious() {
+    this.setState({
+      currentImage: this.state.currentImage - 1
+    });
+  }
+  gotoNext() {
+    this.setState({
+      currentImage: this.state.currentImage + 1
+    });
+  }
+
   render() {
+    var columns = 2;
+    if (this.state.client){
+      if (window.screen.width > 600){
+        columns = 4;
+      }
+    }
     return (
       <_Container>
         <_FloatingCont>
@@ -70,9 +118,11 @@ class PhotographyPortfolio extends React.Component {
             {"Photographer"}
           </h1>
           <h4 style={{ padding: "0 20%" }}>
-            As a digital nomad, I travel, capture my experiences and share these
-            with the world. Check out more on my{" "}
-            <a href="https://www.instagram.com/guutoby/"><u>instagram page</u></a>
+            I travel & capture my experiences to share with the world. Check out
+            more on my{" "}
+            <a href="https://www.instagram.com/guutoby/">
+              <u>instagram page</u>
+            </a>
           </h4>
           <_DButton
             onClick={() => {
@@ -84,15 +134,19 @@ class PhotographyPortfolio extends React.Component {
           </_DButton>
         </_FloatingCont>
         <GalleryContainer>
-          <Gallery
-            style={{ overflow: "scroll" }}
-            images={images}
-            enableImageSelection={false}
-          />
+          <Gallery margin={5} photos={images} columns={columns} onClick={this.openLightbox} />
         </GalleryContainer>
         <div style={{ position: "fixed", zIndex: -1 }}>
           <SplitSection fixed hoverSide={null} side={"right"} />
         </div>
+        <Lightbox
+          images={images}
+          onClose={this.closeLightbox}
+          onClickPrev={this.gotoPrevious}
+          onClickNext={this.gotoNext}
+          currentImage={this.state.currentImage}
+          isOpen={this.state.lightboxIsOpen}
+        />
       </_Container>
     );
   }

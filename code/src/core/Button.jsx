@@ -10,7 +10,7 @@ const _Button = styled('button')`
   margin-top:10px;
   color: ${props => props.color == 'dark' ? 'rgb(73,73,73)' : 'white'};
   border-color: ${props => props.color == 'dark' ? 'rgb(73,73,73)' : 'white'};
-  width:${props=>props.small ? '130px' : '175px'};
+  width:${props=>props.small ? '130px' : '200px'};
   font-size: ${props=>props.small ? '1em' : '1.2em'};
   padding: ${props=>props.small ? '5px 10px 5px 10px' : '10px 30px 10px 30px'};
   @media (max-width: 550px){

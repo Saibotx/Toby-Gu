@@ -29,7 +29,7 @@ const _ButtonRow = styled("div")`
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  max-width: 400px;
+  max-width: 450px;
   margin: auto;
 `;
 
@@ -69,7 +69,7 @@ class HeroText extends React.Component {
         <_ButtonRow>
           <_Button onClick={this.props.scrollToBottom}>Learn More</_Button>
           <a target="_blank" href="mailto:tobiasgoo@gmail.com?Subject=Hello!">
-            <_Button>Hire Me!</_Button>
+            <_Button>Work With Me!</_Button>
           </a>
         </_ButtonRow>
       </_HeroTextDiv>

@@ -98,6 +98,7 @@ const _HiddenDescription = styled('div')`
 
 
 function SplitSectionContent(props){
+  console.log("splitsection side", props.side);
   return (
     <_ContentContainer side={props.side}>
       <_MouseOverCont
