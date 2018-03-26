@@ -3005,7 +3005,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 var _templateObject = _taggedTemplateLiteral(["\n  z-index: 5;\n  height: 100vh;\n  position: fixed;\n  width: 100vw;\n"], ["\n  z-index: 5;\n  height: 100vh;\n  position: fixed;\n  width: 100vw;\n"]),
     _templateObject2 = _taggedTemplateLiteral(["\n  width: 100vw;\n  z-index: 10;\n  text-align: center;\n  position: fixed;\n"], ["\n  width: 100vw;\n  z-index: 10;\n  text-align: center;\n  position: fixed;\n"]),
     _templateObject3 = _taggedTemplateLiteral(["\n  position:fixed;\n  left:0%;\n  top:50%;\n  transform:translate(30%);\n  border-width: 3px;\n  padding:10px;\n  @media (max-width:550px){\n    padding:5px;\n  }\n  border-color: black;\n  color:black;\n  background-color: transparent;\n  font-size: 1.4em;\n  font-weight: 700;\n  &:hover{\n    background-color: grey\n    color:white;\n    border-color: transparent;\n  }\n  &:active{\n    background-color: black;\n  }\n"], ["\n  position:fixed;\n  left:0%;\n  top:50%;\n  transform:translate(30%);\n  border-width: 3px;\n  padding:10px;\n  @media (max-width:550px){\n    padding:5px;\n  }\n  border-color: black;\n  color:black;\n  background-color: transparent;\n  font-size: 1.4em;\n  font-weight: 700;\n  &:hover{\n    background-color: grey\n    color:white;\n    border-color: transparent;\n  }\n  &:active{\n    background-color: black;\n  }\n"]),
-    _templateObject4 = _taggedTemplateLiteral(["\n  width: calc(100% - 105px);\n  margin-top: 125px;\n  margin-left: 75px;\n  @media (max-width:550px){\n    margin-left: 55px;\n    width: calc(100% - 75px);\n  }\n  height: calc(100vh - 135px);\n  overflow: scroll;\n"], ["\n  width: calc(100% - 105px);\n  margin-top: 125px;\n  margin-left: 75px;\n  @media (max-width:550px){\n    margin-left: 55px;\n    width: calc(100% - 75px);\n  }\n  height: calc(100vh - 135px);\n  overflow: scroll;\n"]);
+    _templateObject4 = _taggedTemplateLiteral(["\n  width: calc(100% - 105px);\n  margin-top: 125px;\n  margin-left: 75px;\n  @media (max-width:550px){\n    margin-left: 55px;\n    width: calc(100% - 75px);\n  }\n  height: calc(100vh - 135px);\n  overflow: scroll;\n  overflow-y: scroll; /* has to be scroll, not auto */\n  -webkit-overflow-scrolling: touch;\n"], ["\n  width: calc(100% - 105px);\n  margin-top: 125px;\n  margin-left: 75px;\n  @media (max-width:550px){\n    margin-left: 55px;\n    width: calc(100% - 75px);\n  }\n  height: calc(100vh - 135px);\n  overflow: scroll;\n  overflow-y: scroll; /* has to be scroll, not auto */\n  -webkit-overflow-scrolling: touch;\n"]);
 
 var _react = __webpack_require__(0);
 
@@ -3682,4 +3682,4 @@ exports.default = (0, _reactStatic.withRouter)(SplitSectionContainer);
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.82106472.js.map
+//# sourceMappingURL=static.e9c9907c.js.map

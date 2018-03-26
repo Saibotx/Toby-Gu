@@ -59,6 +59,8 @@ const GalleryContainer = styled("div")`
   }
   height: calc(100vh - 135px);
   overflow: scroll;
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
 `;
 
 class PhotographyPortfolio extends React.Component {
