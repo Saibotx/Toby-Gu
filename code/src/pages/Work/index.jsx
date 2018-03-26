@@ -34,6 +34,7 @@ const _Container = styled("div")`
   height: 100vh;
   position: fixed;
   width: 100vw;
+	overflow: scroll;
 `;
 const _FloatingCont = styled("div")`
   width: 100vw;
