@@ -86,7 +86,7 @@ const HeroSvg = styled(Svg)`
   @media (max-width: 1200px) {
     width: 13vw;
   }
-  @media (max-width: 1200px) and (max-height: 900px){
+  @media (max-width: 1200px) and (max-height: 900px) {
     width: 10vw;
   }
   @media (max-width: 1200px) and (max-height: 600px) {
@@ -95,10 +95,9 @@ const HeroSvg = styled(Svg)`
   @media (max-width: 1200px) and (min-height: 800px) and (max-height: 500px) {
     display: none;
   }
-  @media(max-width:640px){
-    width:15vw;
+  @media (max-width: 640px) {
+    width: 15vw;
   }
-
 `;
 
 const _HeroContainer = styled("div")`
@@ -107,25 +106,30 @@ const _HeroContainer = styled("div")`
   width:100%;
   position:relative;
   background-size: cover;
-  background-image: url('${cover}');
-  @media (max-width: 650px){
-    background-image: url('${coverMobile}');
-  }
   background-attachment: fixed;
   background-position: center top;
+  @media (min-width: 651px){
+    background-image: url('${cover}');
+  }
+  @media (max-width: 650px){
+    ${'' /* background-image: url('${coverMobile}'); */}
+    ${'' /* background-attachment: scroll; */}
+    background-color: transparent;
+    background-image: none;
+  }
+
 `;
 
 const _AnimatedTextContainer = styled("div")`
-  ${'' /* @media (max-width: 650px) {
+  ${"" /* @media (max-width: 650px) {
     display: none;
   }
   @media (max-width: 710px) and (min-height:1000px) {
     display: none;
-  } */}
-  position: fixed;
+  } */} position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 0;
+  z-index: 1;
   width: 100vw;
   height: 57vw;
   min-height: 92vh;
@@ -137,19 +141,31 @@ const _AnimatedText = styled("div")`
   top: 38%;
   position: absolute;
   color: white;
-  @media (max-width: 800px) and (min-height: 900px){
-    left:27%;
+  @media (max-width: 800px) and (min-height: 900px) {
+    left: 27%;
     top: 43%;
   }
-  @media (max-width: 1200px) and (min-height: 1300px){
-    left:27%;
+  @media (max-width: 1200px) and (min-height: 1300px) {
+    left: 27%;
     top: 43%;
   }
-  @media(max-width:640px){
-    left:52%;
-    top:30%;
+  @media (max-width: 640px) {
+    left: 52%;
+    top: 30%;
   }
 `;
+
+const _MobileBgWorkAround = styled('div')`
+  width:100%;
+  height:100%;
+  top:0%;
+  left:0%;
+  background-image: url('${coverMobile}');
+  background-size: cover;
+  background-position: center top;
+  position: fixed;
+  z-index: 0;
+`
 
 export default function Hero(props) {
   return (
@@ -170,6 +186,7 @@ export default function Hero(props) {
         </_AnimatedText>
       </_AnimatedTextContainer>
       <HeroText scrollToBottom={props.scrollToBottom} />
+      <_MobileBgWorkAround/>
     </_HeroContainer>
   );
 }

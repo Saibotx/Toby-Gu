@@ -768,10 +768,11 @@ var _templateObject = _taggedTemplateLiteral(["\n  color: white;\n  max-width: 6
     _templateObject4 = _taggedTemplateLiteral(["\n  color: #f7cb99;\n  display: inline;\n"], ["\n  color: #f7cb99;\n  display: inline;\n"]),
     _templateObject5 = _taggedTemplateLiteral(["\n  position: relative;\n  left: 50%;\n  white-space: nowrap;\n  width: 600px;\n  transform: translate(-50%);\n"], ["\n  position: relative;\n  left: 50%;\n  white-space: nowrap;\n  width: 600px;\n  transform: translate(-50%);\n"]),
     _templateObject6 = _taggedTemplateLiteral([""], [""]),
-    _templateObject7 = _taggedTemplateLiteral(["\n  width: 9vw;\n  @media (max-width: 1400px) {\n    width: 12vw;\n  }\n  @media (max-width: 1200px) {\n    width: 13vw;\n  }\n  @media (max-width: 1200px) and (max-height: 900px){\n    width: 10vw;\n  }\n  @media (max-width: 1200px) and (max-height: 600px) {\n    width: 10vw;\n  }\n  @media (max-width: 1200px) and (min-height: 800px) and (max-height: 500px) {\n    display: none;\n  }\n  @media(max-width:640px){\n    width:15vw;\n  }\n\n"], ["\n  width: 9vw;\n  @media (max-width: 1400px) {\n    width: 12vw;\n  }\n  @media (max-width: 1200px) {\n    width: 13vw;\n  }\n  @media (max-width: 1200px) and (max-height: 900px){\n    width: 10vw;\n  }\n  @media (max-width: 1200px) and (max-height: 600px) {\n    width: 10vw;\n  }\n  @media (max-width: 1200px) and (min-height: 800px) and (max-height: 500px) {\n    display: none;\n  }\n  @media(max-width:640px){\n    width:15vw;\n  }\n\n"]),
-    _templateObject8 = _taggedTemplateLiteral(["\n  height:93vh;\n  padding-top: 2px;\n  width:100%;\n  position:relative;\n  background-size: cover;\n  background-image: url('", "');\n  @media (max-width: 650px){\n    background-image: url('", "');\n  }\n  background-attachment: fixed;\n  background-position: center top;\n"], ["\n  height:93vh;\n  padding-top: 2px;\n  width:100%;\n  position:relative;\n  background-size: cover;\n  background-image: url('", "');\n  @media (max-width: 650px){\n    background-image: url('", "');\n  }\n  background-attachment: fixed;\n  background-position: center top;\n"]),
-    _templateObject9 = _taggedTemplateLiteral(["\n  ", "\n  position: fixed;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 0;\n  width: 100vw;\n  height: 57vw;\n  min-height: 92vh;\n  min-width: 161vh;\n"], ["\n  ", "\n  position: fixed;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 0;\n  width: 100vw;\n  height: 57vw;\n  min-height: 92vh;\n  min-width: 161vh;\n"]),
-    _templateObject10 = _taggedTemplateLiteral(["\n  left: 25%;\n  top: 38%;\n  position: absolute;\n  color: white;\n  @media (max-width: 800px) and (min-height: 900px){\n    left:27%;\n    top: 43%;\n  }\n  @media (max-width: 1200px) and (min-height: 1300px){\n    left:27%;\n    top: 43%;\n  }\n  @media(max-width:640px){\n    left:52%;\n    top:30%;\n  }\n"], ["\n  left: 25%;\n  top: 38%;\n  position: absolute;\n  color: white;\n  @media (max-width: 800px) and (min-height: 900px){\n    left:27%;\n    top: 43%;\n  }\n  @media (max-width: 1200px) and (min-height: 1300px){\n    left:27%;\n    top: 43%;\n  }\n  @media(max-width:640px){\n    left:52%;\n    top:30%;\n  }\n"]);
+    _templateObject7 = _taggedTemplateLiteral(["\n  width: 9vw;\n  @media (max-width: 1400px) {\n    width: 12vw;\n  }\n  @media (max-width: 1200px) {\n    width: 13vw;\n  }\n  @media (max-width: 1200px) and (max-height: 900px) {\n    width: 10vw;\n  }\n  @media (max-width: 1200px) and (max-height: 600px) {\n    width: 10vw;\n  }\n  @media (max-width: 1200px) and (min-height: 800px) and (max-height: 500px) {\n    display: none;\n  }\n  @media (max-width: 640px) {\n    width: 15vw;\n  }\n"], ["\n  width: 9vw;\n  @media (max-width: 1400px) {\n    width: 12vw;\n  }\n  @media (max-width: 1200px) {\n    width: 13vw;\n  }\n  @media (max-width: 1200px) and (max-height: 900px) {\n    width: 10vw;\n  }\n  @media (max-width: 1200px) and (max-height: 600px) {\n    width: 10vw;\n  }\n  @media (max-width: 1200px) and (min-height: 800px) and (max-height: 500px) {\n    display: none;\n  }\n  @media (max-width: 640px) {\n    width: 15vw;\n  }\n"]),
+    _templateObject8 = _taggedTemplateLiteral(["\n  height:93vh;\n  padding-top: 2px;\n  width:100%;\n  position:relative;\n  background-size: cover;\n  background-attachment: fixed;\n  background-position: center top;\n  @media (min-width: 651px){\n    background-image: url('", "');\n  }\n  @media (max-width: 650px){\n    ", "\n    ", "\n    background-color: transparent;\n    background-image: none;\n  }\n\n"], ["\n  height:93vh;\n  padding-top: 2px;\n  width:100%;\n  position:relative;\n  background-size: cover;\n  background-attachment: fixed;\n  background-position: center top;\n  @media (min-width: 651px){\n    background-image: url('", "');\n  }\n  @media (max-width: 650px){\n    ", "\n    ", "\n    background-color: transparent;\n    background-image: none;\n  }\n\n"]),
+    _templateObject9 = _taggedTemplateLiteral(["\n  ", " position: fixed;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 1;\n  width: 100vw;\n  height: 57vw;\n  min-height: 92vh;\n  min-width: 161vh;\n"], ["\n  ", " position: fixed;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 1;\n  width: 100vw;\n  height: 57vw;\n  min-height: 92vh;\n  min-width: 161vh;\n"]),
+    _templateObject10 = _taggedTemplateLiteral(["\n  left: 25%;\n  top: 38%;\n  position: absolute;\n  color: white;\n  @media (max-width: 800px) and (min-height: 900px) {\n    left: 27%;\n    top: 43%;\n  }\n  @media (max-width: 1200px) and (min-height: 1300px) {\n    left: 27%;\n    top: 43%;\n  }\n  @media (max-width: 640px) {\n    left: 52%;\n    top: 30%;\n  }\n"], ["\n  left: 25%;\n  top: 38%;\n  position: absolute;\n  color: white;\n  @media (max-width: 800px) and (min-height: 900px) {\n    left: 27%;\n    top: 43%;\n  }\n  @media (max-width: 1200px) and (min-height: 1300px) {\n    left: 27%;\n    top: 43%;\n  }\n  @media (max-width: 640px) {\n    left: 52%;\n    top: 30%;\n  }\n"]),
+    _templateObject11 = _taggedTemplateLiteral(["\n  width:100%;\n  height:100%;\n  top:0%;\n  left:0%;\n  background-image: url('", "');\n  background-size: cover;\n  background-position: center top;\n  position: fixed;\n  z-index: 0;\n"], ["\n  width:100%;\n  height:100%;\n  top:0%;\n  left:0%;\n  background-image: url('", "');\n  background-size: cover;\n  background-position: center top;\n  position: fixed;\n  z-index: 0;\n"]);
 
 exports.default = Hero;
 
@@ -898,9 +899,9 @@ var HeroText = function (_React$Component) {
 
 var HeroSvg = (0, _reactEmotion2.default)(_HeroSvg2.default)(_templateObject7);
 
-var _HeroContainer = (0, _reactEmotion2.default)("div")(_templateObject8, _cover2.default, _coverMobile2.default);
+var _HeroContainer = (0, _reactEmotion2.default)("div")(_templateObject8, _cover2.default, '' /* background-image: url('${coverMobile}'); */, '' /* background-attachment: scroll; */);
 
-var _AnimatedTextContainer = (0, _reactEmotion2.default)("div")(_templateObject9, '' /* @media (max-width: 650px) {
+var _AnimatedTextContainer = (0, _reactEmotion2.default)("div")(_templateObject9, "" /* @media (max-width: 650px) {
                                                                                      display: none;
                                                                                      }
                                                                                      @media (max-width: 710px) and (min-height:1000px) {
@@ -908,6 +909,8 @@ var _AnimatedTextContainer = (0, _reactEmotion2.default)("div")(_templateObject9
                                                                                      } */);
 
 var _AnimatedText = (0, _reactEmotion2.default)("div")(_templateObject10);
+
+var _MobileBgWorkAround = (0, _reactEmotion2.default)('div')(_templateObject11, _coverMobile2.default);
 
 function Hero(props) {
   return _react2.default.createElement(
@@ -935,7 +938,8 @@ function Hero(props) {
         )
       )
     ),
-    _react2.default.createElement(HeroText, { scrollToBottom: props.scrollToBottom })
+    _react2.default.createElement(HeroText, { scrollToBottom: props.scrollToBottom }),
+    _react2.default.createElement(_MobileBgWorkAround, null)
   );
 }
 
@@ -1035,7 +1039,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _templateObject = _taggedTemplateLiteral(["\n  width: 100%;\n  background-color: white;\n  z-index: 2;\n  position: relative;\n"], ["\n  width: 100%;\n  background-color: white;\n  z-index: 2;\n  position: relative;\n"]),
-    _templateObject2 = _taggedTemplateLiteral(["\n  width: 80%;\n  transform: translateY(-110px);\n  text-align: center;\n  margin-left: 10%;\n  margin-right: 10%;\n  color: #494949;\n  z-index: 2;\n  position: relative;\n"], ["\n  width: 80%;\n  transform: translateY(-110px);\n  text-align: center;\n  margin-left: 10%;\n  margin-right: 10%;\n  color: #494949;\n  z-index: 2;\n  position: relative;\n"]),
+    _templateObject2 = _taggedTemplateLiteral(["\n  width: 80%;\n  transform: translateY(-110px);\n  text-align: center;\n  margin-left: 10%;\n  margin-right: 10%;\n  color: #494949;\n  z-index: 2;\n  position: relative;\n  padding-bottom: 10px;\n"], ["\n  width: 80%;\n  transform: translateY(-110px);\n  text-align: center;\n  margin-left: 10%;\n  margin-right: 10%;\n  color: #494949;\n  z-index: 2;\n  position: relative;\n  padding-bottom: 10px;\n"]),
     _templateObject3 = _taggedTemplateLiteral(["\n  width: 200px;\n  border-radius: 50%;\n  display: inline-block;\n  @media (max-width: 500px) {\n    width: 150px;\n  }\n"], ["\n  width: 200px;\n  border-radius: 50%;\n  display: inline-block;\n  @media (max-width: 500px) {\n    width: 150px;\n  }\n"]);
 
 exports.default = Profile;
@@ -3539,4 +3543,4 @@ exports.default = (0, _reactStatic.withRouter)(SplitSectionContainer);
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.d4ace509.js.map
+//# sourceMappingURL=static.b904822e.js.map

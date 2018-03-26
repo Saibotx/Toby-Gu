@@ -24,6 +24,7 @@ const _ProfileContainer = styled("div")`
   color: #494949;
   z-index: 2;
   position: relative;
+  padding-bottom: 10px;
 `;
 
 const _PortHole = styled("img")`
