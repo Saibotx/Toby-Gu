@@ -138,7 +138,7 @@ const _AnimatedTextContainer = styled("div")`
 
 const _AnimatedText = styled("div")`
   left: 25%;
-  top: 38%;
+  top: 39%;
   position: absolute;
   color: white;
   @media (max-width: 800px) and (min-height: 900px) {
@@ -165,6 +165,10 @@ const _MobileBgWorkAround = styled('div')`
   background-position: center top;
   position: fixed;
   z-index: 0;
+  @media (min-width: 651px){
+    display: none;
+  }
+
 `
 
 export default function Hero(props) {

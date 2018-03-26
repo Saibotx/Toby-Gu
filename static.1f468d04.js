@@ -638,7 +638,6 @@ var App = function (_React$Component) {
         default:
           side = null;
       }
-      console.log("app side", side, pathname);
       return _react2.default.createElement(
         "div",
         { style: { position: "relative" } },
@@ -771,8 +770,8 @@ var _templateObject = _taggedTemplateLiteral(["\n  color: white;\n  max-width: 6
     _templateObject7 = _taggedTemplateLiteral(["\n  width: 9vw;\n  @media (max-width: 1400px) {\n    width: 12vw;\n  }\n  @media (max-width: 1200px) {\n    width: 13vw;\n  }\n  @media (max-width: 1200px) and (max-height: 900px) {\n    width: 10vw;\n  }\n  @media (max-width: 1200px) and (max-height: 600px) {\n    width: 10vw;\n  }\n  @media (max-width: 1200px) and (min-height: 800px) and (max-height: 500px) {\n    display: none;\n  }\n  @media (max-width: 640px) {\n    width: 15vw;\n  }\n"], ["\n  width: 9vw;\n  @media (max-width: 1400px) {\n    width: 12vw;\n  }\n  @media (max-width: 1200px) {\n    width: 13vw;\n  }\n  @media (max-width: 1200px) and (max-height: 900px) {\n    width: 10vw;\n  }\n  @media (max-width: 1200px) and (max-height: 600px) {\n    width: 10vw;\n  }\n  @media (max-width: 1200px) and (min-height: 800px) and (max-height: 500px) {\n    display: none;\n  }\n  @media (max-width: 640px) {\n    width: 15vw;\n  }\n"]),
     _templateObject8 = _taggedTemplateLiteral(["\n  height:93vh;\n  padding-top: 2px;\n  width:100%;\n  position:relative;\n  background-size: cover;\n  background-attachment: fixed;\n  background-position: center top;\n  @media (min-width: 651px){\n    background-image: url('", "');\n  }\n  @media (max-width: 650px){\n    ", "\n    ", "\n    background-color: transparent;\n    background-image: none;\n  }\n\n"], ["\n  height:93vh;\n  padding-top: 2px;\n  width:100%;\n  position:relative;\n  background-size: cover;\n  background-attachment: fixed;\n  background-position: center top;\n  @media (min-width: 651px){\n    background-image: url('", "');\n  }\n  @media (max-width: 650px){\n    ", "\n    ", "\n    background-color: transparent;\n    background-image: none;\n  }\n\n"]),
     _templateObject9 = _taggedTemplateLiteral(["\n  ", " position: fixed;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 1;\n  width: 100vw;\n  height: 57vw;\n  min-height: 92vh;\n  min-width: 161vh;\n"], ["\n  ", " position: fixed;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 1;\n  width: 100vw;\n  height: 57vw;\n  min-height: 92vh;\n  min-width: 161vh;\n"]),
-    _templateObject10 = _taggedTemplateLiteral(["\n  left: 25%;\n  top: 38%;\n  position: absolute;\n  color: white;\n  @media (max-width: 800px) and (min-height: 900px) {\n    left: 27%;\n    top: 43%;\n  }\n  @media (max-width: 1200px) and (min-height: 1300px) {\n    left: 27%;\n    top: 43%;\n  }\n  @media (max-width: 640px) {\n    left: 52%;\n    top: 30%;\n  }\n"], ["\n  left: 25%;\n  top: 38%;\n  position: absolute;\n  color: white;\n  @media (max-width: 800px) and (min-height: 900px) {\n    left: 27%;\n    top: 43%;\n  }\n  @media (max-width: 1200px) and (min-height: 1300px) {\n    left: 27%;\n    top: 43%;\n  }\n  @media (max-width: 640px) {\n    left: 52%;\n    top: 30%;\n  }\n"]),
-    _templateObject11 = _taggedTemplateLiteral(["\n  width:100%;\n  height:100%;\n  top:0%;\n  left:0%;\n  background-image: url('", "');\n  background-size: cover;\n  background-position: center top;\n  position: fixed;\n  z-index: 0;\n"], ["\n  width:100%;\n  height:100%;\n  top:0%;\n  left:0%;\n  background-image: url('", "');\n  background-size: cover;\n  background-position: center top;\n  position: fixed;\n  z-index: 0;\n"]);
+    _templateObject10 = _taggedTemplateLiteral(["\n  left: 25%;\n  top: 39%;\n  position: absolute;\n  color: white;\n  @media (max-width: 800px) and (min-height: 900px) {\n    left: 27%;\n    top: 43%;\n  }\n  @media (max-width: 1200px) and (min-height: 1300px) {\n    left: 27%;\n    top: 43%;\n  }\n  @media (max-width: 640px) {\n    left: 52%;\n    top: 30%;\n  }\n"], ["\n  left: 25%;\n  top: 39%;\n  position: absolute;\n  color: white;\n  @media (max-width: 800px) and (min-height: 900px) {\n    left: 27%;\n    top: 43%;\n  }\n  @media (max-width: 1200px) and (min-height: 1300px) {\n    left: 27%;\n    top: 43%;\n  }\n  @media (max-width: 640px) {\n    left: 52%;\n    top: 30%;\n  }\n"]),
+    _templateObject11 = _taggedTemplateLiteral(["\n  width:100%;\n  height:100%;\n  top:0%;\n  left:0%;\n  background-image: url('", "');\n  background-size: cover;\n  background-position: center top;\n  position: fixed;\n  z-index: 0;\n  @media (min-width: 651px){\n    display: none;\n  }\n\n"], ["\n  width:100%;\n  height:100%;\n  top:0%;\n  left:0%;\n  background-image: url('", "');\n  background-size: cover;\n  background-position: center top;\n  position: fixed;\n  z-index: 0;\n  @media (min-width: 651px){\n    display: none;\n  }\n\n"]);
 
 exports.default = Hero;
 
@@ -1410,7 +1409,6 @@ var _Title = (0, _reactEmotion2.default)('h2')(_templateObject5, mediumWidth);
 var _HiddenDescription = (0, _reactEmotion2.default)('div')(_templateObject6, mediumWidth);
 
 function SplitSectionContent(props) {
-  console.log("splitsection side", props.side);
   return _react2.default.createElement(
     _ContentContainer,
     { side: props.side },
@@ -3543,4 +3541,4 @@ exports.default = (0, _reactStatic.withRouter)(SplitSectionContainer);
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.b904822e.js.map
+//# sourceMappingURL=static.1f468d04.js.map

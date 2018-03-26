@@ -75,7 +75,6 @@ class App extends React.Component {
       default:
         side = null;
     }
-    console.log("app side", side, pathname);
     return (
       <div style={{ position: "relative" }}>
         {/* hacky way of dismounting home section with animation. acutal animation happens
