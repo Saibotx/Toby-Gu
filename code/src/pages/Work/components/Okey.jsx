@@ -31,7 +31,8 @@ const BrowserWindow = styled("div")`
   }
   @media (max-width: 550px) {
     width: 75%;
-    ${"" /* margin-top: -15vh; */} padding: 10% 0 10% 0;
+    margin-top: -35vh;
+    padding: 10% 0 10% 0;
     ${props =>
       props.main &&
       `width:90%;`} ${"" /* ${props =>
@@ -45,6 +46,10 @@ const Desc = styled(BrowserWindow)`
   margin-top: 100vh;
   transform: translateY(-50%);
   display: block !important;
+  @media (max-width: 550px) {
+    margin-top: 90vh;
+    margin-bottom: 10vh;
+  }
 `;
 
 const workText = css`
@@ -69,8 +74,8 @@ const MobilePhoneImg = styled("img")`
   }
 `;
 
-const Okey = (
-  <div>
+const Okey = ({onClick}) => (
+  <div onClick={onClick}>
     <ParallaxFlex offset={4} speed={0}>
       <BrowserWindow main>
         <img style={{ width: "100%" }} src={okeyImac} />
@@ -102,6 +107,9 @@ const Okey = (
             See Live
           </_Button>
         </a>
+        <div style={{textAlign:'center', color:'white', opacity:0.3, paddingBottom:10}}>
+          (or Tap Anywhere to Continue)
+        </div>
       </Desc>
     </ParallaxFlex>
   </div>

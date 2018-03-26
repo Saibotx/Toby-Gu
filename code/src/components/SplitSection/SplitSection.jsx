@@ -30,8 +30,8 @@ const _SplitContainer = styled('div')`
   max-width: 100vw;
   overflow:hidden;
   flex-direction: row;
-  position: ${props=>props.fixed? 'fixed' : 'relative'};
-  ${props=>props.fixed && 'height:100%; width:100%'};
+  ${'' /* position: ${props=>props.fixed? 'fixed' : 'relative'};
+  ${props=>props.fixed && 'height:100%; width:100%'}; */}
   background: ${props=>props.side != 'right' ? '#e2e2e2' :  '#d5d9ff'};
 `;
 
@@ -120,7 +120,7 @@ const _LeftBg = styled('div')`
 function SplitSection(props){
   return (
     <_SplitContainer
-      fixed={props.fixed}
+      // fixed={props.fixed}
       onMouseLeave={props.onMouseLeave}
       side={props.side}
       >

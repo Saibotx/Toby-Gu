@@ -1,6 +1,6 @@
 //Import Packages
 import React from "react";
-import styled, {css} from "react-emotion";
+import styled, { css } from "react-emotion";
 import Parallax from "react-springy-parallax";
 
 //Import Assets
@@ -51,75 +51,76 @@ const BadgePlaceHolder = styled("div")`
 
 const RowTwo = css`
   margin-top: calc(20vh + 400px);
-  @media (max-width: 550px){
-    margin-top:calc(20vh + 38vw);
+  @media (max-width: 550px) {
+    margin-top: calc(20vh + 38vw);
   }
-
-`
+`;
 
 const RowThree = css`
   margin-top: calc(20vh + 450px);
-  @media (max-width: 550px){
-    margin-top:calc(20vh + 45vw);
+  @media (max-width: 550px) {
+    margin-top: calc(20vh + 45vw);
   }
-`
+`;
 
-const Badges = (
-  <div>
-  <Parallax.Layer offset={0} speed={2}>
-    <SubTitle style={{ marginTop: "12vh" }}>
-      My selected works have been built using some of the following:
-    </SubTitle>
-  </Parallax.Layer>
+const Badges = ({ onClick }) => (
+  <div onClick={onClick}>
+    <Parallax.Layer offset={0} speed={2}>
+      <SubTitle style={{ marginTop: "12vh" }}>
+        My selected works have been built using some of the following:
+      </SubTitle>
+    </Parallax.Layer>
 
-  <Parallax.Layer offset={0} speed={2}>
-    <BadgeRow style={{ top: "20vh" }}>
-      <Badge src={swift} />
-      <BadgePlaceHolder width={3} />
-      <Badge src={java} />
-    </BadgeRow>
-  </Parallax.Layer>
+    <Parallax.Layer offset={0} speed={2}>
+      <BadgeRow style={{ top: "20vh" }}>
+        <Badge src={swift} />
+        <BadgePlaceHolder width={3} />
+        <Badge src={java} />
+      </BadgeRow>
+    </Parallax.Layer>
 
-  <Parallax.Layer offset={0} speed={1.6}>
-    <BadgeRow style={{ top: "20vh" }}>
-      <Badge src={redux} />
-      <BadgePlaceHolder width={1} />
-      <Badge src={node} />
-    </BadgeRow>
-    <BadgeRow style={{ top: "20vh" }}>
-      <Badge src={javascript} />
-      <BadgePlaceHolder width={1} />
-      <Badge src={css3} />
-    </BadgeRow>
-  </Parallax.Layer>
+    <Parallax.Layer offset={0} speed={1.6}>
+      <BadgeRow style={{ top: "20vh" }}>
+        <Badge src={redux} />
+        <BadgePlaceHolder width={1} />
+        <Badge src={node} />
+      </BadgeRow>
+      <BadgeRow style={{ top: "20vh" }}>
+        <Badge src={javascript} />
+        <BadgePlaceHolder width={1} />
+        <Badge src={css3} />
+      </BadgeRow>
+    </Parallax.Layer>
 
-  <Parallax.Layer offset={0} speed={1.2}>
-    <BadgeRow style={{ top: "20vh" }}>
-      <Badge src={react} />
-    </BadgeRow>
-    <BadgeRow style={{ top: "20vh" }}>
-      <Badge src={html} />
-    </BadgeRow>
-  </Parallax.Layer>
+    <Parallax.Layer offset={0} speed={1.2}>
+      <BadgeRow style={{ top: "20vh" }}>
+        <Badge src={react} />
+      </BadgeRow>
+      <BadgeRow style={{ top: "20vh" }}>
+        <Badge src={html} />
+      </BadgeRow>
+    </Parallax.Layer>
 
-  <Parallax.Layer offset={0} speed={1.4}>
-    <SubTitle className={RowTwo}>
-      With designs created using
-    </SubTitle>
-  </Parallax.Layer>
+    <Parallax.Layer offset={0} speed={1.4}>
+      <SubTitle className={RowTwo}>With designs created using</SubTitle>
+    </Parallax.Layer>
 
-  <Parallax.Layer offset={0} speed={1.4}>
-    <BadgeRow className={RowThree}>
-      <Badge src={photoshop} />
-    </BadgeRow>
-  </Parallax.Layer>
-  <Parallax.Layer offset={0} speed={1.2}>
-    <BadgeRow className={RowThree}>
-      <Badge style={{ padding: 10 }} scale={0.7} src={illustrator} />
-      <BadgePlaceHolder width={1} />
-      <Badge style={{ padding: 10 }} scale={0.7} src={aftereffects} />
-    </BadgeRow>
-  </Parallax.Layer>
+    <Parallax.Layer offset={0} speed={1.4}>
+      <BadgeRow className={RowThree}>
+        <Badge src={photoshop} />
+      </BadgeRow>
+    </Parallax.Layer>
+    <Parallax.Layer offset={0} speed={1.2}>
+      <BadgeRow className={RowThree}>
+        <Badge style={{ padding: 10 }} scale={0.7} src={illustrator} />
+        <BadgePlaceHolder width={1} />
+        <Badge style={{ padding: 10 }} scale={0.7} src={aftereffects} />
+      </BadgeRow>
+      <br />
+      <SubTitle style={{fontWeight:100, opacity:0.2}}>
+        (Tap Anywhere to Continue)
+      </SubTitle>
+    </Parallax.Layer>
   </div>
 );
 

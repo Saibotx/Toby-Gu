@@ -31,8 +31,10 @@ const BrowserWindow = styled("div")`
     ${props => props.iPad && "left:calc(45% - 10px);"};
   }
   position: absolute;
-  ${props => props.iPad && "left:calc(30% - 10px);"} @media (max-width: 550px) {
+  ${props => props.iPad && "left:calc(30% - 10px);"};
+  @media (max-width: 550px) {
     left: -10px;
+    margin-top: -20vh;
     ${props => props.iPad && "left:calc(30% - 30px);"};
   }
 `;
@@ -48,6 +50,8 @@ const Desc = styled("div")`
   display: block !important;
   @media (max-width: 550px) {
     width: 75%;
+    margin-top: 40vh;
+    margin-bottom: 10vh;
   }
 `;
 
@@ -71,8 +75,8 @@ const IPad = styled("img")`
   }
 `;
 
-const ReportOn = (
-  <div>
+const ReportOn = ({ onClick }) => (
+  <div onClick={onClick}>
     <ParallaxFlex offset={3} speed={0.1}>
       <BrowserWindow>
         <img src={reportOnLaptop} style={{ width: "100%" }} />
@@ -91,11 +95,22 @@ const ReportOn = (
           Freelance Project Lead - Mobile & Web Engineer
         </h3>
         <h4 className={workText}>
-          My team and I were contracted to build a B2B web dashboard and two mobile apps
-          for marketing managers to see what employees were doing in real time. Funded by
-          Ripple Effect Marketing, we vastly improved the efficiency of their
-          employees. I built the front end web app and both mobile apps.
+          My team and I were contracted to build a B2B web dashboard and two
+          mobile apps for marketing managers to see what employees were doing in
+          real time. Funded by Ripple Effect Marketing, we vastly improved the
+          efficiency of their employees. I built the front end web app and both
+          mobile apps.
         </h4>
+        <div
+          style={{
+            textAlign: "center",
+            color: "white",
+            opacity: 0.4,
+            paddingBottom: 10
+          }}
+        >
+          (or Tap Anywhere to Continue)
+        </div>
       </Desc>
     </ParallaxFlex>
   </div>

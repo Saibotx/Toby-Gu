@@ -159,7 +159,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  display:flex;\n  max-height: 100vh;\n  max-width: 100vw;\n  overflow:hidden;\n  flex-direction: row;\n  position: ', ';\n  ', ';\n  background: ', ';\n'], ['\n  display:flex;\n  max-height: 100vh;\n  max-width: 100vw;\n  overflow:hidden;\n  flex-direction: row;\n  position: ', ';\n  ', ';\n  background: ', ';\n']),
+var _templateObject = _taggedTemplateLiteral(['\n  display:flex;\n  max-height: 100vh;\n  max-width: 100vw;\n  overflow:hidden;\n  flex-direction: row;\n  ', '\n  background: ', ';\n'], ['\n  display:flex;\n  max-height: 100vh;\n  max-width: 100vw;\n  overflow:hidden;\n  flex-direction: row;\n  ', '\n  background: ', ';\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  height:0;\n  z-index: 0;\n  width: ', ';\n  @media (max-width: ', '){\n    border-bottom: ', ';\n    border-left: ', ';\n  }\n  @media (min-width: ', '){\n    border-bottom: ', ';\n    border-left: ', ';\n  }\n  transition:all 0.5s;\n'], ['\n  height:0;\n  z-index: 0;\n  width: ', ';\n  @media (max-width: ', '){\n    border-bottom: ', ';\n    border-left: ', ';\n  }\n  @media (min-width: ', '){\n    border-bottom: ', ';\n    border-left: ', ';\n  }\n  transition:all 0.5s;\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  height:0;\n  z-index: 0;\n  width: ', ';\n  @media (max-width: ', '){\n    border-top: ', ';\n    border-right: ', ';\n  }\n  @media (min-width: ', '){\n    border-top: ', ';\n    border-right: ', ';\n  }\n  transition:all 0.3s;\n'], ['\n  height:0;\n  z-index: 0;\n  width: ', ';\n  @media (max-width: ', '){\n    border-top: ', ';\n    border-right: ', ';\n  }\n  @media (min-width: ', '){\n    border-top: ', ';\n    border-right: ', ';\n  }\n  transition:all 0.3s;\n']);
 
@@ -201,11 +201,8 @@ function calcHovSideVal(left, right, def, val) {
 var mediumWidth = '799px';
 var largeWidth = '800px';
 
-var _SplitContainer = (0, _reactEmotion2.default)('div')(_templateObject, function (props) {
-  return props.fixed ? 'fixed' : 'relative';
-}, function (props) {
-  return props.fixed && 'height:100%; width:100%';
-}, function (props) {
+var _SplitContainer = (0, _reactEmotion2.default)('div')(_templateObject, '' /* position: ${props=>props.fixed? 'fixed' : 'relative'};
+                                                                             ${props=>props.fixed && 'height:100%; width:100%'}; */, function (props) {
   return props.side != 'right' ? '#e2e2e2' : '#d5d9ff';
 });
 
@@ -265,10 +262,10 @@ var _LeftBg = (0, _reactEmotion2.default)('div')(_templateObject3, function (pro
 
 function SplitSection(props) {
   return _react2.default.createElement(
-    _SplitContainer,
-    {
-      fixed: props.fixed,
-      onMouseLeave: props.onMouseLeave,
+    _SplitContainer
+    // fixed={props.fixed}
+    ,
+    { onMouseLeave: props.onMouseLeave,
       side: props.side
     },
     _react2.default.createElement(_SplitSectionContent2.default, props),
@@ -1127,7 +1124,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(["\n  z-index: 5;\n  height: 100vh;\n  position: fixed;\n  width: 100vw;\n\toverflow: scroll;\n"], ["\n  z-index: 5;\n  height: 100vh;\n  position: fixed;\n  width: 100vw;\n\toverflow: scroll;\n"]),
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _templateObject = _taggedTemplateLiteral(["\n  z-index: 5;\n  height: 100vh;\n  position: fixed;\n  width: 100vw;\n  overflow: scroll;\n"], ["\n  z-index: 5;\n  height: 100vh;\n  position: fixed;\n  width: 100vw;\n  overflow: scroll;\n"]),
     _templateObject2 = _taggedTemplateLiteral(["\n  width: 100vw;\n  z-index: 10;\n  text-align: center;\n  position: fixed;\n"], ["\n  width: 100vw;\n  z-index: 10;\n  text-align: center;\n  position: fixed;\n"]),
     _templateObject3 = _taggedTemplateLiteral(["\n  position:fixed;\n  left:100%;\n  top:50%;\n  transform:translate(-130%);\n  border-width: 3px;\n  padding:10px;\n  @media (max-width:550px){\n    padding:5px;\n  }\n  border-color: black;\n  color:black;\n  background-color: transparent;\n  font-size: 1.4em;\n  font-weight: 700;\n  &:hover{\n    background-color: grey\n    color:white;\n    border-color: transparent;\n  }\n  &:active{\n    background-color: black;\n  }\n"], ["\n  position:fixed;\n  left:100%;\n  top:50%;\n  transform:translate(-130%);\n  border-width: 3px;\n  padding:10px;\n  @media (max-width:550px){\n    padding:5px;\n  }\n  border-color: black;\n  color:black;\n  background-color: transparent;\n  font-size: 1.4em;\n  font-weight: 700;\n  &:hover{\n    background-color: grey\n    color:white;\n    border-color: transparent;\n  }\n  &:active{\n    background-color: black;\n  }\n"]);
 
@@ -1240,83 +1239,133 @@ var _PButton = (0, _reactEmotion2.default)("button")(_templateObject3);
 // ReportOn! page 4 blue
 // Work with me bitch page 5
 
-function WorkPortfolio(props) {
-  return _react2.default.createElement(
-    _Container,
-    null,
-    _react2.default.createElement(
-      _FloatingCont,
-      null,
-      _react2.default.createElement(
-        "h1",
-        {
-          style: {
-            marginTop: 10,
-            fontSize: "2.7em"
-          }
-        },
-        "< Developer >"
-      ),
-      _react2.default.createElement(
-        _PButton,
-        {
-          onClick: function onClick() {
-            props.history.push("/", { scrollTop: 1000 });
-          }
-        },
-        " ",
-        "P",
-        " "
-      )
-    ),
-    _react2.default.createElement(
-      ParallaxFixed,
-      { pages: 6 },
-      _react2.default.createElement(_reactSpringyParallax2.default.Layer, {
-        offset: 5,
-        speed: 1,
-        style: { backgroundColor: "#87BCDE", opacity: 1 }
-      }),
-      _BackgroundClouds2.default,
-      _react2.default.createElement(_reactSpringyParallax2.default.Layer, {
-        offset: 0,
-        speed: 0,
-        factor: 6,
-        style: {
-          color: "blue",
-          backgroundImage: "url(" + _stars2.default + ")",
-          backgroundSize: "cover"
-        }
-      }),
-      _react2.default.createElement(_reactSpringyParallax2.default.Layer, {
-        offset: 4,
-        speed: 1,
-        style: { backgroundColor: "#503374", opacity: 0.5 }
-      }),
-      _react2.default.createElement(_reactSpringyParallax2.default.Layer, {
-        offset: 3,
-        speed: 1,
-        style: { backgroundColor: "#3e3e7c", opacity: 0.5 }
-      }),
-      _react2.default.createElement(_reactSpringyParallax2.default.Layer, {
-        offset: 2,
-        speed: 1,
-        style: { backgroundColor: "#805E73", opacity: 0.5 }
-      }),
-      _react2.default.createElement(_reactSpringyParallax2.default.Layer, {
-        offset: 1,
-        speed: 1,
-        style: { backgroundColor: "#243B4A", opacity: 0.5 }
-      }),
-      _Badges2.default,
-      _RageOn2.default,
-      _Applyboard2.default,
-      _Okey2.default,
-      _ReportOn2.default,
-      _ContactMe2.default
-    )
-  );
-}
+var WorkPortfolio = function (_React$Component) {
+  _inherits(WorkPortfolio, _React$Component);
+
+  function WorkPortfolio(props) {
+    _classCallCheck(this, WorkPortfolio);
+
+    var _this2 = _possibleConstructorReturn(this, (WorkPortfolio.__proto__ || Object.getPrototypeOf(WorkPortfolio)).call(this, props));
+
+    _this2.scroll = function (to, e) {
+      var page = to;
+      // if (this.state.client && window.innerWidth <= 550 && to){
+      //   to = to + 0.05;
+      // }
+      if (e.target.tagName === 'BUTTON') {
+        return;
+      }
+      _this2.refs.parallax.scrollTo(to);
+    };
+
+    _this2.state = {};
+    return _this2;
+  }
+
+  _createClass(WorkPortfolio, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.setState({ client: true });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this3 = this;
+
+      var props = this.props;
+      return _react2.default.createElement(
+        _Container,
+        { id: "parCont" },
+        _react2.default.createElement(
+          _FloatingCont,
+          { id: "floatCont" },
+          _react2.default.createElement(
+            "h1",
+            {
+              style: {
+                marginTop: 10,
+                fontSize: "2.7em"
+              }
+            },
+            "< Developer >"
+          ),
+          _react2.default.createElement(
+            _PButton,
+            {
+              onClick: function onClick() {
+                props.history.push("/", { scrollTop: 1000 });
+              }
+            },
+            " ",
+            "P",
+            " "
+          )
+        ),
+        _react2.default.createElement(
+          ParallaxFixed,
+          { ref: "parallax", pages: 6, id: "ParFixCont" },
+          _react2.default.createElement(_reactSpringyParallax2.default.Layer, {
+            offset: 5,
+            speed: 1,
+            style: { backgroundColor: "#87BCDE", opacity: 1 }
+          }),
+          _BackgroundClouds2.default,
+          _react2.default.createElement(_reactSpringyParallax2.default.Layer, {
+            offset: 0,
+            speed: 0,
+            factor: 6,
+            style: {
+              color: "blue",
+              backgroundImage: "url(" + _stars2.default + ")",
+              backgroundSize: "cover"
+            }
+          }),
+          _react2.default.createElement(_reactSpringyParallax2.default.Layer, {
+            offset: 4,
+            speed: 1,
+            style: { backgroundColor: "#503374", opacity: 0.5 }
+          }),
+          _react2.default.createElement(_reactSpringyParallax2.default.Layer, {
+            offset: 3,
+            speed: 1,
+            style: { backgroundColor: "#3e3e7c", opacity: 0.5 }
+          }),
+          _react2.default.createElement(_reactSpringyParallax2.default.Layer, {
+            offset: 2,
+            speed: 1,
+            style: { backgroundColor: "#805E73", opacity: 0.5 }
+          }),
+          _react2.default.createElement(_reactSpringyParallax2.default.Layer, {
+            offset: 1,
+            speed: 1,
+            style: { backgroundColor: "#243B4A", opacity: 0.5 }
+          }),
+          _react2.default.createElement(_Badges2.default, { onClick: function onClick(e) {
+              return _this3.scroll(1, e);
+            } }),
+          _react2.default.createElement(_RageOn2.default, { onClick: function onClick(e) {
+              return _this3.scroll(2, e);
+            } }),
+          _react2.default.createElement(_Applyboard2.default, { onClick: function onClick(e) {
+              return _this3.scroll(3, e);
+            } }),
+          _react2.default.createElement(_ReportOn2.default, { onClick: function onClick(e) {
+              return _this3.scroll(4, e);
+            } }),
+          _react2.default.createElement(_Okey2.default, { onClick: function onClick(e) {
+              return _this3.scroll(5, e);
+            } }),
+          _react2.default.createElement(_ContactMe2.default, { onClick: function onClick(e) {
+              return _this3.scroll(0, e);
+            } })
+        )
+      );
+    }
+  }]);
+
+  return WorkPortfolio;
+}(_react2.default.Component);
+
 exports.default = (0, _reactStatic.withRouter)(WorkPortfolio);
 
 /***/ }),
@@ -1336,12 +1385,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  z-index: 4;\n  opacity:', ';\n  transition: all 0.5s;\n'], ['\n  z-index: 4;\n  opacity:', ';\n  transition: all 0.5s;\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  @media (max-width: ', '){\n    height:60vh;\n  }\n  @media (min-width: ', '){\n    height:80vh;\n  }\n  opacity: ', ';\n  position:absolute;\n  z-index: 1;\n  bottom:0px;\n  left: ', ';\n  transform:translate(-50%);\n  transition:all 0.5s;\n'], ['\n  @media (max-width: ', '){\n    height:60vh;\n  }\n  @media (min-width: ', '){\n    height:80vh;\n  }\n  opacity: ', ';\n  position:absolute;\n  z-index: 1;\n  bottom:0px;\n  left: ', ';\n  transform:translate(-50%);\n  transition:all 0.5s;\n']),
-    _templateObject3 = _taggedTemplateLiteral(['\n  width:50%;\n  height:100%;\n  position:absolute;\n  z-index:3;\n  text-align: center;\n'], ['\n  width:50%;\n  height:100%;\n  position:absolute;\n  z-index:3;\n  text-align: center;\n']),
-    _templateObject4 = _taggedTemplateLiteral(['\n  transition:all 0.5s;\n  @media (max-width: ', '){\n    width:28vw;\n    font-size: 0.9em;\n  }\n  @media (min-width: ', '){\n    width:34vw;\n  }\n  margin-top: 8vw;\n  display:inline-block;\n  opacity: ', ';\n  margin-left: ', ';\n'], ['\n  transition:all 0.5s;\n  @media (max-width: ', '){\n    width:28vw;\n    font-size: 0.9em;\n  }\n  @media (min-width: ', '){\n    width:34vw;\n  }\n  margin-top: 8vw;\n  display:inline-block;\n  opacity: ', ';\n  margin-left: ', ';\n']),
-    _templateObject5 = _taggedTemplateLiteral(['\n  @media (max-width: ', '){\n    font-size: 1.3em;\n  }\n'], ['\n  @media (max-width: ', '){\n    font-size: 1.3em;\n  }\n']),
-    _templateObject6 = _taggedTemplateLiteral(['\n  padding:10px;\n  @media (max-width: ', '){\n    display: none;\n  }\n'], ['\n  padding:10px;\n  @media (max-width: ', '){\n    display: none;\n  }\n']);
+var _templateObject = _taggedTemplateLiteral(["\n  z-index: 4;\n  opacity: ", ";\n  transition: all 0.5s;\n"], ["\n  z-index: 4;\n  opacity: ", ";\n  transition: all 0.5s;\n"]),
+    _templateObject2 = _taggedTemplateLiteral(["\n  @media (max-width: ", ") {\n    ", " width:100vw;\n    ", ";\n  }\n  @media (min-width: ", ") {\n    height: 80vh;\n    ", ";\n  }\n  opacity: ", ";\n  position: absolute;\n  z-index: 1;\n  bottom: 0px;\n  left: ", ";\n  transform: translate(-50%);\n  transition: all 0.5s;\n  max-width: 100vw;\n"], ["\n  @media (max-width: ", ") {\n    ", " width:100vw;\n    ", ";\n  }\n  @media (min-width: ", ") {\n    height: 80vh;\n    ", ";\n  }\n  opacity: ", ";\n  position: absolute;\n  z-index: 1;\n  bottom: 0px;\n  left: ", ";\n  transform: translate(-50%);\n  transition: all 0.5s;\n  max-width: 100vw;\n"]),
+    _templateObject3 = _taggedTemplateLiteral(["\n  width: 50%;\n  position: absolute;\n  z-index: 3;\n  text-align: center;\n"], ["\n  width: 50%;\n  position: absolute;\n  z-index: 3;\n  text-align: center;\n"]),
+    _templateObject4 = _taggedTemplateLiteral(["\n  transition: all 0.5s;\n  @media (max-width: ", ") {\n    width: 28vw;\n    font-size: 0.9em;\n  }\n  @media (min-width: ", ") {\n    width: 34vw;\n  }\n  margin-top: 8vw;\n  display: inline-block;\n  opacity: ", ";\n  margin-left: ", ";\n"], ["\n  transition: all 0.5s;\n  @media (max-width: ", ") {\n    width: 28vw;\n    font-size: 0.9em;\n  }\n  @media (min-width: ", ") {\n    width: 34vw;\n  }\n  margin-top: 8vw;\n  display: inline-block;\n  opacity: ", ";\n  margin-left: ", ";\n"]),
+    _templateObject5 = _taggedTemplateLiteral(["\n  @media (max-width: ", ") {\n    font-size: 1.3em;\n  }\n"], ["\n  @media (max-width: ", ") {\n    font-size: 1.3em;\n  }\n"]),
+    _templateObject6 = _taggedTemplateLiteral(["\n  padding: 10px;\n  @media (max-width: ", ") {\n    display: none;\n  }\n"], ["\n  padding: 10px;\n  @media (max-width: ", ") {\n    display: none;\n  }\n"]);
 
 var _reactEmotion = __webpack_require__(1);
 
@@ -1382,40 +1431,42 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 //helper function
 function calcHovSideVal(left, right, def, val) {
   switch (val) {
-    case 'left':
+    case "left":
       return left;
-    case 'right':
+    case "right":
       return right;
     default:
       return def;
   }
-};
+}
 
 //styling media queries
-var mediumWidth = '799px';
-var largeWidth = '800px';
+var mediumWidth = "799px";
+var largeWidth = "800px";
 
-var _ContentContainer = (0, _reactEmotion2.default)('div')(_templateObject, function (props) {
-  return props.side ? '0' : '1';
+var _ContentContainer = (0, _reactEmotion2.default)("div")(_templateObject, function (props) {
+  return props.side ? "0" : "1";
 });
 
-var _SplitImage = (0, _reactEmotion2.default)('img')(_templateObject2, mediumWidth, largeWidth, function (props) {
-  return calcHovSideVal(props.left ? '1' : '0', props.left ? '0' : '1', '1', props.hoverSide);
+var _SplitImage = (0, _reactEmotion2.default)("img")(_templateObject2, mediumWidth, "" /* height:60vh; */, function (props) {
+  return props.side && "width:0vw";
+}, largeWidth, "" /* width:100vw; */, function (props) {
+  return calcHovSideVal(props.left ? "1" : "0", props.left ? "0" : "1", "1", props.hoverSide);
 }, function (props) {
-  return calcHovSideVal('60%', '40%', '50%', props.hoverSide);
+  return calcHovSideVal("60%", "40%", "50%", props.hoverSide);
 });
 
-var _MouseOverCont = (0, _reactEmotion2.default)('div')(_templateObject3);
+var _MouseOverCont = (0, _reactEmotion2.default)("div")(_templateObject3);
 
-var _Profession = (0, _reactEmotion2.default)('div')(_templateObject4, mediumWidth, largeWidth, function (props) {
-  return calcHovSideVal(props.left ? '1' : '0.1', props.left ? '0.1' : '1', '1', props.hoverSide);
+var _Profession = (0, _reactEmotion2.default)("div")(_templateObject4, mediumWidth, largeWidth, function (props) {
+  return calcHovSideVal(props.left ? "1" : "0.1", props.left ? "0.1" : "1", "1", props.hoverSide);
 }, function (props) {
-  return calcHovSideVal('30%', '-30%', '0', props.hoverSide);
+  return calcHovSideVal("30%", "-30%", "0", props.hoverSide);
 });
 
-var _Title = (0, _reactEmotion2.default)('h2')(_templateObject5, mediumWidth);
+var _Title = (0, _reactEmotion2.default)("h2")(_templateObject5, mediumWidth);
 
-var _HiddenDescription = (0, _reactEmotion2.default)('div')(_templateObject6, mediumWidth);
+var _HiddenDescription = (0, _reactEmotion2.default)("div")(_templateObject6, mediumWidth);
 
 function SplitSectionContent(props) {
   return _react2.default.createElement(
@@ -1423,96 +1474,116 @@ function SplitSectionContent(props) {
     { side: props.side },
     _react2.default.createElement(
       _MouseOverCont,
-      {
-        onMouseEnter: function onMouseEnter() {
-          return props.onMouseEnter('left');
+      { onMouseEnter: function onMouseEnter() {
+          return props.onMouseEnter("left");
         } },
       _react2.default.createElement(
         _Profession,
-        {
-          left: true,
-          hoverSide: props.hoverSide
-        },
+        { left: true, hoverSide: props.hoverSide },
         _react2.default.createElement(
           _Title,
           null,
-          '<Developer>'
+          "<Developer>"
         ),
         _react2.default.createElement(
-          'p',
+          "p",
           null,
-          'Software engineer, front end specialist & React.JS rockstar.'
+          "Software engineer, front end specialist & React.JS rockstar."
         ),
-        _react2.default.createElement('br', null),
+        _react2.default.createElement("br", null),
         _react2.default.createElement(
           _HiddenDescription,
           null,
           _react2.default.createElement(
-            'p',
+            "p",
             null,
-            'I love making visual things sexy with clean, elegant and efficient code.'
+            "I love making visual things sexy with clean, elegant and efficient code."
           ),
-          _react2.default.createElement('br', null)
+          _react2.default.createElement("br", null)
         ),
         _react2.default.createElement(
           _Button3.default,
           {
             onClick: function onClick() {
-              props.history.push('/engineer');
+              props.history.push("/engineer");
             },
-            small: true, whiteBg: true, color: 'dark' },
-          'See Work'
+            small: true,
+            whiteBg: true,
+            color: "dark"
+          },
+          "See Work"
         )
       )
     ),
-    _react2.default.createElement(_SplitImage, { hoverSide: props.hoverSide, left: true, src: '' + _splitleft2.default }),
+    _react2.default.createElement(_SplitImage, {
+      side: props.side,
+      hoverSide: props.hoverSide,
+      left: true,
+      src: "" + _splitleft2.default
+    }),
     _react2.default.createElement(
       _MouseOverCont,
       {
-        style: { left: '50%' },
+        style: { left: "50%" },
         onMouseEnter: function onMouseEnter() {
-          return props.onMouseEnter('right');
-        } },
+          return props.onMouseEnter("right");
+        }
+      },
       _react2.default.createElement(
         _Profession,
-        {
-          hoverSide: props.hoverSide
-        },
+        { hoverSide: props.hoverSide },
         _react2.default.createElement(
           _Title,
           null,
-          'Photographer'
+          "Photographer"
         ),
         _react2.default.createElement(
-          'p',
+          "p",
           null,
-          'Travelling, exploring and learning new things is my passion.'
+          "Travelling, exploring and learning new things is my passion."
         ),
-        _react2.default.createElement('br', null),
+        _react2.default.createElement("br", null),
         _react2.default.createElement(
           _HiddenDescription,
           null,
           _react2.default.createElement(
-            'p',
+            "p",
             null,
-            'I\'m a hobby photographer that shares my stories & journeys with the world'
+            "I'm a hobby photographer that shares my stories & journeys with the world"
           ),
-          _react2.default.createElement('br', null)
+          _react2.default.createElement("br", null)
         ),
         _react2.default.createElement(
           _Button3.default,
           {
             onClick: function onClick() {
-              props.history.push('/photographer', { scrollToTop: false });
+              props.history.push("/photographer", { scrollToTop: false });
             },
-            small: true, whiteBg: true, color: 'dark' },
-          'View Gallery'
+            small: true,
+            whiteBg: true,
+            color: "dark"
+          },
+          "View Gallery"
         )
       )
     ),
-    _react2.default.createElement(_SplitImage, { hoverSide: props.hoverSide, src: '' + _splitright2.default }),
-    _react2.default.createElement(_SplitImage, { hoverSide: props.hoverSide, style: { opacity: props.hoverSide == 'left' ? 1 : 0 }, src: '' + _left2.default }),
-    _react2.default.createElement(_SplitImage, { hoverSide: props.hoverSide, style: { opacity: props.hoverSide == 'right' ? 1 : 0 }, src: '' + _right2.default })
+    _react2.default.createElement(_SplitImage, {
+      side: props.side,
+      hoverSide: props.hoverSide,
+      src: "" + _splitright2.default
+    }),
+    _react2.default.createElement(_SplitImage, {
+      side: props.side,
+      hoverSide: props.hoverSide,
+      style: { opacity: props.hoverSide == "left" ? 1 : 0 },
+      src: "" + _left2.default
+    }),
+    _react2.default.createElement(_SplitImage, {
+      side: props.side,
+      hoverSide: props.hoverSide,
+      style: { opacity: props.hoverSide == "right" ? 1 : 0 },
+      src: "" + _right2.default
+    })
   );
 }
 exports.default = SplitSectionContent;
@@ -1744,8 +1815,8 @@ var _templateObject = _taggedTemplateLiteral(["\n  margin-left: auto;\n  margin-
     _templateObject2 = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: center;\n  position: relative;\n"], ["\n  display: flex;\n  justify-content: center;\n  position: relative;\n"]),
     _templateObject3 = _taggedTemplateLiteral(["\n  width: ", "vw;\n  max-width: ", "px;\n  height: ", "vw;\n  max-height: ", "px;\n  padding: ", "vw;\n  position: relative;\n  ", " ", ";\n"], ["\n  width: ", "vw;\n  max-width: ", "px;\n  height: ", "vw;\n  max-height: ", "px;\n  padding: ", "vw;\n  position: relative;\n  ", " ", ";\n"]),
     _templateObject4 = _taggedTemplateLiteral(["\n  width: ", "vw;\n  max-width: ", "px;\n  max-height: ", "px;\n  padding: ", "vw;\n  height: 14vw;\n  ", ";\n"], ["\n  width: ", "vw;\n  max-width: ", "px;\n  max-height: ", "px;\n  padding: ", "vw;\n  height: 14vw;\n  ", ";\n"]),
-    _templateObject5 = _taggedTemplateLiteral(["\n  margin-top: calc(20vh + 400px);\n  @media (max-width: 550px){\n    margin-top:calc(20vh + 38vw);\n  }\n\n"], ["\n  margin-top: calc(20vh + 400px);\n  @media (max-width: 550px){\n    margin-top:calc(20vh + 38vw);\n  }\n\n"]),
-    _templateObject6 = _taggedTemplateLiteral(["\n  margin-top: calc(20vh + 450px);\n  @media (max-width: 550px){\n    margin-top:calc(20vh + 45vw);\n  }\n"], ["\n  margin-top: calc(20vh + 450px);\n  @media (max-width: 550px){\n    margin-top:calc(20vh + 45vw);\n  }\n"]);
+    _templateObject5 = _taggedTemplateLiteral(["\n  margin-top: calc(20vh + 400px);\n  @media (max-width: 550px) {\n    margin-top: calc(20vh + 38vw);\n  }\n"], ["\n  margin-top: calc(20vh + 400px);\n  @media (max-width: 550px) {\n    margin-top: calc(20vh + 38vw);\n  }\n"]),
+    _templateObject6 = _taggedTemplateLiteral(["\n  margin-top: calc(20vh + 450px);\n  @media (max-width: 550px) {\n    margin-top: calc(20vh + 45vw);\n  }\n"], ["\n  margin-top: calc(20vh + 450px);\n  @media (max-width: 550px) {\n    margin-top: calc(20vh + 45vw);\n  }\n"]);
 
 var _react = __webpack_require__(0);
 
@@ -1840,91 +1911,100 @@ var RowTwo = (0, _reactEmotion.css)(_templateObject5);
 
 var RowThree = (0, _reactEmotion.css)(_templateObject6);
 
-var Badges = _react2.default.createElement(
-  "div",
-  null,
-  _react2.default.createElement(
-    _reactSpringyParallax2.default.Layer,
-    { offset: 0, speed: 2 },
+var Badges = function Badges(_ref) {
+  var onClick = _ref.onClick;
+  return _react2.default.createElement(
+    "div",
+    { onClick: onClick },
     _react2.default.createElement(
-      SubTitle,
-      { style: { marginTop: "12vh" } },
-      "My selected works have been built using some of the following:"
-    )
-  ),
-  _react2.default.createElement(
-    _reactSpringyParallax2.default.Layer,
-    { offset: 0, speed: 2 },
-    _react2.default.createElement(
-      BadgeRow,
-      { style: { top: "20vh" } },
-      _react2.default.createElement(Badge, { src: _swift2.default }),
-      _react2.default.createElement(BadgePlaceHolder, { width: 3 }),
-      _react2.default.createElement(Badge, { src: _java2.default })
-    )
-  ),
-  _react2.default.createElement(
-    _reactSpringyParallax2.default.Layer,
-    { offset: 0, speed: 1.6 },
-    _react2.default.createElement(
-      BadgeRow,
-      { style: { top: "20vh" } },
-      _react2.default.createElement(Badge, { src: _redux2.default }),
-      _react2.default.createElement(BadgePlaceHolder, { width: 1 }),
-      _react2.default.createElement(Badge, { src: _node2.default })
+      _reactSpringyParallax2.default.Layer,
+      { offset: 0, speed: 2 },
+      _react2.default.createElement(
+        SubTitle,
+        { style: { marginTop: "12vh" } },
+        "My selected works have been built using some of the following:"
+      )
     ),
     _react2.default.createElement(
-      BadgeRow,
-      { style: { top: "20vh" } },
-      _react2.default.createElement(Badge, { src: _javascript2.default }),
-      _react2.default.createElement(BadgePlaceHolder, { width: 1 }),
-      _react2.default.createElement(Badge, { src: _css2.default })
-    )
-  ),
-  _react2.default.createElement(
-    _reactSpringyParallax2.default.Layer,
-    { offset: 0, speed: 1.2 },
-    _react2.default.createElement(
-      BadgeRow,
-      { style: { top: "20vh" } },
-      _react2.default.createElement(Badge, { src: _react4.default })
+      _reactSpringyParallax2.default.Layer,
+      { offset: 0, speed: 2 },
+      _react2.default.createElement(
+        BadgeRow,
+        { style: { top: "20vh" } },
+        _react2.default.createElement(Badge, { src: _swift2.default }),
+        _react2.default.createElement(BadgePlaceHolder, { width: 3 }),
+        _react2.default.createElement(Badge, { src: _java2.default })
+      )
     ),
     _react2.default.createElement(
-      BadgeRow,
-      { style: { top: "20vh" } },
-      _react2.default.createElement(Badge, { src: _html2.default })
-    )
-  ),
-  _react2.default.createElement(
-    _reactSpringyParallax2.default.Layer,
-    { offset: 0, speed: 1.4 },
+      _reactSpringyParallax2.default.Layer,
+      { offset: 0, speed: 1.6 },
+      _react2.default.createElement(
+        BadgeRow,
+        { style: { top: "20vh" } },
+        _react2.default.createElement(Badge, { src: _redux2.default }),
+        _react2.default.createElement(BadgePlaceHolder, { width: 1 }),
+        _react2.default.createElement(Badge, { src: _node2.default })
+      ),
+      _react2.default.createElement(
+        BadgeRow,
+        { style: { top: "20vh" } },
+        _react2.default.createElement(Badge, { src: _javascript2.default }),
+        _react2.default.createElement(BadgePlaceHolder, { width: 1 }),
+        _react2.default.createElement(Badge, { src: _css2.default })
+      )
+    ),
     _react2.default.createElement(
-      SubTitle,
-      { className: RowTwo },
-      "With designs created using"
-    )
-  ),
-  _react2.default.createElement(
-    _reactSpringyParallax2.default.Layer,
-    { offset: 0, speed: 1.4 },
+      _reactSpringyParallax2.default.Layer,
+      { offset: 0, speed: 1.2 },
+      _react2.default.createElement(
+        BadgeRow,
+        { style: { top: "20vh" } },
+        _react2.default.createElement(Badge, { src: _react4.default })
+      ),
+      _react2.default.createElement(
+        BadgeRow,
+        { style: { top: "20vh" } },
+        _react2.default.createElement(Badge, { src: _html2.default })
+      )
+    ),
     _react2.default.createElement(
-      BadgeRow,
-      { className: RowThree },
-      _react2.default.createElement(Badge, { src: _photoshop2.default })
-    )
-  ),
-  _react2.default.createElement(
-    _reactSpringyParallax2.default.Layer,
-    { offset: 0, speed: 1.2 },
+      _reactSpringyParallax2.default.Layer,
+      { offset: 0, speed: 1.4 },
+      _react2.default.createElement(
+        SubTitle,
+        { className: RowTwo },
+        "With designs created using"
+      )
+    ),
     _react2.default.createElement(
-      BadgeRow,
-      { className: RowThree },
-      _react2.default.createElement(Badge, { style: { padding: 10 }, scale: 0.7, src: _illustrator2.default }),
-      _react2.default.createElement(BadgePlaceHolder, { width: 1 }),
-      _react2.default.createElement(Badge, { style: { padding: 10 }, scale: 0.7, src: _aftereffects2.default })
+      _reactSpringyParallax2.default.Layer,
+      { offset: 0, speed: 1.4 },
+      _react2.default.createElement(
+        BadgeRow,
+        { className: RowThree },
+        _react2.default.createElement(Badge, { src: _photoshop2.default })
+      )
+    ),
+    _react2.default.createElement(
+      _reactSpringyParallax2.default.Layer,
+      { offset: 0, speed: 1.2 },
+      _react2.default.createElement(
+        BadgeRow,
+        { className: RowThree },
+        _react2.default.createElement(Badge, { style: { padding: 10 }, scale: 0.7, src: _illustrator2.default }),
+        _react2.default.createElement(BadgePlaceHolder, { width: 1 }),
+        _react2.default.createElement(Badge, { style: { padding: 10 }, scale: 0.7, src: _aftereffects2.default })
+      ),
+      _react2.default.createElement("br", null),
+      _react2.default.createElement(
+        SubTitle,
+        { style: { fontWeight: 100, opacity: 0.2 } },
+        "(Tap Anywhere to Continue)"
+      )
     )
-  )
-);
+  );
+};
 
 exports.default = Badges;
 
@@ -2006,8 +2086,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _templateObject = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  @media (max-width: 550px) {\n    ", "\n    justify-content: center;\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  @media (max-width: 550px) {\n    ", "\n    justify-content: center;\n  }\n"]),
-    _templateObject2 = _taggedTemplateLiteral(["\n  width: ", ";\n  max-width: 900px;\n  @media(max-height: 800px){\n    max-width: 500px;\n  }\n  text-align: center;\n  margin-top: -25vh;\n  @media (max-width: 550px) {\n    width: 75%;\n    ", "\n    padding: 10% 0 10% 0;\n    ", "\n    ", "\n  }\n"], ["\n  width: ", ";\n  max-width: 900px;\n  @media(max-height: 800px){\n    max-width: 500px;\n  }\n  text-align: center;\n  margin-top: -25vh;\n  @media (max-width: 550px) {\n    width: 75%;\n    ", "\n    padding: 10% 0 10% 0;\n    ", "\n    ", "\n  }\n"]),
-    _templateObject3 = _taggedTemplateLiteral(["\n  padding-bottom: 30px;\n  width: 50%;\n  max-width: 100% !important;\n  margin-top: 100vh;\n  transform: translateY(-50%);\n  display: block !important;\n"], ["\n  padding-bottom: 30px;\n  width: 50%;\n  max-width: 100% !important;\n  margin-top: 100vh;\n  transform: translateY(-50%);\n  display: block !important;\n"]),
+    _templateObject2 = _taggedTemplateLiteral(["\n  width: ", ";\n  max-width: 900px;\n  @media(max-height: 800px){\n    max-width: 500px;\n  }\n  text-align: center;\n  margin-top: -25vh;\n  @media (max-width: 550px) {\n    width: 85%;\n    margin-top: -35vh;\n    padding: 10% 0 10% 0;\n    ", "\n    ", "\n  }\n"], ["\n  width: ", ";\n  max-width: 900px;\n  @media(max-height: 800px){\n    max-width: 500px;\n  }\n  text-align: center;\n  margin-top: -25vh;\n  @media (max-width: 550px) {\n    width: 85%;\n    margin-top: -35vh;\n    padding: 10% 0 10% 0;\n    ", "\n    ", "\n  }\n"]),
+    _templateObject3 = _taggedTemplateLiteral(["\n  width: 50%;\n  max-width: 100% !important;\n  margin-top:100vh;\n  @media (max-width: 550px) {\n    margin-top: 90vh;\n    margin-bottom: 10vh;\n  }\n  transform: translateY(-50%);\n  display: block !important;\n"], ["\n  width: 50%;\n  max-width: 100% !important;\n  margin-top:100vh;\n  @media (max-width: 550px) {\n    margin-top: 90vh;\n    margin-bottom: 10vh;\n  }\n  transform: translateY(-50%);\n  display: block !important;\n"]),
     _templateObject4 = _taggedTemplateLiteral(["\n  color: white;\n  opacity: 1;\n  text-shadow: 0px 0px 8px black;\n"], ["\n  color: white;\n  opacity: 1;\n  text-shadow: 0px 0px 8px black;\n"]),
     _templateObject5 = _taggedTemplateLiteral(["\n    ", "\n    width:15vw;\n    margin-top:10vh;\n    max-width: 300px;\n    @media(max-height: 800px){\n      max-width: 250px;\n    }\n    @media (max-width: 550px) {\n      ", "\n      ", "\n      height:auto;\n      width:25vw;\n    }\n"], ["\n    ", "\n    width:15vw;\n    margin-top:10vh;\n    max-width: 300px;\n    @media(max-height: 800px){\n      max-width: 250px;\n    }\n    @media (max-width: 550px) {\n      ", "\n      ", "\n      height:auto;\n      width:25vw;\n    }\n"]);
 
@@ -2058,7 +2138,7 @@ var ParallaxFlex = (0, _reactEmotion2.default)(_reactSpringyParallax2.default.La
 
 var BrowserWindow = (0, _reactEmotion2.default)("div")(_templateObject2, function (props) {
   return props.main ? "60%" : "38%";
-}, '' /* margin-top: -15vh; */, function (props) {
+}, function (props) {
   return props.main && "width:90%;";
 }, '' /* ${props =>
       !props.main && `display:none;`}; */);
@@ -2073,64 +2153,73 @@ var MobilePhoneImg = (0, _reactEmotion2.default)('img')(_templateObject5, '' /* 
   return props.right && 'padding-left: 10vh;';
 });
 
-var RageOn = _react2.default.createElement(
-  "div",
-  null,
-  _react2.default.createElement(
-    ParallaxFlex,
-    { offset: 1, speed: 0 },
+var RageOn = function RageOn(_ref) {
+  var onClick = _ref.onClick;
+  return _react2.default.createElement(
+    "div",
+    { onClick: onClick },
     _react2.default.createElement(
-      BrowserWindow,
-      { main: true },
-      _react2.default.createElement("img", { style: { width: "100%" }, src: _rageonIMac2.default })
-    )
-  ),
-  _react2.default.createElement(
-    ParallaxFlex,
-    { offset: 1, speed: 0.2 },
-    _react2.default.createElement(
-      BrowserWindow,
-      null,
-      _react2.default.createElement(MobilePhoneImg, { left: true, src: _rageonIphonex2.default })
+      ParallaxFlex,
+      { offset: 1, speed: 0 },
+      _react2.default.createElement(
+        BrowserWindow,
+        { main: true },
+        _react2.default.createElement("img", { style: { width: "100%" }, src: _rageonIMac2.default })
+      )
     ),
     _react2.default.createElement(
-      BrowserWindow,
-      null,
-      _react2.default.createElement(MobilePhoneImg, {
-        right: true,
-        src: _rageonPixel2.default
-      })
-    )
-  ),
-  _react2.default.createElement(
-    ParallaxFlex,
-    { offset: 1, speed: 0.9 },
+      ParallaxFlex,
+      { offset: 1, speed: 0.2 },
+      _react2.default.createElement(
+        BrowserWindow,
+        null,
+        _react2.default.createElement(MobilePhoneImg, { left: true, src: _rageonIphonex2.default })
+      ),
+      _react2.default.createElement(
+        BrowserWindow,
+        null,
+        _react2.default.createElement(MobilePhoneImg, {
+          right: true,
+          src: _rageonPixel2.default
+        })
+      )
+    ),
     _react2.default.createElement(
-      Desc,
-      null,
-      _react2.default.createElement("img", { style: { width: "80%", maxWidth: 250 }, src: _rageonLogo2.default }),
+      ParallaxFlex,
+      { offset: 1, speed: 0.9 },
       _react2.default.createElement(
-        "h3",
-        { className: workText, style: { marginTop: 5 } },
-        "Lead Front End Engineer"
-      ),
-      _react2.default.createElement(
-        "h4",
-        { className: workText },
-        "RageOn is the world's largest online all over print shop! We empower creators and artists to design and sell garments and products with their art from the comfort of their own home. This is where I currently work and we've been building lots of new web stuff including a web builder, product customization and search page!"
-      ),
-      _react2.default.createElement(
-        "a",
-        { target: "_blank", href: "http://rageon.com/" },
+        Desc,
+        null,
+        _react2.default.createElement("img", { style: { width: "80%", maxWidth: 250 }, src: _rageonLogo2.default }),
         _react2.default.createElement(
-          _Button3.default,
-          { shadow: true, color: "light" },
-          "See Live"
+          "h3",
+          { className: workText, style: { marginTop: 5 } },
+          "Lead Front End Engineer"
+        ),
+        _react2.default.createElement(
+          "h4",
+          { className: workText },
+          "RageOn is the world's largest online all over print shop! We empower creators & artists to design & sell products from the comfort of their own home. I currently work here - we've built lots of new stuff including product customization and a new search!"
+        ),
+        _react2.default.createElement(
+          "a",
+          { target: "_blank", href: "http://rageon.com/" },
+          _react2.default.createElement(
+            _Button3.default,
+            { shadow: true, color: "light" },
+            "See Live"
+          )
+        ),
+        _react2.default.createElement("br", null),
+        _react2.default.createElement(
+          "div",
+          { style: { textAlign: 'center', color: 'white', opacity: 0.4, paddingBottom: 10 } },
+          "(or Tap Anywhere to Continue)"
         )
       )
     )
-  )
-);
+  );
+};
 
 exports.default = RageOn;
 
@@ -2146,8 +2235,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _templateObject = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n  @media (max-width: 550px) {\n    flex-direction: column;\n    justify-content: center;\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n  @media (max-width: 550px) {\n    flex-direction: column;\n    justify-content: center;\n  }\n"]),
-    _templateObject2 = _taggedTemplateLiteral(["\n  width: ", ";\n  text-align: center;\n  margin-top:-25vh;\n  @media(max-height: 800px){\n    max-width: ", ";\n  }\n  @media (max-width: 550px) {\n    width: 75%;\n    padding: 10% 0 10% 0;\n    ", "\n    ", "\n  }\n"], ["\n  width: ", ";\n  text-align: center;\n  margin-top:-25vh;\n  @media(max-height: 800px){\n    max-width: ", ";\n  }\n  @media (max-width: 550px) {\n    width: 75%;\n    padding: 10% 0 10% 0;\n    ", "\n    ", "\n  }\n"]),
-    _templateObject3 = _taggedTemplateLiteral(["\n  padding-bottom: 30px;\n  max-width: 100% !important;\n  width:50%;\n  margin-top:100vh;\n  transform:translateY(-50%);\n  display:block !important;\n"], ["\n  padding-bottom: 30px;\n  max-width: 100% !important;\n  width:50%;\n  margin-top:100vh;\n  transform:translateY(-50%);\n  display:block !important;\n"]),
+    _templateObject2 = _taggedTemplateLiteral(["\n  width: ", ";\n  text-align: center;\n  margin-top:-25vh;\n  @media(max-height: 800px){\n    max-width: ", ";\n  }\n  @media (max-width: 550px) {\n    width: 85%;\n    margin-top: -35vh;\n    padding: 10% 0 10% 0;\n    ", "\n    ", "\n  }\n"], ["\n  width: ", ";\n  text-align: center;\n  margin-top:-25vh;\n  @media(max-height: 800px){\n    max-width: ", ";\n  }\n  @media (max-width: 550px) {\n    width: 85%;\n    margin-top: -35vh;\n    padding: 10% 0 10% 0;\n    ", "\n    ", "\n  }\n"]),
+    _templateObject3 = _taggedTemplateLiteral(["\n  margin-bottom: 10vh;\n  max-width: 100% !important;\n  width:50%;\n  margin-top:100vh;\n  @media (max-width: 550px) {\n    margin-top: 90vh;\n    margin-bottom: 10vh;\n  }\n  transform:translateY(-50%);\n  display:block !important;\n"], ["\n  margin-bottom: 10vh;\n  max-width: 100% !important;\n  width:50%;\n  margin-top:100vh;\n  @media (max-width: 550px) {\n    margin-top: 90vh;\n    margin-bottom: 10vh;\n  }\n  transform:translateY(-50%);\n  display:block !important;\n"]),
     _templateObject4 = _taggedTemplateLiteral(["\n  color: white;\n  opacity: 1;\n  text-shadow: 0px 0px 8px black;\n"], ["\n  color: white;\n  opacity: 1;\n  text-shadow: 0px 0px 8px black;\n"]);
 
 var _react = __webpack_require__(0);
@@ -2209,67 +2298,75 @@ var Desc = (0, _reactEmotion2.default)(BrowserWindow)(_templateObject3);
 
 var workText = (0, _reactEmotion.css)(_templateObject4);
 
-var Applyboard = _react2.default.createElement(
-  "div",
-  null,
-  _react2.default.createElement(
-    ParallaxFlex,
-    { offset: 2, speed: 0.1 },
+var Applyboard = function Applyboard(_ref) {
+  var onClick = _ref.onClick;
+  return _react2.default.createElement(
+    "div",
+    { onClick: onClick },
     _react2.default.createElement(
-      BrowserWindow,
-      null,
-      _react2.default.createElement("img", {
-        src: _applyboardSchool2.default,
-        style: { width: "100%" }
-      })
+      ParallaxFlex,
+      { offset: 2, speed: 0.1 },
+      _react2.default.createElement(
+        BrowserWindow,
+        null,
+        _react2.default.createElement("img", {
+          src: _applyboardSchool2.default,
+          style: { width: "100%" }
+        })
+      ),
+      _react2.default.createElement(
+        BrowserWindow,
+        null,
+        _react2.default.createElement("img", {
+          src: _applyboardEligibility2.default,
+          style: { width: "100%" }
+        })
+      )
     ),
     _react2.default.createElement(
-      BrowserWindow,
-      null,
-      _react2.default.createElement("img", {
-        src: _applyboardEligibility2.default,
-        style: { width: "100%" }
-      })
-    )
-  ),
-  _react2.default.createElement(
-    ParallaxFlex,
-    { offset: 2, speed: -0.05 },
+      ParallaxFlex,
+      { offset: 2, speed: -0.05 },
+      _react2.default.createElement(
+        BrowserWindow,
+        { main: true },
+        _react2.default.createElement("img", { style: { width: "100%" }, src: _applyboardSearch2.default })
+      )
+    ),
     _react2.default.createElement(
-      BrowserWindow,
-      { main: true },
-      _react2.default.createElement("img", { style: { width: "100%" }, src: _applyboardSearch2.default })
-    )
-  ),
-  _react2.default.createElement(
-    ParallaxFlex,
-    { offset: 2, speed: 0.7 },
-    _react2.default.createElement(
-      Desc,
-      null,
-      _react2.default.createElement("img", { style: { width: '80%', maxWidth: 250 }, src: _applyboardLogo2.default }),
+      ParallaxFlex,
+      { offset: 2, speed: 0.7 },
       _react2.default.createElement(
-        "h3",
-        { className: workText, style: { marginTop: 5 } },
-        "Lead Front Engineer && UX/UI Designer"
-      ),
-      _react2.default.createElement(
-        "h4",
-        { className: workText },
-        "Applyboard allows international students find & apply to their dream universities in 60 seconds flat. During my time leading the front end team, we rebuilt the school/program search and institution pages to improve UX, user retention, click-through, feel and speed. Oh yeah, I also did some hiring and management \uD83D\uDE07"
-      ),
-      _react2.default.createElement(
-        "a",
-        { target: "_blank", href: "http://applyboard.com/schools" },
+        Desc,
+        null,
+        _react2.default.createElement("img", { style: { width: '80%', maxWidth: 250 }, src: _applyboardLogo2.default }),
         _react2.default.createElement(
-          _Button3.default,
-          { shadow: true, color: "light" },
-          "See Live"
+          "h3",
+          { className: workText, style: { marginTop: 5 } },
+          "Lead Front Engineer && UX/UI Designer"
+        ),
+        _react2.default.createElement(
+          "h4",
+          { className: workText },
+          "Applyboard allows international students find & apply to post-secondary schools in 60 seconds. I led the front end team & rebuilt the school/program search and institution pages to improve UX, user retention, click-through, feel and speed. Oh yeah, I also did some hiring and management \uD83D\uDE07"
+        ),
+        _react2.default.createElement(
+          "a",
+          { target: "_blank", href: "http://applyboard.com/schools" },
+          _react2.default.createElement(
+            _Button3.default,
+            { shadow: true, color: "light" },
+            "See Live"
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { style: { textAlign: 'center', color: 'black', opacity: 0.3, marginBottom: 10 } },
+          "(or Tap Anywhere to Continue)"
         )
       )
     )
-  )
-);
+  );
+};
 
 exports.default = Applyboard;
 
@@ -2447,8 +2544,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _templateObject = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  @media (max-width: 550px) {\n    ", " justify-content: center;\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  @media (max-width: 550px) {\n    ", " justify-content: center;\n  }\n"]),
-    _templateObject2 = _taggedTemplateLiteral(["\n  width: ", ";\n  max-width: 700px;\n  text-align: center;\n  margin-top: -25vh;\n  @media (max-height: 800px) {\n    max-width: 400px;\n  }\n  @media (max-width: 550px) {\n    width: 75%;\n    ", " padding: 10% 0 10% 0;\n    ", " ", ";\n  }\n"], ["\n  width: ", ";\n  max-width: 700px;\n  text-align: center;\n  margin-top: -25vh;\n  @media (max-height: 800px) {\n    max-width: 400px;\n  }\n  @media (max-width: 550px) {\n    width: 75%;\n    ", " padding: 10% 0 10% 0;\n    ", " ", ";\n  }\n"]),
-    _templateObject3 = _taggedTemplateLiteral(["\n  padding-bottom: 30px;\n  width: 50%;\n  margin-top: 100vh;\n  transform: translateY(-50%);\n  display: block !important;\n"], ["\n  padding-bottom: 30px;\n  width: 50%;\n  margin-top: 100vh;\n  transform: translateY(-50%);\n  display: block !important;\n"]),
+    _templateObject2 = _taggedTemplateLiteral(["\n  width: ", ";\n  max-width: 700px;\n  text-align: center;\n  margin-top: -25vh;\n  @media (max-height: 800px) {\n    max-width: 400px;\n  }\n  @media (max-width: 550px) {\n    width: 75%;\n    margin-top: -35vh;\n    padding: 10% 0 10% 0;\n    ", " ", ";\n  }\n"], ["\n  width: ", ";\n  max-width: 700px;\n  text-align: center;\n  margin-top: -25vh;\n  @media (max-height: 800px) {\n    max-width: 400px;\n  }\n  @media (max-width: 550px) {\n    width: 75%;\n    margin-top: -35vh;\n    padding: 10% 0 10% 0;\n    ", " ", ";\n  }\n"]),
+    _templateObject3 = _taggedTemplateLiteral(["\n  padding-bottom: 30px;\n  width: 50%;\n  margin-top: 100vh;\n  transform: translateY(-50%);\n  display: block !important;\n  @media (max-width: 550px) {\n    margin-top: 90vh;\n    margin-bottom: 10vh;\n  }\n"], ["\n  padding-bottom: 30px;\n  width: 50%;\n  margin-top: 100vh;\n  transform: translateY(-50%);\n  display: block !important;\n  @media (max-width: 550px) {\n    margin-top: 90vh;\n    margin-bottom: 10vh;\n  }\n"]),
     _templateObject4 = _taggedTemplateLiteral(["\n  color: white;\n  opacity: 1;\n  text-shadow: 0px 0px 8px black;\n"], ["\n  color: white;\n  opacity: 1;\n  text-shadow: 0px 0px 8px black;\n"]),
     _templateObject5 = _taggedTemplateLiteral(["\n  width: ", ";\n  margin-top: ", ";\n  max-width: ", ";\n  @media (max-height: 800px) {\n    max-width: ", ";\n    margin-top: ", ";\n  }\n  @media (max-width: 550px) {\n    ", ";\n    ", ";\n    height: auto;\n    width: ", ";\n  }\n"], ["\n  width: ", ";\n  margin-top: ", ";\n  max-width: ", ";\n  @media (max-height: 800px) {\n    max-width: ", ";\n    margin-top: ", ";\n  }\n  @media (max-width: 550px) {\n    ", ";\n    ", ";\n    height: auto;\n    width: ", ";\n  }\n"]);
 
@@ -2499,7 +2596,7 @@ var ParallaxFlex = (0, _reactEmotion2.default)(_reactSpringyParallax2.default.La
 
 var BrowserWindow = (0, _reactEmotion2.default)("div")(_templateObject2, function (props) {
   return props.main ? "45%" : "38%";
-}, "" /* margin-top: -15vh; */, function (props) {
+}, function (props) {
   return props.main && "width:90%;";
 }, "" /* ${props =>
       !props.main && `display:none;`}; */);
@@ -2526,61 +2623,69 @@ var MobilePhoneImg = (0, _reactEmotion2.default)("img")(_templateObject5, functi
   return props.left ? '35vw' : '20vw';
 });
 
-var Okey = _react2.default.createElement(
-  "div",
-  null,
-  _react2.default.createElement(
-    ParallaxFlex,
-    { offset: 4, speed: 0 },
+var Okey = function Okey(_ref) {
+  var onClick = _ref.onClick;
+  return _react2.default.createElement(
+    "div",
+    { onClick: onClick },
     _react2.default.createElement(
-      BrowserWindow,
-      { main: true },
-      _react2.default.createElement("img", { style: { width: "100%" }, src: _okeyImac2.default })
-    )
-  ),
-  _react2.default.createElement(
-    ParallaxFlex,
-    { offset: 4, speed: 0.1 },
-    _react2.default.createElement(
-      BrowserWindow,
-      null,
-      _react2.default.createElement(MobilePhoneImg, { left: true, src: _okeywatch2.default })
+      ParallaxFlex,
+      { offset: 4, speed: 0 },
+      _react2.default.createElement(
+        BrowserWindow,
+        { main: true },
+        _react2.default.createElement("img", { style: { width: "100%" }, src: _okeyImac2.default })
+      )
     ),
     _react2.default.createElement(
-      BrowserWindow,
-      null,
-      _react2.default.createElement(MobilePhoneImg, { right: true, src: _okeyphone2.default })
-    )
-  ),
-  _react2.default.createElement(
-    ParallaxFlex,
-    { offset: 4, speed: 0.9 },
+      ParallaxFlex,
+      { offset: 4, speed: 0.1 },
+      _react2.default.createElement(
+        BrowserWindow,
+        null,
+        _react2.default.createElement(MobilePhoneImg, { left: true, src: _okeywatch2.default })
+      ),
+      _react2.default.createElement(
+        BrowserWindow,
+        null,
+        _react2.default.createElement(MobilePhoneImg, { right: true, src: _okeyphone2.default })
+      )
+    ),
     _react2.default.createElement(
-      Desc,
-      null,
-      _react2.default.createElement("img", { style: { width: "80%", maxWidth: 250 }, src: _okeyLogo2.default }),
+      ParallaxFlex,
+      { offset: 4, speed: 0.9 },
       _react2.default.createElement(
-        "h3",
-        { className: workText, style: { marginTop: 5 } },
-        "Founder, CEO, Lead Engineer"
-      ),
-      _react2.default.createElement(
-        "h4",
-        { className: workText },
-        "Over a few short months, Okey was built natively on Android, iOS, Apple Watch and OSX. Our products had a combined 30,000 downloads and raised nearly $100k in investment money. I handled all the business, fund raising and built the mobile and web apps."
-      ),
-      _react2.default.createElement(
-        "a",
-        { target: "_blank", href: "https://okeytest.herokuapp.com/" },
+        Desc,
+        null,
+        _react2.default.createElement("img", { style: { width: "80%", maxWidth: 250 }, src: _okeyLogo2.default }),
         _react2.default.createElement(
-          _Button3.default,
-          { shadow: true, color: "light" },
-          "See Live"
+          "h3",
+          { className: workText, style: { marginTop: 5 } },
+          "Founder, CEO, Lead Engineer"
+        ),
+        _react2.default.createElement(
+          "h4",
+          { className: workText },
+          "Over a few short months, Okey was built natively on Android, iOS, Apple Watch and OSX. Our products had a combined 30,000 downloads and raised nearly $100k in investment money. I handled all the business, fund raising and built the mobile and web apps."
+        ),
+        _react2.default.createElement(
+          "a",
+          { target: "_blank", href: "https://okeytest.herokuapp.com/" },
+          _react2.default.createElement(
+            _Button3.default,
+            { shadow: true, color: "light" },
+            "See Live"
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { style: { textAlign: 'center', color: 'white', opacity: 0.3, paddingBottom: 10 } },
+          "(or Tap Anywhere to Continue)"
         )
       )
     )
-  )
-);
+  );
+};
 
 exports.default = Okey;
 
@@ -2620,8 +2725,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _templateObject = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n  ", " @media (max-width: 550px) {\n    flex-direction: column;\n    justify-content: center;\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n  ", " @media (max-width: 550px) {\n    flex-direction: column;\n    justify-content: center;\n  }\n"]),
-    _templateObject2 = _taggedTemplateLiteral(["\n  width: 90%;\n  text-align: center;\n  max-width: 1300px;\n  margin-top: -10vh;\n  @media (max-height: 800px) {\n    max-width: 500px;\n    ", ";\n  }\n  position: absolute;\n  ", " @media (max-width: 550px) {\n    left: -10px;\n    ", ";\n  }\n"], ["\n  width: 90%;\n  text-align: center;\n  max-width: 1300px;\n  margin-top: -10vh;\n  @media (max-height: 800px) {\n    max-width: 500px;\n    ", ";\n  }\n  position: absolute;\n  ", " @media (max-width: 550px) {\n    left: -10px;\n    ", ";\n  }\n"]),
-    _templateObject3 = _taggedTemplateLiteral(["\n  padding-bottom: 60px;\n  width: 50%;\n  margin-top: 50vh;\n  max-width: 100% !important;\n  transform: translateY(-50%);\n  text-align: center;\n  position: absolute;\n  display: block !important;\n  @media (max-width: 550px) {\n    width: 75%;\n  }\n"], ["\n  padding-bottom: 60px;\n  width: 50%;\n  margin-top: 50vh;\n  max-width: 100% !important;\n  transform: translateY(-50%);\n  text-align: center;\n  position: absolute;\n  display: block !important;\n  @media (max-width: 550px) {\n    width: 75%;\n  }\n"]),
+    _templateObject2 = _taggedTemplateLiteral(["\n  width: 90%;\n  text-align: center;\n  max-width: 1300px;\n  margin-top: -10vh;\n  @media (max-height: 800px) {\n    max-width: 500px;\n    ", ";\n  }\n  position: absolute;\n  ", ";\n  @media (max-width: 550px) {\n    left: -10px;\n    margin-top: -20vh;\n    ", ";\n  }\n"], ["\n  width: 90%;\n  text-align: center;\n  max-width: 1300px;\n  margin-top: -10vh;\n  @media (max-height: 800px) {\n    max-width: 500px;\n    ", ";\n  }\n  position: absolute;\n  ", ";\n  @media (max-width: 550px) {\n    left: -10px;\n    margin-top: -20vh;\n    ", ";\n  }\n"]),
+    _templateObject3 = _taggedTemplateLiteral(["\n  padding-bottom: 60px;\n  width: 50%;\n  margin-top: 50vh;\n  max-width: 100% !important;\n  transform: translateY(-50%);\n  text-align: center;\n  position: absolute;\n  display: block !important;\n  @media (max-width: 550px) {\n    width: 75%;\n    margin-top: 40vh;\n    margin-bottom: 10vh;\n  }\n"], ["\n  padding-bottom: 60px;\n  width: 50%;\n  margin-top: 50vh;\n  max-width: 100% !important;\n  transform: translateY(-50%);\n  text-align: center;\n  position: absolute;\n  display: block !important;\n  @media (max-width: 550px) {\n    width: 75%;\n    margin-top: 40vh;\n    margin-bottom: 10vh;\n  }\n"]),
     _templateObject4 = _taggedTemplateLiteral(["\n  color: white;\n  opacity: 1;\n  text-shadow: 0px 0px 8px black;\n"], ["\n  color: white;\n  opacity: 1;\n  text-shadow: 0px 0px 8px black;\n"]),
     _templateObject5 = _taggedTemplateLiteral(["\n  height: 60vh;\n  text-align: right;\n  @media (max-height: 800px) {\n    height: auto;\n    width: 300px;\n  }\n  @media (max-width: 550px) {\n    height: auto;\n    width: 50vw;\n    transform: translate(0%);\n  }\n"], ["\n  height: 60vh;\n  text-align: right;\n  @media (max-height: 800px) {\n    height: auto;\n    width: 300px;\n  }\n  @media (max-width: 550px) {\n    height: auto;\n    width: 50vw;\n    transform: translate(0%);\n  }\n"]);
 
@@ -2680,47 +2785,62 @@ var workText = (0, _reactEmotion.css)(_templateObject4);
 
 var IPad = (0, _reactEmotion2.default)("img")(_templateObject5);
 
-var ReportOn = _react2.default.createElement(
-  "div",
-  null,
-  _react2.default.createElement(
-    ParallaxFlex,
-    { offset: 3, speed: 0.1 },
+var ReportOn = function ReportOn(_ref) {
+  var onClick = _ref.onClick;
+  return _react2.default.createElement(
+    "div",
+    { onClick: onClick },
     _react2.default.createElement(
-      BrowserWindow,
-      null,
-      _react2.default.createElement("img", { src: _reportOnLaptop2.default, style: { width: "100%" } })
-    )
-  ),
-  _react2.default.createElement(
-    ParallaxFlex,
-    { offset: 3, speed: -0.1 },
-    _react2.default.createElement(
-      BrowserWindow,
-      { iPad: true },
-      _react2.default.createElement(IPad, { src: _reportOniPad2.default })
-    )
-  ),
-  _react2.default.createElement(
-    ParallaxFlex,
-    { offset: 3, speed: 0.8 },
-    _react2.default.createElement(
-      Desc,
-      null,
-      _react2.default.createElement("img", { style: { width: "80%", maxWidth: 250 }, src: _rippleLogo2.default }),
+      ParallaxFlex,
+      { offset: 3, speed: 0.1 },
       _react2.default.createElement(
-        "h3",
-        { className: workText, style: { marginTop: 5 } },
-        "Freelance Project Lead - Mobile & Web Engineer"
-      ),
+        BrowserWindow,
+        null,
+        _react2.default.createElement("img", { src: _reportOnLaptop2.default, style: { width: "100%" } })
+      )
+    ),
+    _react2.default.createElement(
+      ParallaxFlex,
+      { offset: 3, speed: -0.1 },
       _react2.default.createElement(
-        "h4",
-        { className: workText },
-        "My team and I were contracted to build a B2B web dashboard and two mobile apps for marketing managers to see what employees were doing in real time. Funded by Ripple Effect Marketing, we vastly improved the efficiency of their employees. I built the front end web app and both mobile apps."
+        BrowserWindow,
+        { iPad: true },
+        _react2.default.createElement(IPad, { src: _reportOniPad2.default })
+      )
+    ),
+    _react2.default.createElement(
+      ParallaxFlex,
+      { offset: 3, speed: 0.8 },
+      _react2.default.createElement(
+        Desc,
+        null,
+        _react2.default.createElement("img", { style: { width: "80%", maxWidth: 250 }, src: _rippleLogo2.default }),
+        _react2.default.createElement(
+          "h3",
+          { className: workText, style: { marginTop: 5 } },
+          "Freelance Project Lead - Mobile & Web Engineer"
+        ),
+        _react2.default.createElement(
+          "h4",
+          { className: workText },
+          "My team and I were contracted to build a B2B web dashboard and two mobile apps for marketing managers to see what employees were doing in real time. Funded by Ripple Effect Marketing, we vastly improved the efficiency of their employees. I built the front end web app and both mobile apps."
+        ),
+        _react2.default.createElement(
+          "div",
+          {
+            style: {
+              textAlign: "center",
+              color: "white",
+              opacity: 0.4,
+              paddingBottom: 10
+            }
+          },
+          "(or Tap Anywhere to Continue)"
+        )
       )
     )
-  )
-);
+  );
+};
 
 exports.default = ReportOn;
 
@@ -2814,42 +2934,54 @@ var Cont = (0, _reactEmotion2.default)("div")(_templateObject2);
 
 var Earth = (0, _reactEmotion2.default)('img')(_templateObject3);
 
-var RageOn = _react2.default.createElement(
-  "div",
-  null,
-  _react2.default.createElement(
-    ParallaxFlex,
-    {
-      offset: 5.5,
-      speed: -0.2
-    },
-    _react2.default.createElement(Earth, { src: _earth2.default })
-  ),
-  _react2.default.createElement(
-    ParallaxFlex,
-    { offset: 5, speed: 0.9 },
+var ContactMe = function ContactMe(_ref) {
+  var onClick = _ref.onClick;
+  return _react2.default.createElement(
+    "div",
+    null,
     _react2.default.createElement(
-      Cont,
-      null,
-      _react2.default.createElement("img", { src: _window2.default, style: { width: "100%" } }),
-      _react2.default.createElement("br", null),
+      ParallaxFlex,
+      {
+        offset: 5.5,
+        speed: -0.2
+      },
+      _react2.default.createElement(Earth, { src: _earth2.default })
+    ),
+    _react2.default.createElement(
+      ParallaxFlex,
+      { offset: 5, speed: 0.9 },
       _react2.default.createElement(
-        "a",
-        { target: "_blank", href: "mailto:tobiasgoo@gmail.com?Subject=Hello!" },
+        Cont,
+        null,
+        _react2.default.createElement("img", { src: _window2.default, style: { width: "100%" } }),
+        _react2.default.createElement("br", null),
         _react2.default.createElement(
-          _Button3.default,
-          { shadow: true, color: "light" },
-          "Send Email"
-        ),
-        _react2.default.createElement("br", null),
-        _react2.default.createElement("br", null),
-        "(tobias.goo@gmail.com)"
+          "a",
+          { target: "_blank", href: "mailto:tobiasgoo@gmail.com?Subject=Hello!" },
+          _react2.default.createElement(
+            _Button3.default,
+            { shadow: true, color: "light" },
+            "Send Email"
+          ),
+          _react2.default.createElement("br", null),
+          _react2.default.createElement("br", null),
+          "(tobias.goo@gmail.com)"
+        )
+      )
+    ),
+    _react2.default.createElement(
+      ParallaxFlex,
+      { offset: 5.3, speed: 0.9 },
+      _react2.default.createElement(
+        Cont,
+        { onClick: onClick, style: { opacity: 0.4 } },
+        "(Tap here to go back to top)"
       )
     )
-  )
-);
+  );
+};
 
-exports.default = RageOn;
+exports.default = ContactMe;
 
 /***/ }),
 /* 64 */
@@ -3550,4 +3682,4 @@ exports.default = (0, _reactStatic.withRouter)(SplitSectionContainer);
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.7871fa4a.js.map
+//# sourceMappingURL=static.82106472.js.map

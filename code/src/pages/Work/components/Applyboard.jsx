@@ -31,7 +31,8 @@ const BrowserWindow = styled("div")`
     max-width: ${props => (props.main ? "500px" : "400px")};
   }
   @media (max-width: 550px) {
-    width: 75%;
+    width: 85%;
+    margin-top: -35vh;
     padding: 10% 0 10% 0;
     ${props => props.main && `width:90%;`}
     ${props => !props.main && `display:none;`}
@@ -39,10 +40,14 @@ const BrowserWindow = styled("div")`
 `;
 
 const Desc = styled(BrowserWindow)`
-  padding-bottom: 30px;
+  margin-bottom: 10vh;
   max-width: 100% !important;
   width:50%;
   margin-top:100vh;
+  @media (max-width: 550px) {
+    margin-top: 90vh;
+    margin-bottom: 10vh;
+  }
   transform:translateY(-50%);
   display:block !important;
 `
@@ -54,8 +59,8 @@ const workText = css`
 `;
 
 
-const Applyboard = (
-  <div>
+const Applyboard = ({onClick}) => (
+  <div onClick={onClick}>
     <ParallaxFlex offset={2} speed={0.1}>
       <BrowserWindow>
         <img
@@ -83,9 +88,8 @@ const Applyboard = (
         Lead Front Engineer && UX/UI Designer
       </h3>
       <h4 className={workText}>
-        Applyboard allows international students find & apply to their
-        dream universities in 60 seconds flat. During my time leading
-        the front end team, we rebuilt the school/program search and
+        Applyboard allows international students find & apply to post-secondary schools in 60 seconds. I led
+        the front end team & rebuilt the school/program search and
         institution pages to improve UX, user retention, click-through,
         feel and speed. Oh yeah, I also did some hiring and management 😇
       </h4>
@@ -94,6 +98,9 @@ const Applyboard = (
           See Live
         </_Button>
       </a>
+      <div style={{textAlign:'center', color:'black', opacity:0.3, marginBottom:10}}>
+        (or Tap Anywhere to Continue)
+      </div>
       </Desc>
     </ParallaxFlex>
   </div>

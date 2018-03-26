@@ -49,7 +49,7 @@ const Earth = styled('img')`
 
 
 
-const RageOn = (
+const ContactMe = ({onClick}) => (
   <div>
     <ParallaxFlex
       offset={5.5}
@@ -72,7 +72,12 @@ const RageOn = (
         </a>
       </Cont>
     </ParallaxFlex>
+    <ParallaxFlex offset={5.3} speed={0.9}>
+      <Cont  onClick={onClick} style={{opacity:0.4}}>
+        (Tap here to go back to top)
+      </Cont>
+    </ParallaxFlex>
   </div>
 );
 
-export default RageOn;
+export default ContactMe;

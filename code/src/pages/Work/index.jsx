@@ -20,13 +20,13 @@ import Applyboard from "./components/Applyboard";
 import AnataMassage from "./components/AnataMassage";
 import Okey from "./components/Okey";
 import ReportOn from "./components/ReportOn";
-import ContactMe from './components/ContactMe';
+import ContactMe from "./components/ContactMe";
 
 class ParallaxFixed extends Parallax {
-	constructor(props) {
-		super(props);
-		this.state = {ready: true};
-	}
+  constructor(props) {
+    super(props);
+    this.state = {ready:true};
+  }
 }
 
 const _Container = styled("div")`
@@ -34,7 +34,7 @@ const _Container = styled("div")`
   height: 100vh;
   position: fixed;
   width: 100vw;
-	overflow: scroll;
+  overflow: scroll;
 `;
 const _FloatingCont = styled("div")`
   width: 100vw;
@@ -75,92 +75,112 @@ const _PButton = styled("button")`
 // ReportOn! page 4 blue
 // Work with me bitch page 5
 
-function WorkPortfolio(props) {
-  return (
-    <_Container>
-      <_FloatingCont>
-        <h1
-          style={{
-            marginTop: 10,
-            fontSize: "2.7em"
-          }}
-        >
-          {"< Developer >"}
-        </h1>
-        <_PButton
-          onClick={() => {
-            props.history.push("/", { scrollTop: 1000 });
-          }}
-        >
-          {" "}
-          P{" "}
-        </_PButton>
-      </_FloatingCont>
-      <ParallaxFixed pages={6}>
-        {/*  last page has no transpaency. we want clouds above it. */}
-        <Parallax.Layer
-          offset={5}
-          speed={1}
-          style={{ backgroundColor: "#87BCDE", opacity: 1 }}
-        />
-        {/* background floating things */}
-        {BackgroundClouds}
-        <Parallax.Layer
-          offset={0}
-          speed={0}
-          factor={6}
-          style={{
-            color: "blue",
-            backgroundImage: `url(${stars})`,
-            backgroundSize: "cover"
-          }}
-        />
+class WorkPortfolio extends React.Component {
+  constructor(props){
+    super(props);
+    this.state={}
+  }
+  componentDidMount(){
+    this.setState({client:true});
+  }
+  scroll = (to,e) => {
+    var page = to;
+    // if (this.state.client && window.innerWidth <= 550 && to){
+    //   to = to + 0.05;
+    // }
+    if (e.target.tagName === 'BUTTON'){
+      return;
+    }
+    this.refs.parallax.scrollTo(to);
+  };
 
-        <Parallax.Layer
-          offset={4}
-          speed={1}
-          style={{ backgroundColor: "#503374", opacity: 0.5 }}
-        />
-        <Parallax.Layer
-          offset={3}
-          speed={1}
-          style={{ backgroundColor: "#3e3e7c", opacity: 0.5 }}
-        />
-        {/* <Parallax.Layer
+  render() {
+    let props = this.props;
+    return (
+      <_Container id="parCont">
+        <_FloatingCont id="floatCont">
+          <h1
+            style={{
+              marginTop: 10,
+              fontSize: "2.7em"
+            }}
+          >
+            {"< Developer >"}
+          </h1>
+          <_PButton
+            onClick={() => {
+              props.history.push("/", { scrollTop: 1000 });
+            }}
+          >
+            {" "}
+            P{" "}
+          </_PButton>
+        </_FloatingCont>
+        <ParallaxFixed ref={"parallax"} pages={6} id="ParFixCont">
+          {/*  last page has no transpaency. we want clouds above it. */}
+          <Parallax.Layer
+            offset={5}
+            speed={1}
+            style={{ backgroundColor: "#87BCDE", opacity: 1 }}
+          />
+          {/* background floating things */}
+          {BackgroundClouds}
+          <Parallax.Layer
+            offset={0}
+            speed={0}
+            factor={6}
+            style={{
+              color: "blue",
+              backgroundImage: `url(${stars})`,
+              backgroundSize: "cover"
+            }}
+          />
+
+          <Parallax.Layer
+            offset={4}
+            speed={1}
+            style={{ backgroundColor: "#503374", opacity: 0.5 }}
+          />
+          <Parallax.Layer
             offset={3}
             speed={1}
-            style={{ backgroundColor: "#b2f187", opacity: 0.5 }}
-          /> */}
+            style={{ backgroundColor: "#3e3e7c", opacity: 0.5 }}
+          />
+          {/* <Parallax.Layer
+	            offset={3}
+	            speed={1}
+	            style={{ backgroundColor: "#b2f187", opacity: 0.5 }}
+	          /> */}
 
-        <Parallax.Layer
-          offset={2}
-          speed={1}
-          style={{ backgroundColor: "#805E73", opacity: 0.5 }}
-        />
-        <Parallax.Layer
-          offset={1}
-          speed={1}
-          style={{ backgroundColor: "#243B4A", opacity: 0.5 }}
-        />
+          <Parallax.Layer
+            offset={2}
+            speed={1}
+            style={{ backgroundColor: "#805E73", opacity: 0.5 }}
+          />
+          <Parallax.Layer
+            offset={1}
+            speed={1}
+            style={{ backgroundColor: "#243B4A", opacity: 0.5 }}
+          />
 
-        {/* Actual content */}
-        {Badges}
-        {RageOn}
-        {Applyboard}
-        {/* {AnataMassage} */}
-        {Okey}
-        {ReportOn}
-        {ContactMe}
-
-      </ParallaxFixed>
-      {/* <div style={{position:'fixed', zIndex:-1}}>
-        <SplitSection
-          fixed
-          hoverSide={null}
-          side={'left'}
-        />
-      </div> */}
-    </_Container>
-  );
+          {/* Actual content */}
+          <Badges onClick={(e) => this.scroll(1,e)} />
+          <RageOn onClick={(e)=>this.scroll(2,e)}/>
+          <Applyboard onClick={(e)=>this.scroll(3,e)}/>
+          {/* {AnataMassage} */}
+          <ReportOn onClick={(e)=>this.scroll(4,e)}/>
+          <Okey onClick={(e)=>this.scroll(5,e)}/>
+          <ContactMe  onClick={(e)=>this.scroll(0,e)}/>
+        </ParallaxFixed>
+        {/* <div style={{position:'fixed', zIndex:-1}}>
+	        <SplitSection
+	          fixed
+	          hoverSide={null}
+	          side={'left'}
+	        />
+	      </div> */}
+      </_Container>
+    );
+  }
 }
 export default withRouter(WorkPortfolio);

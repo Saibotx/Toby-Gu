@@ -31,8 +31,8 @@ const BrowserWindow = styled("div")`
   text-align: center;
   margin-top: -25vh;
   @media (max-width: 550px) {
-    width: 75%;
-    ${'' /* margin-top: -15vh; */}
+    width: 85%;
+    margin-top: -35vh;
     padding: 10% 0 10% 0;
     ${props => props.main && `width:90%;`}
     ${'' /* ${props =>
@@ -41,10 +41,13 @@ const BrowserWindow = styled("div")`
 `;
 
 const Desc = styled(BrowserWindow)`
-  padding-bottom: 30px;
   width: 50%;
   max-width: 100% !important;
-  margin-top: 100vh;
+  margin-top:100vh;
+  @media (max-width: 550px) {
+    margin-top: 90vh;
+    margin-bottom: 10vh;
+  }
   transform: translateY(-50%);
   display: block !important;
 `;
@@ -71,8 +74,8 @@ const MobilePhoneImg = styled('img')`
     }
 `
 
-const RageOn = (
-  <div>
+const RageOn = ({onClick})=>(
+  <div onClick={onClick}>
     <ParallaxFlex offset={1} speed={0}>
       <BrowserWindow main>
         <img style={{ width: "100%" }} src={rageonIMac} />
@@ -98,16 +101,20 @@ const RageOn = (
         </h3>
         <h4 className={workText}>
           RageOn is the world's largest online all over print shop! We empower
-          creators and artists to design and sell garments and products with
-          their art from the comfort of their own home. This is where I currently work and we've been building
-          lots of new web stuff including a web builder, product customization
-          and search page!
+          creators & artists to design & sell products
+          from the comfort of their own home. I currently work here - we've built
+          lots of new stuff including product customization
+          and a new search!
         </h4>
         <a target="_blank" href="http://rageon.com/">
           <_Button shadow color="light">
             See Live
           </_Button>
         </a>
+        <br/>
+        <div style={{textAlign:'center', color:'white', opacity:0.4, paddingBottom:10}}>
+          (or Tap Anywhere to Continue)
+        </div>
       </Desc>
     </ParallaxFlex>
   </div>
