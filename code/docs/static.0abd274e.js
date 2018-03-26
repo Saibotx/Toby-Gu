@@ -159,7 +159,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  display:flex;\n  max-height: 100vh;\n  max-width: 100vw;\n  overflow:hidden;\n  flex-direction: row;\n  ', '\n  background: ', ';\n'], ['\n  display:flex;\n  max-height: 100vh;\n  max-width: 100vw;\n  overflow:hidden;\n  flex-direction: row;\n  ', '\n  background: ', ';\n']),
+var _templateObject = _taggedTemplateLiteral(['\n  display:flex;\n  max-height: 100vh;\n  max-width: 100vw;\n  overflow:hidden;\n  flex-direction: row;\n  position: relative;\n  width:100%;\n  ', '\n  background: ', ';\n'], ['\n  display:flex;\n  max-height: 100vh;\n  max-width: 100vw;\n  overflow:hidden;\n  flex-direction: row;\n  position: relative;\n  width:100%;\n  ', '\n  background: ', ';\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  height:0;\n  z-index: 0;\n  width: ', ';\n  @media (max-width: ', '){\n    border-bottom: ', ';\n    border-left: ', ';\n  }\n  @media (min-width: ', '){\n    border-bottom: ', ';\n    border-left: ', ';\n  }\n  transition:all 0.5s;\n'], ['\n  height:0;\n  z-index: 0;\n  width: ', ';\n  @media (max-width: ', '){\n    border-bottom: ', ';\n    border-left: ', ';\n  }\n  @media (min-width: ', '){\n    border-bottom: ', ';\n    border-left: ', ';\n  }\n  transition:all 0.5s;\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  height:0;\n  z-index: 0;\n  width: ', ';\n  @media (max-width: ', '){\n    border-top: ', ';\n    border-right: ', ';\n  }\n  @media (min-width: ', '){\n    border-top: ', ';\n    border-right: ', ';\n  }\n  transition:all 0.3s;\n'], ['\n  height:0;\n  z-index: 0;\n  width: ', ';\n  @media (max-width: ', '){\n    border-top: ', ';\n    border-right: ', ';\n  }\n  @media (min-width: ', '){\n    border-top: ', ';\n    border-right: ', ';\n  }\n  transition:all 0.3s;\n']);
 
@@ -1386,7 +1386,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _templateObject = _taggedTemplateLiteral(["\n  z-index: 4;\n  opacity: ", ";\n  transition: all 0.5s;\n"], ["\n  z-index: 4;\n  opacity: ", ";\n  transition: all 0.5s;\n"]),
-    _templateObject2 = _taggedTemplateLiteral(["\n  @media (max-width: ", ") {\n    ", " width:100vw;\n    ", ";\n  }\n  @media (min-width: ", ") {\n    height: 80vh;\n    ", ";\n  }\n  opacity: ", ";\n  position: absolute;\n  z-index: 1;\n  bottom: 0px;\n  left: ", ";\n  transform: translate(-50%);\n  transition: all 0.5s;\n  max-width: 100vw;\n"], ["\n  @media (max-width: ", ") {\n    ", " width:100vw;\n    ", ";\n  }\n  @media (min-width: ", ") {\n    height: 80vh;\n    ", ";\n  }\n  opacity: ", ";\n  position: absolute;\n  z-index: 1;\n  bottom: 0px;\n  left: ", ";\n  transform: translate(-50%);\n  transition: all 0.5s;\n  max-width: 100vw;\n"]),
+    _templateObject2 = _taggedTemplateLiteral(["\n  @media (max-width: ", ") {\n    height:60vh;\n    ", "\n    ", ";\n  }\n  @media (min-width: ", ") {\n    ", "\n    width:100vw;\n  }\n  opacity: ", ";\n  position: absolute;\n  z-index: 1;\n  bottom: 0px;\n  left: ", ";\n  transform: translate(-50%);\n  transition: all 0.5s;\n  ", "\n"], ["\n  @media (max-width: ", ") {\n    height:60vh;\n    ", "\n    ", ";\n  }\n  @media (min-width: ", ") {\n    ", "\n    width:100vw;\n  }\n  opacity: ", ";\n  position: absolute;\n  z-index: 1;\n  bottom: 0px;\n  left: ", ";\n  transform: translate(-50%);\n  transition: all 0.5s;\n  ", "\n"]),
     _templateObject3 = _taggedTemplateLiteral(["\n  width: 50%;\n  position: absolute;\n  z-index: 3;\n  text-align: center;\n"], ["\n  width: 50%;\n  position: absolute;\n  z-index: 3;\n  text-align: center;\n"]),
     _templateObject4 = _taggedTemplateLiteral(["\n  transition: all 0.5s;\n  @media (max-width: ", ") {\n    width: 28vw;\n    font-size: 0.9em;\n  }\n  @media (min-width: ", ") {\n    width: 34vw;\n  }\n  margin-top: 8vw;\n  display: inline-block;\n  opacity: ", ";\n  margin-left: ", ";\n"], ["\n  transition: all 0.5s;\n  @media (max-width: ", ") {\n    width: 28vw;\n    font-size: 0.9em;\n  }\n  @media (min-width: ", ") {\n    width: 34vw;\n  }\n  margin-top: 8vw;\n  display: inline-block;\n  opacity: ", ";\n  margin-left: ", ";\n"]),
     _templateObject5 = _taggedTemplateLiteral(["\n  @media (max-width: ", ") {\n    font-size: 1.3em;\n  }\n"], ["\n  @media (max-width: ", ") {\n    font-size: 1.3em;\n  }\n"]),
@@ -1448,13 +1448,13 @@ var _ContentContainer = (0, _reactEmotion2.default)("div")(_templateObject, func
   return props.side ? "0" : "1";
 });
 
-var _SplitImage = (0, _reactEmotion2.default)("img")(_templateObject2, mediumWidth, "" /* height:60vh; */, function (props) {
+var _SplitImage = (0, _reactEmotion2.default)("img")(_templateObject2, mediumWidth, '' /* width: 100vw; */, function (props) {
   return props.side && "width:0vw";
-}, largeWidth, "" /* width:100vw; */, function (props) {
+}, largeWidth, '' /* height: 80vh; */, function (props) {
   return calcHovSideVal(props.left ? "1" : "0", props.left ? "0" : "1", "1", props.hoverSide);
 }, function (props) {
   return calcHovSideVal("60%", "40%", "50%", props.hoverSide);
-});
+}, '' /* max-width: 100vw; */);
 
 var _MouseOverCont = (0, _reactEmotion2.default)("div")(_templateObject3);
 
@@ -3682,4 +3682,4 @@ exports.default = (0, _reactStatic.withRouter)(SplitSectionContainer);
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.e9c9907c.js.map
+//# sourceMappingURL=static.0abd274e.js.map

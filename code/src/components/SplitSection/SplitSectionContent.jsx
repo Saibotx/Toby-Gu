@@ -34,12 +34,13 @@ const _ContentContainer = styled("div")`
 
 const _SplitImage = styled("img")`
   @media (max-width: ${mediumWidth}) {
-    ${"" /* height:60vh; */} width:100vw;
+    height:60vh;
+    ${'' /* width: 100vw; */}
     ${props => props.side && "width:0vw"};
   }
   @media (min-width: ${largeWidth}) {
-    height: 80vh;
-    ${"" /* width:100vw; */};
+    ${'' /* height: 80vh; */}
+    width:100vw;
   }
   opacity: ${props =>
     calcHovSideVal(
@@ -54,7 +55,7 @@ const _SplitImage = styled("img")`
   left: ${props => calcHovSideVal("60%", "40%", "50%", props.hoverSide)};
   transform: translate(-50%);
   transition: all 0.5s;
-  max-width: 100vw;
+  ${'' /* max-width: 100vw; */}
 `;
 
 const _MouseOverCont = styled("div")`
