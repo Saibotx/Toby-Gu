@@ -9,6 +9,7 @@ import Svg from "./HeroSvg.jsx";
 
 //Import assets
 import cover from "../../../assets/cover.jpg";
+import coverMobile from "../../../assets/cover-mobile.png";
 
 const _HeroTextDiv = styled("div")`
   color: white;
@@ -94,6 +95,9 @@ const HeroSvg = styled(Svg)`
   @media (max-width: 1200px) and (min-height: 800px) and (max-height: 500px) {
     display: none;
   }
+  @media(max-width:640px){
+    width:15vw;
+  }
 
 `;
 
@@ -103,18 +107,21 @@ const _HeroContainer = styled("div")`
   width:100%;
   position:relative;
   background-size: cover;
-  background-image: url('${props => props.src}');
+  background-image: url('${cover}');
+  @media (max-width: 650px){
+    background-image: url('${coverMobile}');
+  }
   background-attachment: fixed;
   background-position: center top;
 `;
 
 const _AnimatedTextContainer = styled("div")`
-  @media (max-width: 600px) {
+  ${'' /* @media (max-width: 650px) {
     display: none;
   }
   @media (max-width: 710px) and (min-height:1000px) {
     display: none;
-  }
+  } */}
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
@@ -127,7 +134,7 @@ const _AnimatedTextContainer = styled("div")`
 
 const _AnimatedText = styled("div")`
   left: 25%;
-  top: 40%;
+  top: 38%;
   position: absolute;
   color: white;
   @media (max-width: 800px) and (min-height: 900px){
@@ -137,6 +144,10 @@ const _AnimatedText = styled("div")`
   @media (max-width: 1200px) and (min-height: 1300px){
     left:27%;
     top: 43%;
+  }
+  @media(max-width:640px){
+    left:52%;
+    top:30%;
   }
 `;
 
