@@ -61,7 +61,7 @@ class HeroText extends React.Component {
     return (
       <_HeroTextDiv>
         <_Title>
-          <_PurpText>Toby</_PurpText> <_OjText>Gu</_OjText>
+          <_PurpText>Toby</_PurpText> <_OjText>Guu</_OjText>
         </_Title>
         <_SubTitle>
           Senior Software Engineer | Designer | Front End Lead Developer

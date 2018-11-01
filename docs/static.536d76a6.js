@@ -67,7 +67,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "http://tobygu.com/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 14);
@@ -854,7 +854,7 @@ var HeroText = function (_React$Component) {
           _react2.default.createElement(
             _OjText,
             null,
-            "Gu"
+            "Guu"
           )
         ),
         _react2.default.createElement(
@@ -3682,4 +3682,4 @@ exports.default = (0, _reactStatic.withRouter)(SplitSectionContainer);
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.54c071ca.js.map
+//# sourceMappingURL=static.536d76a6.js.map
