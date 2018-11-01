@@ -60,12 +60,15 @@ const _LoadingFace = styled("img")`
   animation: ${spin} 1s linear infinite;
 `;
 
-const _LoadingText = styled('div')`
-  position:fixed;
+const _LoadingText = styled("div")`
+  position: fixed;
   top: calc(50% + 160px);
   left: 50%;
-  transform:translateX(-50%);
-`
+  transform: translateX(-50%);
+`;
+
+//picture array to check if they're loaded
+let pictures = [cover, coverMobile, profile];
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -73,22 +76,27 @@ export default class Home extends React.Component {
     this.onImagesLoaded = this.onImagesLoaded.bind(this);
 
     //check if largest image is loaded.. if so, dont splash loading
-    let loading = true;
-    if (typeof window !== 'undefined') {
-      const img = new Image();
-      img.src = cover;
-      loading = !img.complete
+    var loading = true;
+    if (this.props.client) {
+      loading = false;
+      pictures.forEach(picture => {
+        const img = new Image();
+        img.src = picture;
+        if (!img.complete) {
+          console.log("image not loaded");
+          loading = true;
+        }
+      });
     }
-    
+
     this.state = {
       loading
     };
   }
 
-
   componentDidMount() {
     //load all images
-    let pictures = [cover, coverMobile, profile];
+
     pictures.forEach((picture, count) => {
       const img = new Image();
       img.src = picture;
@@ -96,6 +104,13 @@ export default class Home extends React.Component {
         img.onload = this.onImagesLoaded;
       }
     });
+    let us = this;
+    window.setTimeout(() => {
+      if (us && us.state.loading) {
+        us.setState({ loading: false });
+        console.log("timeout loading splash");
+      }
+    }, 10000);
   }
 
   onImagesLoaded() {

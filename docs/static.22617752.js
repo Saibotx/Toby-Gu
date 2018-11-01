@@ -705,7 +705,7 @@ var _templateObject = _taggedTemplateLiteral(["\n  position: fixed;\n  z-index: 
     _templateObject4 = _taggedTemplateLiteral(["\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  z-index: ", ";\n  background-color: white;\n  opacity: ", ";\n  transition: all 0.6s ease-in;\n"], ["\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  z-index: ", ";\n  background-color: white;\n  opacity: ", ";\n  transition: all 0.6s ease-in;\n"]),
     _templateObject5 = _taggedTemplateLiteral(["\n  from { transform: rotate(0deg); }\n  to { transform: rotate(359deg); }\n"], ["\n  from { transform: rotate(0deg); }\n  to { transform: rotate(359deg); }\n"]),
     _templateObject6 = _taggedTemplateLiteral(["\n  position: fixed;\n  left: calc(50% - 75px);\n  top: calc(50% - 75px);\n  animation: ", " 1s linear infinite;\n"], ["\n  position: fixed;\n  left: calc(50% - 75px);\n  top: calc(50% - 75px);\n  animation: ", " 1s linear infinite;\n"]),
-    _templateObject7 = _taggedTemplateLiteral(["\n  position:fixed;\n  top: calc(50% + 160px);\n  left: 50%;\n  transform:translateX(-50%);\n"], ["\n  position:fixed;\n  top: calc(50% + 160px);\n  left: 50%;\n  transform:translateX(-50%);\n"]);
+    _templateObject7 = _taggedTemplateLiteral(["\n  position: fixed;\n  top: calc(50% + 160px);\n  left: 50%;\n  transform: translateX(-50%);\n"], ["\n  position: fixed;\n  top: calc(50% + 160px);\n  left: 50%;\n  transform: translateX(-50%);\n"]);
 
 var _react = __webpack_require__(0);
 
@@ -778,7 +778,10 @@ var spin = (0, _reactEmotion.keyframes)(_templateObject5);
 
 var _LoadingFace = (0, _reactEmotion2.default)("img")(_templateObject6, spin);
 
-var _LoadingText = (0, _reactEmotion2.default)('div')(_templateObject7);
+var _LoadingText = (0, _reactEmotion2.default)("div")(_templateObject7);
+
+//picture array to check if they're loaded
+var pictures = [_cover2.default, _coverMobile2.default, _profile2.default];
 
 var Home = function (_React$Component) {
   _inherits(Home, _React$Component);
@@ -792,10 +795,16 @@ var Home = function (_React$Component) {
 
     //check if largest image is loaded.. if so, dont splash loading
     var loading = true;
-    if (typeof window !== 'undefined') {
-      var img = new Image();
-      img.src = _cover2.default;
-      loading = !img.complete;
+    if (_this.props.client) {
+      loading = false;
+      pictures.forEach(function (picture) {
+        var img = new Image();
+        img.src = picture;
+        if (!img.complete) {
+          console.log("image not loaded");
+          loading = true;
+        }
+      });
     }
 
     _this.state = {
@@ -810,7 +819,7 @@ var Home = function (_React$Component) {
       var _this2 = this;
 
       //load all images
-      var pictures = [_cover2.default, _coverMobile2.default, _profile2.default];
+
       pictures.forEach(function (picture, count) {
         var img = new Image();
         img.src = picture;
@@ -818,6 +827,13 @@ var Home = function (_React$Component) {
           img.onload = _this2.onImagesLoaded;
         }
       });
+      var us = this;
+      window.setTimeout(function () {
+        if (us && us.state.loading) {
+          us.setState({ loading: false });
+          console.log("timeout loading splash");
+        }
+      }, 10000);
     }
   }, {
     key: "onImagesLoaded",
@@ -3793,4 +3809,4 @@ exports.default = (0, _reactStatic.withRouter)(SplitSectionContainer);
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.0ccd9db3.js.map
+//# sourceMappingURL=static.22617752.js.map
