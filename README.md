@@ -16,4 +16,19 @@ Hey-yo! Welcome. All my stuff is built super responsive. Feel free to mess with 
 
 ### How it works
 
-This is hosted on github pages. Which means index.html must be served from the root - which means all the source code will be in ./code
+This is technically a "project page" and hosted on github pages. This means all the html and assets are served from `./docs`. Technically this shouldn't be a thing, but I made it a thing lol.
+
+### How to run the project
+#### (and draw a mustache on my face)
+
+To get started, just
+```
+git clone git@github.com:Saibotx/portfolio.git
+```
+
+then run
+```
+yarn install
+yarn start
+
+```
