@@ -702,7 +702,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 var _templateObject = _taggedTemplateLiteral(["\n  position: fixed;\n  z-index: 5;\n  border-top: 100px solid orange;\n  border-right: 50px solid transparent;\n  height: 100vh;\n  width: 100vw;\n  left: ", ";\n"], ["\n  position: fixed;\n  z-index: 5;\n  border-top: 100px solid orange;\n  border-right: 50px solid transparent;\n  height: 100vh;\n  width: 100vw;\n  left: ", ";\n"]),
     _templateObject2 = _taggedTemplateLiteral(["\n  position: fixed;\n  z-index: 5;\n  border-top: 100px solid orange;\n  border-right: 50px solid transparent;\n  height: 100vh;\n  width: 100vw;\n  right: ", ";\n"], ["\n  position: fixed;\n  z-index: 5;\n  border-top: 100px solid orange;\n  border-right: 50px solid transparent;\n  height: 100vh;\n  width: 100vw;\n  right: ", ";\n"]),
     _templateObject3 = _taggedTemplateLiteral(["\n  max-height: ", ";\n  overflow: hidden;\n  transition: all 0.6s ease-in;\n"], ["\n  max-height: ", ";\n  overflow: hidden;\n  transition: all 0.6s ease-in;\n"]),
-    _templateObject4 = _taggedTemplateLiteral(["\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  z-index: ", ";\n  ", "\n  background-color: white;\n  opacity: ", ";\n  ", "\n  transition: all 0.6s ease-in;\n"], ["\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  z-index: ", ";\n  ", "\n  background-color: white;\n  opacity: ", ";\n  ", "\n  transition: all 0.6s ease-in;\n"]),
+    _templateObject4 = _taggedTemplateLiteral(["\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  z-index: ", ";\n  background-color: white;\n  opacity: ", ";\n  transition: all 0.6s ease-in;\n"], ["\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  z-index: ", ";\n  background-color: white;\n  opacity: ", ";\n  transition: all 0.6s ease-in;\n"]),
     _templateObject5 = _taggedTemplateLiteral(["\n  from { transform: rotate(0deg); }\n  to { transform: rotate(359deg); }\n"], ["\n  from { transform: rotate(0deg); }\n  to { transform: rotate(359deg); }\n"]),
     _templateObject6 = _taggedTemplateLiteral(["\n  position: fixed;\n  left: calc(50% - 75px);\n  top: calc(50% - 75px);\n  animation: ", " 1s linear infinite;\n"], ["\n  position: fixed;\n  left: calc(50% - 75px);\n  top: calc(50% - 75px);\n  animation: ", " 1s linear infinite;\n"]),
     _templateObject7 = _taggedTemplateLiteral(["\n  position:fixed;\n  top: calc(50% + 160px);\n  left: 50%;\n  transform:translateX(-50%);\n"], ["\n  position:fixed;\n  top: calc(50% + 160px);\n  left: 50%;\n  transform:translateX(-50%);\n"]);
@@ -770,9 +770,9 @@ var _DisspearingDiv = (0, _reactEmotion2.default)("div")(_templateObject3, funct
 
 var _LoadingOverlay = (0, _reactEmotion2.default)("div")(_templateObject4, function (props) {
   return props.loading ? 30 : -1;
-}, '' /* z-index: 30; */, function (props) {
+}, function (props) {
   return props.loading ? 1 : 0;
-}, '' /* opacity: 1; */);
+});
 
 var spin = (0, _reactEmotion.keyframes)(_templateObject5);
 
@@ -789,8 +789,17 @@ var Home = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
 
     _this.onImagesLoaded = _this.onImagesLoaded.bind(_this);
+
+    //check if largest image is loaded.. if so, dont splash loading
+    var loading = true;
+    if (typeof window !== 'undefined') {
+      var img = new Image();
+      img.src = _cover2.default;
+      loading = !img.complete;
+    }
+
     _this.state = {
-      loading: true
+      loading: loading
     };
     return _this;
   }
@@ -3784,4 +3793,4 @@ exports.default = (0, _reactStatic.withRouter)(SplitSectionContainer);
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.aa24221d.js.map
+//# sourceMappingURL=static.0ccd9db3.js.map

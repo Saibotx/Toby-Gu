@@ -39,3 +39,5 @@ yarn start
 yarn build
 git commit ... git push etc.
 ```
+
+Then you must go into githubv project settings and change the custom dns!

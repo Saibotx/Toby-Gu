@@ -43,10 +43,8 @@ const _LoadingOverlay = styled("div")`
   height: 100vh;
   position: fixed;
   z-index: ${props => (props.loading ? 30 : -1)};
-  ${'' /* z-index: 30; */}
   background-color: white;
   opacity: ${props => (props.loading ? 1 : 0)};
-  ${'' /* opacity: 1; */}
   transition: all 0.6s ease-in;
 `;
 
@@ -73,10 +71,20 @@ export default class Home extends React.Component {
   constructor(props) {
     super(props);
     this.onImagesLoaded = this.onImagesLoaded.bind(this);
+
+    //check if largest image is loaded.. if so, dont splash loading
+    let loading = true;
+    if (typeof window !== 'undefined') {
+      const img = new Image();
+      img.src = cover;
+      loading = !img.complete
+    }
+    
     this.state = {
-      loading: true
+      loading
     };
   }
+
 
   componentDidMount() {
     //load all images
