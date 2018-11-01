@@ -4,7 +4,7 @@ import { renderToString } from "react-dom/server";
 
 // Read the docs at https://github.com/nozzle/react-static/blob/master/README.md to learn more!
 export default {
-  siteRoot: "http://tobygu.com/",
+  siteRoot: "https://tobygu.com/",
   paths: {
     src: "src", // The source directory. Must include an index.js entry file.
     dist: "docs", // The production output directory.
