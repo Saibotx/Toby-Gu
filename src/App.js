@@ -77,7 +77,8 @@ class App extends React.Component {
     }
     return (
       <div style={{ position: "relative" }}>
-        {/* hacky way of dismounting home section with animation. acutal animation happens
+        {/* hacky way of dismounting home section with animation.
+          acutal animation happens
           within the Home component.  */}
         <Transition>
           {pathname == "" && (

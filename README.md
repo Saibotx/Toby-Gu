@@ -32,3 +32,10 @@ yarn install
 yarn start
 
 ```
+
+### How to deploy
+
+```
+yarn build
+git commit ... git push etc.
+```

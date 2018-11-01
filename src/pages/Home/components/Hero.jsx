@@ -101,22 +101,21 @@ const HeroSvg = styled(Svg)`
 `;
 
 const _HeroContainer = styled("div")`
-  height:93vh;
+  height: 93vh;
   padding-top: 2px;
-  width:100%;
-  position:relative;
+  width: 100%;
+  position: relative;
   background-size: cover;
   background-attachment: fixed;
   background-position: center top;
 
-  @media (min-width: 651px){
+  @media (min-width: 651px) {
     background-image: url(${cover});
   }
-  @media (max-width: 650px){
+  @media (max-width: 650px) {
     background-image: url(${coverMobile});
     background-attachment: scroll;
   }
-
 `;
 
 const _AnimatedTextContainer = styled("div")`
@@ -129,12 +128,11 @@ const _AnimatedTextContainer = styled("div")`
   min-height: 92vh;
   min-width: 161vh;
   @media (max-width: 650px) {
-    ${'' /* display: none; */}
-    position: absolute;
+    ${"" /* display: none; */} position: absolute;
   }
-  ${'' /* @media (max-width: 710px) and (min-height:1000px) {
+  ${"" /* @media (max-width: 710px) and (min-height:1000px) {
     display: none;
-  } */}
+  } */};
 `;
 
 const _AnimatedText = styled("div")`
@@ -179,14 +177,17 @@ export default function Hero(props) {
         <_AnimatedText>
           {/* aspect ratio of 7:4 */}
           <div>
-            <MtSvgLines
-              animate={500}
-              duration={3000}
-              stagger={100}
-              timing="ease-in"
-            >
-              <HeroSvg className="ass" />
-            </MtSvgLines>
+            {props.loading === false && (
+              <MtSvgLines
+                animate={500}
+                duration={3000}
+                stagger={100}
+                delay={100}
+                timing="ease-in"
+              >
+                <HeroSvg className="ass" />
+              </MtSvgLines>
+            )}
           </div>
         </_AnimatedText>
       </_AnimatedTextContainer>
