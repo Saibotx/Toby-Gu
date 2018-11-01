@@ -7,10 +7,13 @@ import Hero from "./components/Hero.jsx";
 import Profile from "./components/Profile.jsx";
 import tobyface from "../../assets/tobyface.png";
 
+//Import utils
+import { setCookie, getCookie, preloadWorkImages } from "./utils.js";
+
 //Import all images to preload
-import cover from "../../assets/cover.jpg";
-import coverMobile from "../../assets/cover-mobile.png";
-import profile from "../../assets/profile.jpg";
+import cover from "assets/cover.jpg";
+import coverMobile from "assets/cover-mobile.png";
+import profile from "assets/profile.jpg";
 
 const LeftModal = styled("div")`
   position: fixed;
@@ -77,26 +80,22 @@ export default class Home extends React.Component {
 
     //check if largest image is loaded.. if so, dont splash loading
     var loading = true;
-    if (this.props.client) {
-      loading = false;
-      pictures.forEach(picture => {
-        const img = new Image();
-        img.src = picture;
-        if (!img.complete) {
-          console.log("image not loaded");
-          loading = true;
-        }
-      });
-    }
 
+    if (this.props.client) {
+      let firstLoad = getCookie('firstLoad');
+      if (firstLoad === "false") {
+        loading = false
+      }
+      setCookie('firstLoad', "false", 1);
+    }
     this.state = {
       loading
     };
   }
 
   componentDidMount() {
-    //load all images
-
+    //load all images on this page
+    setCookie('firstLoad', "false", 1);
     pictures.forEach((picture, count) => {
       const img = new Image();
       img.src = picture;
@@ -104,6 +103,7 @@ export default class Home extends React.Component {
         img.onload = this.onImagesLoaded;
       }
     });
+    //fall back if things do not load
     let us = this;
     window.setTimeout(() => {
       if (us && us.state.loading) {
@@ -111,6 +111,9 @@ export default class Home extends React.Component {
         console.log("timeout loading splash");
       }
     }, 10000);
+
+    //load all assets on portfolio page
+    preloadWorkImages();
   }
 
   onImagesLoaded() {
