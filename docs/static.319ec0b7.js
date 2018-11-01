@@ -67,7 +67,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "http://tobygu.com/";
+/******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 14);
@@ -765,7 +765,7 @@ var _templateObject = _taggedTemplateLiteral(["\n  color: white;\n  max-width: 6
     _templateObject5 = _taggedTemplateLiteral(["\n  position: relative;\n  left: 50%;\n  white-space: nowrap;\n  width: 600px;\n  transform: translate(-50%);\n"], ["\n  position: relative;\n  left: 50%;\n  white-space: nowrap;\n  width: 600px;\n  transform: translate(-50%);\n"]),
     _templateObject6 = _taggedTemplateLiteral([""], [""]),
     _templateObject7 = _taggedTemplateLiteral(["\n  width: 9vw;\n  @media (max-width: 1400px) {\n    width: 12vw;\n  }\n  @media (max-width: 1200px) {\n    width: 13vw;\n  }\n  @media (max-width: 1200px) and (max-height: 900px) {\n    width: 10vw;\n  }\n  @media (max-width: 1200px) and (max-height: 600px) {\n    width: 10vw;\n  }\n  @media (max-width: 1200px) and (min-height: 800px) and (max-height: 500px) {\n    display: none;\n  }\n  @media (max-width: 650px) {\n    width: 20vw;\n  }\n"], ["\n  width: 9vw;\n  @media (max-width: 1400px) {\n    width: 12vw;\n  }\n  @media (max-width: 1200px) {\n    width: 13vw;\n  }\n  @media (max-width: 1200px) and (max-height: 900px) {\n    width: 10vw;\n  }\n  @media (max-width: 1200px) and (max-height: 600px) {\n    width: 10vw;\n  }\n  @media (max-width: 1200px) and (min-height: 800px) and (max-height: 500px) {\n    display: none;\n  }\n  @media (max-width: 650px) {\n    width: 20vw;\n  }\n"]),
-    _templateObject8 = _taggedTemplateLiteral(["\n  height:93vh;\n  padding-top: 2px;\n  width:100%;\n  position:relative;\n  background-size: cover;\n  background-attachment: fixed;\n  background-position: center top;\n  @media (min-width: 651px){\n    background-image: url('", "');\n  }\n  @media (max-width: 650px){\n    background-image: url('", "');\n    background-attachment: scroll;\n    ", "\n    ", "\n  }\n\n"], ["\n  height:93vh;\n  padding-top: 2px;\n  width:100%;\n  position:relative;\n  background-size: cover;\n  background-attachment: fixed;\n  background-position: center top;\n  @media (min-width: 651px){\n    background-image: url('", "');\n  }\n  @media (max-width: 650px){\n    background-image: url('", "');\n    background-attachment: scroll;\n    ", "\n    ", "\n  }\n\n"]),
+    _templateObject8 = _taggedTemplateLiteral(["\n  height:93vh;\n  padding-top: 2px;\n  width:100%;\n  position:relative;\n  background-size: cover;\n  background-attachment: fixed;\n  background-position: center top;\n\n  @media (min-width: 651px){\n    background-image: url(", ");\n  }\n  @media (max-width: 650px){\n    background-image: url(", ");\n    background-attachment: scroll;\n  }\n\n"], ["\n  height:93vh;\n  padding-top: 2px;\n  width:100%;\n  position:relative;\n  background-size: cover;\n  background-attachment: fixed;\n  background-position: center top;\n\n  @media (min-width: 651px){\n    background-image: url(", ");\n  }\n  @media (max-width: 650px){\n    background-image: url(", ");\n    background-attachment: scroll;\n  }\n\n"]),
     _templateObject9 = _taggedTemplateLiteral(["\n  position: fixed;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 0;\n  width: 100vw;\n  height: 57vw;\n  min-height: 92vh;\n  min-width: 161vh;\n  @media (max-width: 650px) {\n    ", "\n    position: absolute;\n  }\n  ", "\n"], ["\n  position: fixed;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 0;\n  width: 100vw;\n  height: 57vw;\n  min-height: 92vh;\n  min-width: 161vh;\n  @media (max-width: 650px) {\n    ", "\n    position: absolute;\n  }\n  ", "\n"]),
     _templateObject10 = _taggedTemplateLiteral(["\n  left: 25%;\n  top: 39%;\n  position: absolute;\n  color: white;\n  @media (max-width: 800px) and (min-height: 900px) {\n    left: 27%;\n    top: 43%;\n  }\n  @media (max-width: 1200px) and (min-height: 1300px) {\n    left: 27%;\n    top: 43%;\n  }\n  @media (max-width: 640px) {\n    left: 50%;\n    top: 25%;\n  }\n"], ["\n  left: 25%;\n  top: 39%;\n  position: absolute;\n  color: white;\n  @media (max-width: 800px) and (min-height: 900px) {\n    left: 27%;\n    top: 43%;\n  }\n  @media (max-width: 1200px) and (min-height: 1300px) {\n    left: 27%;\n    top: 43%;\n  }\n  @media (max-width: 640px) {\n    left: 50%;\n    top: 25%;\n  }\n"]);
 
@@ -894,7 +894,7 @@ var HeroText = function (_React$Component) {
 
 var HeroSvg = (0, _reactEmotion2.default)(_HeroSvg2.default)(_templateObject7);
 
-var _HeroContainer = (0, _reactEmotion2.default)("div")(_templateObject8, _cover2.default, _coverMobile2.default, '' /* background-color: transparent; */, '' /* background-image: none; */);
+var _HeroContainer = (0, _reactEmotion2.default)("div")(_templateObject8, _cover2.default, _coverMobile2.default);
 
 var _AnimatedTextContainer = (0, _reactEmotion2.default)("div")(_templateObject9, '' /* display: none; */, '' /* @media (max-width: 710px) and (min-height:1000px) {
                                                                                                               display: none;
@@ -3682,4 +3682,4 @@ exports.default = (0, _reactStatic.withRouter)(SplitSectionContainer);
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.536d76a6.js.map
+//# sourceMappingURL=static.319ec0b7.js.map

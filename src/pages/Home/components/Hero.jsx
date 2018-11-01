@@ -108,14 +108,13 @@ const _HeroContainer = styled("div")`
   background-size: cover;
   background-attachment: fixed;
   background-position: center top;
+
   @media (min-width: 651px){
-    background-image: url('${cover}');
+    background-image: url(${cover});
   }
   @media (max-width: 650px){
-    background-image: url('${coverMobile}');
+    background-image: url(${coverMobile});
     background-attachment: scroll;
-    ${'' /* background-color: transparent; */}
-    ${'' /* background-image: none; */}
   }
 
 `;
