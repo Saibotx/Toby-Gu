@@ -10,7 +10,6 @@
     "serve": "serve docs -p 3000"
   },
   "dependencies": {
-    "axios": "^0.16.2",
     "emotion": "^9.0.2",
     "emotion-server": "^9.0.2",
     "react": "^16.0.0",
