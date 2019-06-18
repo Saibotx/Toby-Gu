@@ -43,12 +43,11 @@ export default function Profile(props) {
         <_PortHole src={`${profile}`} />
         <h2>Hey! I'm Toby</h2>
         <h3>
-          A Canadian software engineer specializing in front-end development and
-          design.
+          A full stack software engineer specializing in React.JS, UX & Rails.
           <br />
           <br />
           I've founded two startups and have been coding since before facebook
-          was cool.
+          was a thing.
         </h3>
       </_ProfileContainer>
     </_ProfileBackground>

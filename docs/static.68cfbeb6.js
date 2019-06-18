@@ -1296,10 +1296,10 @@ function Profile(props) {
       _react2.default.createElement(
         "h3",
         null,
-        "A Canadian software engineer specializing in front-end development and design.",
+        "A full stack software engineer specializing in React.JS, UX & Rails.",
         _react2.default.createElement("br", null),
         _react2.default.createElement("br", null),
-        "I've founded two startups and have been coding since before facebook was cool."
+        "I've founded two startups and have been coding since before facebook was a thing."
       )
     )
   );
@@ -3904,4 +3904,4 @@ exports.default = (0, _reactStatic.withRouter)(SplitSectionContainer);
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.dc1e4a59.js.map
+//# sourceMappingURL=static.68cfbeb6.js.map
