@@ -1,69 +1,83 @@
 
-    import React, { Component } from 'react'
-    import { Route } from 'react-router-dom'
-    import universal, { setHasBabelPlugin } from 'react-universal-component'
 
-    import t_0 from '../src/pages/Home'
+import React, { Component } from 'react'
+import { Route } from 'react-router-dom'
+
+import { cleanPath } from 'react-static'
+
+import t_0 from '../src/pages/Home'
 import t_1 from '../src/pages/Work'
 import t_2 from '../src/pages/Photography'
 
-    // Template Map
-    const templateMap = {
-      t_0,
+// Template Map
+global.componentsByTemplateID = global.componentsByTemplateID || [
+  t_0,
 t_1,
 t_2
-    }
+]
 
-    // Template Tree
-    const templateTree = {c:{"/":{t:"t_0"},"engineer":{t:"t_1"},"photographer":{t:"t_2"}}}
+// Template Tree
+global.templateIDsByPath = global.templateIDsByPath || {
+  '404': undefined
+}
 
-    // Get template for given path
-    const getComponentForPath = path => {
-      const parts = path === '/' ? ['/'] : path.split('/').filter(d => d)
-      let cursor = templateTree
-      try {
-        parts.forEach(part => {
-          cursor = cursor.c[part]
-        })
-        return templateMap[cursor.t]
-      } catch (e) {
-        return false
+// Get template for given path
+const getComponentForPath = path => {
+  path = cleanPath(path)
+  return global.componentsByTemplateID[global.templateIDsByPath[path]]
+}
+
+global.reactStaticGetComponentForPath = getComponentForPath
+global.reactStaticRegisterTemplateIDForPath = (path, id) => {
+  global.templateIDsByPath[path] = id
+}
+
+export default class Routes extends Component {
+  render () {
+    const { component: Comp, render, children } = this.props
+
+    const getFullComponentForPath = path => {
+      let Comp = getComponentForPath(path)
+      let is404 = path === '404'
+      if (!Comp) {
+        is404 = true
+        Comp = getComponentForPath('404')
       }
+      return newProps => (
+        Comp
+          ? <Comp {...newProps} {...(is404 ? {is404: true} : {})} />
+          : null
+      )
     }
 
-    if (typeof document !== 'undefined') {
-      window.reactStaticGetComponentForPath = getComponentForPath
+    const renderProps = {
+      componentsByTemplateID: global.componentsByTemplateID,
+      templateIDsByPath: global.templateIDsByPath,
+      getComponentForPath: getFullComponentForPath
     }
 
-    export default class Routes extends Component {
-      render () {
-        const { component: Comp, render, children } = this.props
-        const renderProps = {
-          templateMap,
-          templateTree,
-          getComponentForPath
-        }
-        if (Comp) {
-          return (
-            <Comp
-              {...renderProps}
-            />
-          )
-        }
-        if (render || children) {
-          return (render || children)(renderProps)
-        }
-
-        // This is the default auto-routing renderer
-        return (
-          <Route path='*' render={props => {
-            let Comp = getComponentForPath(props.location.pathname)
-            if (!Comp) {
-              Comp = getComponentForPath('404')
-            }
-            return Comp && <Comp {...props} />
-          }} />
-        )
-      }
+    if (Comp) {
+      return (
+        <Comp
+          {...renderProps}
+        />
+      )
     }
-    
+
+    if (render || children) {
+      return (render || children)(renderProps)
+    }
+
+    // This is the default auto-routing renderer
+    return (
+      <Route path='*' render={props => {
+        let Comp = getFullComponentForPath(props.location.pathname)
+        // If Comp is used as a component here, it triggers React to re-mount the entire
+        // component tree underneath during reconciliation, losing all internal state.
+        // By unwrapping it here we keep the real, static component exposed directly to React.
+        return Comp && Comp({ ...props, key: props.location.pathname })
+      }} />
+    )
+  }
+}
+

@@ -5,6 +5,7 @@ import { Router, Link, Route, Switch } from "react-static";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import { withRouter } from "react-static";
 import Scroll from "react-scroll";
+import MouseActionIndicator from "react-mouse-action-indicator"
 
 //Import Pages
 import Home from "./pages/Home";
@@ -76,6 +77,7 @@ class App extends React.Component {
         side = null;
     }
     return (
+      <MouseActionIndicator>
       <div style={{ position: "relative" }}>
         {/* hacky way of dismounting home section with animation.
           acutal animation happens
@@ -96,6 +98,7 @@ class App extends React.Component {
         {/* background render depending on side */}
         <SplitSection side={side} />
       </div>
+      </MouseActionIndicator>
     );
   }
 }

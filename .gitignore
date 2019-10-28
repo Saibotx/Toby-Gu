@@ -9,3 +9,4 @@ backup
 # Files marked with gitigx
 *gitigx*
 *CNAME*
+*DS_STORE*

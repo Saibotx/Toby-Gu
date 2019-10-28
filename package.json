@@ -18,6 +18,7 @@
     "react-emotion": "^8.0.10",
     "react-hot-loader": "^4.0.0-beta.21",
     "react-images": "^0.5.17",
+    "react-mouse-action-indicator": "file:../CodingExercises/MouseActionIndicator/react-mouse-action-indicator",
     "react-mt-svg-lines": "^0.8.3",
     "react-photo-gallery": "^6.0.22",
     "react-router": "^4.2.0",
