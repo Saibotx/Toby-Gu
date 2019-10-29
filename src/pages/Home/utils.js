@@ -52,3 +52,9 @@ export function preloadWorkImages() {
     img.src = badge;
   });
 }
+
+export default {
+  preloadWorkImages,
+  getCookie,
+  setCookie
+}
