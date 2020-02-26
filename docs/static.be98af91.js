@@ -3567,7 +3567,6 @@ var loadedImages = images.map(function (image) {
   var secondLastIndex = image.lastIndexOf('.', image.lastIndexOf('.') - 1);
   var imageName = image.slice(image.indexOf('/static/') + 8, secondLastIndex) + '.jpg';
   var imageSize = _jsonFile2.default[imageName] || { width: 4, height: 5 };
-  console.log("looking for \", " + imageName + ", 'from', " + image);
   return {
     src: image,
     width: imageSize.width,
@@ -4372,4 +4371,4 @@ exports.push([module.i, "a,body,code,div,h1,html,li,nav,p,span,ul{margin:0;borde
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.cc79ab5c.js.map
+//# sourceMappingURL=static.be98af91.js.map
