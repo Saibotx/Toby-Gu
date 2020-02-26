@@ -6,6 +6,7 @@ const images = importAll(
 let loadedImages = images.map(image => {
   let imageName = image.slice(image.indexOf('/static/')+8, image.indexOf('.')) + '.jpg';
   let imageSize = imageDimensions[imageName] || {width:4, height:5};
+  console.log("looking for ", imageName, 'from', image);
   return ({
     src: image,
     width: imageSize.width,
