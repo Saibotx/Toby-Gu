@@ -43,7 +43,7 @@ const BrowserWindow = styled("div")`
 const Desc = styled(BrowserWindow)`
   width: 50%;
   max-width: 100% !important;
-  margin-top:100vh;
+  margin-top: 79vh;
   @media (max-width: 550px) {
     margin-top: 90vh;
     margin-bottom: 10vh;
@@ -60,9 +60,9 @@ const workText = css`
 
 const MobilePhoneImg = styled('img')`
     ${'' /* height:50vh; */}
-    width:15vw;
+    width:14vw;
     margin-top:10vh;
-    max-width: 300px;
+    max-width: 250px;
     @media(max-height: 800px){
       max-width: 250px;
     }
@@ -70,7 +70,7 @@ const MobilePhoneImg = styled('img')`
       ${props=>props.left && 'padding-right: 10vh;'}
       ${props=>props.right && 'padding-left: 10vh;'}
       height:auto;
-      width:25vw;
+      width:23vw;
     }
 `
 
@@ -78,7 +78,7 @@ const RageOn = ({onClick})=>(
   <div onClick={onClick}>
     <ParallaxFlex offset={1} speed={0}>
       <BrowserWindow main>
-        <img style={{ width: "100%" }} src={rageonIMac} />
+        <img style={{ width: "95%" }} src={rageonIMac} />
       </BrowserWindow>
     </ParallaxFlex>
     <ParallaxFlex offset={1} speed={0.2}>

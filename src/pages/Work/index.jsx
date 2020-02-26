@@ -105,7 +105,7 @@ class WorkPortfolio extends React.Component {
               fontSize: "2.7em"
             }}
           >
-            {"< Developer >"}
+            {"< Engineer >"}
           </h1>
           <_PButton
             onClick={() => {

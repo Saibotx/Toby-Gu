@@ -7,7 +7,7 @@ import styled, { css } from "react-emotion";
 import { withRouter } from "react-static";
 import SplitSection from "components/SplitSection/SplitSection.jsx";
 
-import "./style.css";
+import _Button from "core/Button.jsx";
 
 import images from "./images";
 
@@ -53,7 +53,7 @@ const GalleryContainer = styled("div")`
   width: calc(100% - 105px);
   margin-top: 125px;
   margin-left: 75px;
-  @media (max-width:550px){
+  @media (max-width: 550px) {
     margin-left: 55px;
     width: calc(100% - 75px);
   }
@@ -64,7 +64,7 @@ const GalleryContainer = styled("div")`
 `;
 
 class PhotographyPortfolio extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = { currentImage: 0 };
     this.closeLightbox = this.closeLightbox.bind(this);
@@ -102,8 +102,8 @@ class PhotographyPortfolio extends React.Component {
 
   render() {
     var columns = 2;
-    if (this.state.client){
-      if (window.screen.width > 600){
+    if (this.state.client) {
+      if (window.screen.width > 600) {
         columns = 4;
       }
     }
@@ -135,9 +135,25 @@ class PhotographyPortfolio extends React.Component {
             D{" "}
           </_DButton>
         </_FloatingCont>
+
         <GalleryContainer>
-          <Gallery margin={5} photos={images} columns={columns} onClick={this.openLightbox} />
+          <Gallery
+            margin={5}
+            photos={images}
+            columns={columns}
+            onClick={this.openLightbox}
+          />
+          <a
+            target="_blank"
+            style={{ width: "100%", display: "flex", justifyContent:'center' }}
+            href="https://instagram.com/guutoby"
+          >
+            <_Button whiteBg color="dark">
+              See More on Instagram
+            </_Button>
+          </a>
         </GalleryContainer>
+
         <div style={{ position: "fixed", zIndex: -1 }}>
           <SplitSection fixed hoverSide={null} side={"right"} />
         </div>
