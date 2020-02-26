@@ -4,9 +4,10 @@ const images = importAll(
 );
 
 let loadedImages = images.map(image => {
-  let imageName = image.slice(image.indexOf('/static/')+8, image.indexOf('.')) + '.jpg';
+  var secondLastIndex = image.lastIndexOf('.', image.lastIndexOf('.')-1)
+  let imageName = image.slice(image.indexOf('/static/')+8, secondLastIndex) + '.jpg';
   let imageSize = imageDimensions[imageName] || {width:4, height:5};
-  console.log("looking for ", imageName, 'from', image);
+  console.log(`looking for ", ${imageName}, 'from', ${image}`);
   return ({
     src: image,
     width: imageSize.width,

@@ -2,15 +2,15 @@
   "errors": [],
   "warnings": [],
   "version": "3.12.0",
-  "hash": "6dc1e2935ae3719cfde0",
-  "time": 10950,
+  "hash": "46979515ef815436bfa7",
+  "time": 10885,
   "publicPath": "https://tobygu.com/",
   "assetsByChunkName": {
     "main": [
-      "main.b6380ebc.js",
-      "styles.6dc1e293.css",
-      "main.b6380ebc.js.map",
-      "styles.6dc1e293.css.map"
+      "main.7b192ffd.js",
+      "styles.46979515.css",
+      "main.7b192ffd.js.map",
+      "styles.46979515.css.map"
     ],
     "bootstrap": [
       "bootstrap.c6de1676.js",
@@ -737,8 +737,8 @@
       "emitted": true
     },
     {
-      "name": "main.b6380ebc.js",
-      "size": 679561,
+      "name": "main.7b192ffd.js",
+      "size": 679599,
       "chunks": [
         0
       ],
@@ -760,7 +760,7 @@
       "emitted": true
     },
     {
-      "name": "styles.6dc1e293.css",
+      "name": "styles.46979515.css",
       "size": 2863,
       "chunks": [
         0
@@ -771,8 +771,8 @@
       "emitted": true
     },
     {
-      "name": "main.b6380ebc.js.map",
-      "size": 3420936,
+      "name": "main.7b192ffd.js.map",
+      "size": 3421169,
       "chunks": [
         0
       ],
@@ -782,7 +782,7 @@
       "emitted": true
     },
     {
-      "name": "styles.6dc1e293.css.map",
+      "name": "styles.46979515.css.map",
       "size": 96,
       "chunks": [
         0
@@ -814,10 +814,10 @@
       "assets": [
         "bootstrap.c6de1676.js",
         "bootstrap.c6de1676.js.map",
-        "main.b6380ebc.js",
-        "styles.6dc1e293.css",
-        "main.b6380ebc.js.map",
-        "styles.6dc1e293.css.map"
+        "main.7b192ffd.js",
+        "styles.46979515.css",
+        "main.7b192ffd.js.map",
+        "styles.46979515.css.map"
       ],
       "isOverSizeLimit": true
     }
@@ -829,17 +829,17 @@
       "initial": true,
       "entry": false,
       "extraAsync": false,
-      "size": 1259981,
+      "size": 1260067,
       "names": [
         "main"
       ],
       "files": [
-        "main.b6380ebc.js",
-        "styles.6dc1e293.css",
-        "main.b6380ebc.js.map",
-        "styles.6dc1e293.css.map"
+        "main.7b192ffd.js",
+        "styles.46979515.css",
+        "main.7b192ffd.js.map",
+        "styles.46979515.css.map"
       ],
-      "hash": "b6380ebc13835615ed48",
+      "hash": "7b192ffd27503e774421",
       "parents": [
         1
       ],
@@ -3130,9 +3130,9 @@
             0
           ],
           "assets": [],
-          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/animated/lib/AnimatedValueXY.js",
-          "issuerId": 228,
-          "issuerName": "./node_modules/animated/lib/AnimatedValueXY.js",
+          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/animated/lib/AnimatedAddition.js",
+          "issuerId": 229,
+          "issuerName": "./node_modules/animated/lib/AnimatedAddition.js",
           "failed": false,
           "errors": 0,
           "warnings": 0,
@@ -3240,9 +3240,9 @@
             0
           ],
           "assets": [],
-          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-router-dom/es/HashRouter.js",
-          "issuerId": 124,
-          "issuerName": "./node_modules/react-router-dom/es/HashRouter.js",
+          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-router-dom/es/BrowserRouter.js",
+          "issuerId": 120,
+          "issuerName": "./node_modules/react-router-dom/es/BrowserRouter.js",
           "failed": false,
           "errors": 0,
           "warnings": 0,
@@ -3628,9 +3628,9 @@
             0
           ],
           "assets": [],
-          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-static/lib/client/components/Prefetch.js",
-          "issuerId": 171,
-          "issuerName": "./node_modules/react-static/lib/client/components/Prefetch.js",
+          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-static/lib/client/components/SiteData.js",
+          "issuerId": 168,
+          "issuerName": "./node_modules/react-static/lib/client/components/SiteData.js",
           "failed": false,
           "errors": 0,
           "warnings": 0,
@@ -5309,9 +5309,9 @@
             0
           ],
           "assets": [],
-          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/history/createMemoryHistory.js",
-          "issuerId": 175,
-          "issuerName": "./node_modules/history/createMemoryHistory.js",
+          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/history/createHashHistory.js",
+          "issuerId": 176,
+          "issuerName": "./node_modules/history/createHashHistory.js",
           "failed": false,
           "errors": 0,
           "warnings": 0,
@@ -5421,9 +5421,9 @@
             0
           ],
           "assets": [],
-          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/dom-helpers/transition/properties.js",
-          "issuerId": 192,
-          "issuerName": "./node_modules/dom-helpers/transition/properties.js",
+          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/dom-helpers/util/requestAnimationFrame.js",
+          "issuerId": 191,
+          "issuerName": "./node_modules/dom-helpers/util/requestAnimationFrame.js",
           "failed": false,
           "errors": 0,
           "warnings": 0,
@@ -5533,9 +5533,9 @@
             0
           ],
           "assets": [],
-          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-scroll/modules/mixins/Helpers.js",
-          "issuerId": 200,
-          "issuerName": "./node_modules/react-scroll/modules/mixins/Helpers.js",
+          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-scroll/modules/index.js",
+          "issuerId": 193,
+          "issuerName": "./node_modules/react-scroll/modules/index.js",
           "failed": false,
           "errors": 0,
           "warnings": 0,
@@ -5645,9 +5645,9 @@
             0
           ],
           "assets": [],
-          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-scroll/modules/mixins/scroller.js",
-          "issuerId": 25,
-          "issuerName": "./node_modules/react-scroll/modules/mixins/scroller.js",
+          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-scroll/modules/mixins/animate-scroll.js",
+          "issuerId": 78,
+          "issuerName": "./node_modules/react-scroll/modules/mixins/animate-scroll.js",
           "failed": false,
           "errors": 0,
           "warnings": 0,
@@ -5871,9 +5871,9 @@
           "assets": [
             "static/rageonIMac.74dbcaf6.png"
           ],
-          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-static/node_modules/babel-loader/lib/index.js??ref--0-oneOf-0-0!/Users/tobiasgu/dev/portfolio/src/pages/Work/components/RageOn.jsx",
-          "issuerId": 253,
-          "issuerName": "./src/pages/Work/components/RageOn.jsx",
+          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-static/node_modules/babel-loader/lib/index.js??ref--0-oneOf-0-0!/Users/tobiasgu/dev/portfolio/src/pages/Work/components/AnataMassage.jsx",
+          "issuerId": 259,
+          "issuerName": "./src/pages/Work/components/AnataMassage.jsx",
           "failed": false,
           "errors": 0,
           "warnings": 0,
@@ -5929,9 +5929,9 @@
           "assets": [
             "static/rageonIphonex.716491a5.png"
           ],
-          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-static/node_modules/babel-loader/lib/index.js??ref--0-oneOf-0-0!/Users/tobiasgu/dev/portfolio/src/pages/Work/components/ContactMe.jsx",
-          "issuerId": 269,
-          "issuerName": "./src/pages/Work/components/ContactMe.jsx",
+          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-static/node_modules/babel-loader/lib/index.js??ref--0-oneOf-0-0!/Users/tobiasgu/dev/portfolio/src/pages/Work/components/AnataMassage.jsx",
+          "issuerId": 259,
+          "issuerName": "./src/pages/Work/components/AnataMassage.jsx",
           "failed": false,
           "errors": 0,
           "warnings": 0,
@@ -5987,9 +5987,9 @@
           "assets": [
             "static/rageonPixel2.8525960a.png"
           ],
-          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-static/node_modules/babel-loader/lib/index.js??ref--0-oneOf-0-0!/Users/tobiasgu/dev/portfolio/src/pages/Work/components/ContactMe.jsx",
-          "issuerId": 269,
-          "issuerName": "./src/pages/Work/components/ContactMe.jsx",
+          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-static/node_modules/babel-loader/lib/index.js??ref--0-oneOf-0-0!/Users/tobiasgu/dev/portfolio/src/pages/Work/components/AnataMassage.jsx",
+          "issuerId": 259,
+          "issuerName": "./src/pages/Work/components/AnataMassage.jsx",
           "failed": false,
           "errors": 0,
           "warnings": 0,
@@ -6043,9 +6043,9 @@
             0
           ],
           "assets": [],
-          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-static/node_modules/babel-loader/lib/index.js??ref--0-oneOf-0-0!/Users/tobiasgu/dev/portfolio/src/pages/Work/components/AnataMassage.jsx",
-          "issuerId": 259,
-          "issuerName": "./src/pages/Work/components/AnataMassage.jsx",
+          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-static/node_modules/babel-loader/lib/index.js??ref--0-oneOf-0-0!/Users/tobiasgu/dev/portfolio/src/pages/Work/components/RageOn.jsx",
+          "issuerId": 253,
+          "issuerName": "./src/pages/Work/components/RageOn.jsx",
           "failed": false,
           "errors": 0,
           "warnings": 0,
@@ -6560,9 +6560,9 @@
             0
           ],
           "assets": [],
-          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-router/es/matchPath.js",
-          "issuerId": 34,
-          "issuerName": "./node_modules/react-router/es/matchPath.js",
+          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-router/es/generatePath.js",
+          "issuerId": 61,
+          "issuerName": "./node_modules/react-router/es/generatePath.js",
           "failed": false,
           "errors": 0,
           "warnings": 0,
@@ -7318,9 +7318,9 @@
             0
           ],
           "assets": [],
-          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/dom-helpers/transition/properties.js",
-          "issuerId": 192,
-          "issuerName": "./node_modules/dom-helpers/transition/properties.js",
+          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/dom-helpers/util/requestAnimationFrame.js",
+          "issuerId": 191,
+          "issuerName": "./node_modules/dom-helpers/util/requestAnimationFrame.js",
           "failed": false,
           "errors": 0,
           "warnings": 0,
@@ -7412,9 +7412,9 @@
             0
           ],
           "assets": [],
-          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-scroll/modules/mixins/scroller.js",
-          "issuerId": 25,
-          "issuerName": "./node_modules/react-scroll/modules/mixins/scroller.js",
+          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-scroll/modules/index.js",
+          "issuerId": 193,
+          "issuerName": "./node_modules/react-scroll/modules/index.js",
           "failed": false,
           "errors": 0,
           "warnings": 0,
@@ -7459,9 +7459,9 @@
             0
           ],
           "assets": [],
-          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-scroll/modules/mixins/Helpers.js",
-          "issuerId": 200,
-          "issuerName": "./node_modules/react-scroll/modules/mixins/Helpers.js",
+          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-scroll/modules/mixins/scroll-link.js",
+          "issuerId": 40,
+          "issuerName": "./node_modules/react-scroll/modules/mixins/scroll-link.js",
           "failed": false,
           "errors": 0,
           "warnings": 0,
@@ -9052,9 +9052,9 @@
             0
           ],
           "assets": [],
-          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-transition-group/Transition.js",
-          "issuerId": 110,
-          "issuerName": "./node_modules/react-transition-group/Transition.js",
+          "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-transition-group/CSSTransition.js",
+          "issuerId": 308,
+          "issuerName": "./node_modules/react-transition-group/CSSTransition.js",
           "failed": false,
           "errors": 0,
           "warnings": 0,
@@ -16924,7 +16924,7 @@
           "name": "./src/pages/Photography/images.js",
           "index": 314,
           "index2": 387,
-          "size": 1027,
+          "size": 1113,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -16954,7 +16954,7 @@
           "providedExports": null,
           "optimizationBailout": [],
           "depth": 3,
-          "source": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _jsonFile = require(\"assets/igImages/jsonFile\");\n\nvar _jsonFile2 = _interopRequireDefault(_jsonFile);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar images = importAll(require.context(\"assets/igImages\", false, /\\.(png|jpe?g|svg)$/));\n\nvar loadedImages = images.map(function (image) {\n  var imageName = image.slice(image.indexOf('/static/') + 8, image.indexOf('.')) + '.jpg';\n  var imageSize = _jsonFile2.default[imageName] || { width: 4, height: 5 };\n  console.log(\"looking for \", imageName, 'from', image);\n  return {\n    src: image,\n    width: imageSize.width,\n    height: imageSize.height\n  };\n});\n\nfunction importAll(r) {\n  return r.keys().map(r);\n}\n\n//To generate the json file with dimensions, run this script in bash in the images folder:\n/*\n  for f in *jpg; do\n    identify -format '\"%f\":{\"width\": %w,\"height\": %h},' $f >> jsonFile.json\n  done\n*/\n\nexports.default = loadedImages;"
+          "source": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _jsonFile = require(\"assets/igImages/jsonFile\");\n\nvar _jsonFile2 = _interopRequireDefault(_jsonFile);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar images = importAll(require.context(\"assets/igImages\", false, /\\.(png|jpe?g|svg)$/));\n\nvar loadedImages = images.map(function (image) {\n  var secondLastIndex = image.lastIndexOf('.', image.lastIndexOf('.') - 1);\n  var imageName = image.slice(image.indexOf('/static/') + 8, secondLastIndex) + '.jpg';\n  var imageSize = _jsonFile2.default[imageName] || { width: 4, height: 5 };\n  console.log(\"looking for \\\", \" + imageName + \", 'from', \" + image);\n  return {\n    src: image,\n    width: imageSize.width,\n    height: imageSize.height\n  };\n});\n\nfunction importAll(r) {\n  return r.keys().map(r);\n}\n\n//To generate the json file with dimensions, run this script in bash in the images folder:\n/*\n  for f in *jpg; do\n    identify -format '\"%f\":{\"width\": %w,\"height\": %h},' $f >> jsonFile.json\n  done\n*/\n\nexports.default = loadedImages;"
         },
         {
           "id": 316,
@@ -22541,9 +22541,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/animated/lib/AnimatedValueXY.js",
-      "issuerId": 228,
-      "issuerName": "./node_modules/animated/lib/AnimatedValueXY.js",
+      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/animated/lib/AnimatedAddition.js",
+      "issuerId": 229,
+      "issuerName": "./node_modules/animated/lib/AnimatedAddition.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -22651,9 +22651,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-router-dom/es/HashRouter.js",
-      "issuerId": 124,
-      "issuerName": "./node_modules/react-router-dom/es/HashRouter.js",
+      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-router-dom/es/BrowserRouter.js",
+      "issuerId": 120,
+      "issuerName": "./node_modules/react-router-dom/es/BrowserRouter.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -23039,9 +23039,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-static/lib/client/components/Prefetch.js",
-      "issuerId": 171,
-      "issuerName": "./node_modules/react-static/lib/client/components/Prefetch.js",
+      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-static/lib/client/components/SiteData.js",
+      "issuerId": 168,
+      "issuerName": "./node_modules/react-static/lib/client/components/SiteData.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -24720,9 +24720,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/history/createMemoryHistory.js",
-      "issuerId": 175,
-      "issuerName": "./node_modules/history/createMemoryHistory.js",
+      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/history/createHashHistory.js",
+      "issuerId": 176,
+      "issuerName": "./node_modules/history/createHashHistory.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -24832,9 +24832,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/dom-helpers/transition/properties.js",
-      "issuerId": 192,
-      "issuerName": "./node_modules/dom-helpers/transition/properties.js",
+      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/dom-helpers/util/requestAnimationFrame.js",
+      "issuerId": 191,
+      "issuerName": "./node_modules/dom-helpers/util/requestAnimationFrame.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -24944,9 +24944,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-scroll/modules/mixins/Helpers.js",
-      "issuerId": 200,
-      "issuerName": "./node_modules/react-scroll/modules/mixins/Helpers.js",
+      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-scroll/modules/index.js",
+      "issuerId": 193,
+      "issuerName": "./node_modules/react-scroll/modules/index.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -25056,9 +25056,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-scroll/modules/mixins/scroller.js",
-      "issuerId": 25,
-      "issuerName": "./node_modules/react-scroll/modules/mixins/scroller.js",
+      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-scroll/modules/mixins/animate-scroll.js",
+      "issuerId": 78,
+      "issuerName": "./node_modules/react-scroll/modules/mixins/animate-scroll.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -25282,9 +25282,9 @@
       "assets": [
         "static/rageonIMac.74dbcaf6.png"
       ],
-      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-static/node_modules/babel-loader/lib/index.js??ref--0-oneOf-0-0!/Users/tobiasgu/dev/portfolio/src/pages/Work/components/RageOn.jsx",
-      "issuerId": 253,
-      "issuerName": "./src/pages/Work/components/RageOn.jsx",
+      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-static/node_modules/babel-loader/lib/index.js??ref--0-oneOf-0-0!/Users/tobiasgu/dev/portfolio/src/pages/Work/components/AnataMassage.jsx",
+      "issuerId": 259,
+      "issuerName": "./src/pages/Work/components/AnataMassage.jsx",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -25340,9 +25340,9 @@
       "assets": [
         "static/rageonIphonex.716491a5.png"
       ],
-      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-static/node_modules/babel-loader/lib/index.js??ref--0-oneOf-0-0!/Users/tobiasgu/dev/portfolio/src/pages/Work/components/ContactMe.jsx",
-      "issuerId": 269,
-      "issuerName": "./src/pages/Work/components/ContactMe.jsx",
+      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-static/node_modules/babel-loader/lib/index.js??ref--0-oneOf-0-0!/Users/tobiasgu/dev/portfolio/src/pages/Work/components/AnataMassage.jsx",
+      "issuerId": 259,
+      "issuerName": "./src/pages/Work/components/AnataMassage.jsx",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -25398,9 +25398,9 @@
       "assets": [
         "static/rageonPixel2.8525960a.png"
       ],
-      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-static/node_modules/babel-loader/lib/index.js??ref--0-oneOf-0-0!/Users/tobiasgu/dev/portfolio/src/pages/Work/components/ContactMe.jsx",
-      "issuerId": 269,
-      "issuerName": "./src/pages/Work/components/ContactMe.jsx",
+      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-static/node_modules/babel-loader/lib/index.js??ref--0-oneOf-0-0!/Users/tobiasgu/dev/portfolio/src/pages/Work/components/AnataMassage.jsx",
+      "issuerId": 259,
+      "issuerName": "./src/pages/Work/components/AnataMassage.jsx",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -25454,9 +25454,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-static/node_modules/babel-loader/lib/index.js??ref--0-oneOf-0-0!/Users/tobiasgu/dev/portfolio/src/pages/Work/components/AnataMassage.jsx",
-      "issuerId": 259,
-      "issuerName": "./src/pages/Work/components/AnataMassage.jsx",
+      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-static/node_modules/babel-loader/lib/index.js??ref--0-oneOf-0-0!/Users/tobiasgu/dev/portfolio/src/pages/Work/components/RageOn.jsx",
+      "issuerId": 253,
+      "issuerName": "./src/pages/Work/components/RageOn.jsx",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -25971,9 +25971,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-router/es/matchPath.js",
-      "issuerId": 34,
-      "issuerName": "./node_modules/react-router/es/matchPath.js",
+      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-router/es/generatePath.js",
+      "issuerId": 61,
+      "issuerName": "./node_modules/react-router/es/generatePath.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -26729,9 +26729,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/dom-helpers/transition/properties.js",
-      "issuerId": 192,
-      "issuerName": "./node_modules/dom-helpers/transition/properties.js",
+      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/dom-helpers/util/requestAnimationFrame.js",
+      "issuerId": 191,
+      "issuerName": "./node_modules/dom-helpers/util/requestAnimationFrame.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -26823,9 +26823,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-scroll/modules/mixins/scroller.js",
-      "issuerId": 25,
-      "issuerName": "./node_modules/react-scroll/modules/mixins/scroller.js",
+      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-scroll/modules/index.js",
+      "issuerId": 193,
+      "issuerName": "./node_modules/react-scroll/modules/index.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -26870,9 +26870,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-scroll/modules/mixins/Helpers.js",
-      "issuerId": 200,
-      "issuerName": "./node_modules/react-scroll/modules/mixins/Helpers.js",
+      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-scroll/modules/mixins/scroll-link.js",
+      "issuerId": 40,
+      "issuerName": "./node_modules/react-scroll/modules/mixins/scroll-link.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -28463,9 +28463,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-transition-group/Transition.js",
-      "issuerId": 110,
-      "issuerName": "./node_modules/react-transition-group/Transition.js",
+      "issuer": "/Users/tobiasgu/dev/portfolio/node_modules/react-transition-group/CSSTransition.js",
+      "issuerId": 308,
+      "issuerName": "./node_modules/react-transition-group/CSSTransition.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -36335,7 +36335,7 @@
       "name": "./src/pages/Photography/images.js",
       "index": 314,
       "index2": 387,
-      "size": 1027,
+      "size": 1113,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -36365,7 +36365,7 @@
       "providedExports": null,
       "optimizationBailout": [],
       "depth": 3,
-      "source": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _jsonFile = require(\"assets/igImages/jsonFile\");\n\nvar _jsonFile2 = _interopRequireDefault(_jsonFile);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar images = importAll(require.context(\"assets/igImages\", false, /\\.(png|jpe?g|svg)$/));\n\nvar loadedImages = images.map(function (image) {\n  var imageName = image.slice(image.indexOf('/static/') + 8, image.indexOf('.')) + '.jpg';\n  var imageSize = _jsonFile2.default[imageName] || { width: 4, height: 5 };\n  console.log(\"looking for \", imageName, 'from', image);\n  return {\n    src: image,\n    width: imageSize.width,\n    height: imageSize.height\n  };\n});\n\nfunction importAll(r) {\n  return r.keys().map(r);\n}\n\n//To generate the json file with dimensions, run this script in bash in the images folder:\n/*\n  for f in *jpg; do\n    identify -format '\"%f\":{\"width\": %w,\"height\": %h},' $f >> jsonFile.json\n  done\n*/\n\nexports.default = loadedImages;"
+      "source": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _jsonFile = require(\"assets/igImages/jsonFile\");\n\nvar _jsonFile2 = _interopRequireDefault(_jsonFile);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar images = importAll(require.context(\"assets/igImages\", false, /\\.(png|jpe?g|svg)$/));\n\nvar loadedImages = images.map(function (image) {\n  var secondLastIndex = image.lastIndexOf('.', image.lastIndexOf('.') - 1);\n  var imageName = image.slice(image.indexOf('/static/') + 8, secondLastIndex) + '.jpg';\n  var imageSize = _jsonFile2.default[imageName] || { width: 4, height: 5 };\n  console.log(\"looking for \\\", \" + imageName + \", 'from', \" + image);\n  return {\n    src: image,\n    width: imageSize.width,\n    height: imageSize.height\n  };\n});\n\nfunction importAll(r) {\n  return r.keys().map(r);\n}\n\n//To generate the json file with dimensions, run this script in bash in the images folder:\n/*\n  for f in *jpg; do\n    identify -format '\"%f\":{\"width\": %w,\"height\": %h},' $f >> jsonFile.json\n  done\n*/\n\nexports.default = loadedImages;"
     },
     {
       "id": 316,
