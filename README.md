@@ -17,7 +17,7 @@ Hey-yo! Welcome. All my stuff is built super responsive. Feel free to mess with 
 
 ### How it works
 
-This is technically a "project page" and hosted on github pages. This means all the html and assets are served from `./docs`. Technically this shouldn't be a thing, but I made it a thing lol.
+This is technically a "project page" and hosted on github pages. This means all the html and assets are served from `./docs`. Technically this shouldn't be a thing, but I made it a thing lol (Update, 2020: I built this before Gatsby.js came out - which is now the standard for static react projects served from Github pages.)
 
 ### How to run the project
 #### (and draw a mustache on my face)
